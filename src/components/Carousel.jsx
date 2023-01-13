@@ -18,7 +18,7 @@ const Carousel = () => {
   };
 
   return (
-    <div className="w-full flex justify-center py-3 px-5 flex-col items-center bg-zinc-300 h-full">
+    <div className="w-full flex justify-center py-3 px-5 flex-col items-center h-full">
       <div className="w-[34%] bg-white max-md:w-full mt-10">
         <Slider {...settings}>
           {sliderData.length > 0 &&
@@ -29,7 +29,10 @@ const Carousel = () => {
                     {" "}
                     <img src={slider.image} alt="" className="w-[auto]" />
                   </div>
-                  <h2 className="first-letter:capitalize text-3xl text-center px-5 font-normal my-10">
+                  <h2
+                    className="font first-letter:capitalize text-3xl text-center px-5 max-sm:px-3 
+                  break-normal whitespace-pre-wrap subpixel-antialiased font-normal my-10"
+                  >
                     {slider.caption}
                   </h2>
                 </div>
@@ -37,7 +40,7 @@ const Carousel = () => {
             ))}
         </Slider>
       </div>
-      <GetStartedButton/>
+      <GetStartedButton />
     </div>
   );
 };
