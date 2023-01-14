@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Loader from "./components/loader/Loader";
 import Carousel from "./components/Carousel";
 import AccountType from "./components/AccountType";
+import AccountTypePage from "./pages/AccountTypePage";
 
 function App() {
   const [spinner, setSpinner] = useState(true);
@@ -17,7 +18,7 @@ function App() {
     spinner ? <Loader /> : (
     <div className="App h-screen">
       {/* <Carousel/> */}
-      <AccountType/>
+      <AccountTypePage/>
     </div>)
   );
 }
