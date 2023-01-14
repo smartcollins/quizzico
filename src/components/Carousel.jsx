@@ -15,6 +15,9 @@ const Carousel = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     swipeToScroll: true,
+    autoplay: true,
+    cssEase: "linear",
+    autoplaySpeed: 2500,
   };
 
   return (
@@ -23,7 +26,7 @@ const Carousel = () => {
         <Slider {...settings}>
           {sliderData.length > 0 &&
             sliderData.map((slider) => (
-              <div key={slider.id} className="overflow-hidden">
+              <div key={slider.id} className="overflow-hidden scroll-smooth">
                 <div className="w-full overflow-hidden">
                   <div className="flex justify-center">
                     {" "}
