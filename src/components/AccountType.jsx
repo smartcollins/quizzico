@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import {  ArrowLeft} from "phosphor-react";
 
-const AccountType = ({mapContent, accountHeader}) => {
+const AccountType = ({mapContent, accountHeader, emoji}) => {
   const [progressWidth, setProgressWidth] = useState(0);
   /**
    * *created a progress bar for the top section progress
@@ -55,7 +55,7 @@ const AccountType = ({mapContent, accountHeader}) => {
         </div>
         <h2 className="text-center font text-3xl font-[700] max-sm:text-2xl mt-8 mb-4">
           <span>{accountHeader}</span>{" "}
-          <span className="text-2xl">👨</span>
+          <span className="text-2xl">{emoji}</span>
         </h2>
         <p className="text-center font-extralight">
           You can skip if you are not sure.

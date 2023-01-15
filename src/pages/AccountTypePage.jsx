@@ -1,13 +1,17 @@
-import React from 'react'
-import AccountType from '../components/AccountType';
+import React from "react";
+import AccountType from "../components/AccountType";
 import { accountCategory } from "../assets/data";
 
 const AccountTypePage = () => {
   return (
     <>
-    <AccountType mapContent={accountCategory} accountHeader={"What type of account do you like to create?"}/>
+      <AccountType
+        mapContent={accountCategory}
+        accountHeader={"What type of account do you like to create?"}
+        emoji={"👨"}
+      />
     </>
-  )
-}
+  );
+};
 
-export default AccountTypePage
+export default AccountTypePage;

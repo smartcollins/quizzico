@@ -5,7 +5,7 @@ import { workplaceCategory } from "../assets/data";
 const WorkPlace = () => {
   return (
     <>
-    <AccountType />
+    <AccountType mapContent={workplaceCategory} accountHeader={"Describe a workplace that suits you"} emoji={"💼"}/>
     </>
   )
 }
