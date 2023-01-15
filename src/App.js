@@ -3,6 +3,9 @@ import Loader from "./components/loader/Loader";
 import Carousel from "./components/Carousel";
 import AccountType from "./components/AccountType";
 import AccountTypePage from "./pages/AccountTypePage";
+import { createBrowserRouter, createRoutesFromElements,RouterProvider, Route } from "react-router-dom";
+import WorkPlace from "./pages/WorkPlace";
+import ErrorPage from "./pages/ErrorPage";
 
 function App() {
   const [spinner, setSpinner] = useState(true);
@@ -12,13 +15,28 @@ function App() {
    return () => timeOut
   }, []);
   
+ const router =  createBrowserRouter([
+  {
+    path: "/",
+    element: <Carousel/>,
+    errorElement: <ErrorPage/>
+  },
+  {
+    path: "occupation",
+    element:<AccountTypePage/> 
+  },
+  {
+    path: "workplace",
+    element: <WorkPlace/> 
+  },
+ ]
   
+ )
 
   return(
     spinner ? <Loader /> : (
     <div className="App h-screen">
-      {/* <Carousel/> */}
-      <AccountTypePage/>
+      <RouterProvider router={router} />
     </div>)
   );
 }
