@@ -1,7 +1,7 @@
 import { ArrowLeft } from "phosphor-react";
 import { Link } from "react-router-dom";
 
-const AccountType = ({ mapContent, accountHeader, emoji, pathName }) => {
+const AccountType = ({ mapContent, accountHeader, emoji, pathName, handleProgessWidth }) => {
   /**
    * *created a progress bar for the top section progress
    * todo: i guess you try to install better comment extensioin to write and view my comment, for easy understanding
@@ -11,7 +11,7 @@ const AccountType = ({ mapContent, accountHeader, emoji, pathName }) => {
    */
 
   const renderCategories = mapContent.map(({ icon, title, color }) => (
-    <li key={title} className="hover:bg-zinc-100 rounded-xl">
+    <li key={title} className="hover:bg-zinc-100 rounded-xl" onClick={handleProgessWidth}>
       <Link to={pathName} className="flex items-center   w-6/6">
         <div className="p-3  rounded-l-xl" style={{ background: color }}>
           <span className="flex items-center justify-center w-10 h-10  bg-[#61616134]  rounded-full">
@@ -36,13 +36,14 @@ const AccountType = ({ mapContent, accountHeader, emoji, pathName }) => {
       </p>
       <ul className="space-y-5 my-10">{renderCategories}</ul>
       <div className="flex justify-center mt-5">
+        <Link className=" w-full">
         <button
-          className="shadow-sm shadow-[#bbb] px-3 w-full uppercase text-sm
+          className="shadow-sm shadow-[#bbb] px-3  w-full uppercase text-sm
          text-[#6949ff]  py-3 rounded-[30px] block bg-[#f0edff] 
          hover:opacity-75 hover:text-[13px]"
         >
           skip
-        </button>
+        </button> </Link>
       </div>
     </>
   );

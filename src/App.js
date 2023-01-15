@@ -17,7 +17,7 @@ function App() {
   const [spinner, setSpinner] = useState(true);
 
   useEffect(() => {
-    const timeOut = setTimeout(() => setSpinner(false), 3500);
+    const timeOut = setTimeout(() => setSpinner(false), 3000);
     return () => timeOut;
   }, []);
 
@@ -29,9 +29,9 @@ function App() {
     },
     {
       path: "occupation",
-      element: <ProgressBar/>,
+      element: <ProgressBar />,
       children: [
-        { index:true, element: <AccountTypePage /> },
+        { index: true, element: <AccountTypePage /> },
         {
           path: "workplace",
           element: <WorkPlace />,
