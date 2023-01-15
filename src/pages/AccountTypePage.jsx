@@ -9,6 +9,7 @@ const AccountTypePage = () => {
         mapContent={accountCategory}
         accountHeader={"What type of account do you like to create?"}
         emoji={"👨"}
+        pathName={'workplace'}
       />
     </>
   );
