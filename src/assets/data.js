@@ -5,8 +5,13 @@ import slide_image_three from "../images/slid-img-three.png";
 import homeSlide1 from "../images/sch-one.jpeg";
 import homeSlide2 from "../images/sch-two.png";
 import homeSlide3 from "../images/sch-three.png";
-import homeSlide4 from "../images/sch-four.jpg";
+import homeSlide4 from "../images/sch-8.png";
 import homeSlide5 from "../images/sch-five.png";
+import homeSlide6 from "../images/sch-six.png";
+import homeSlide7 from "../images/sch-seven.png";
+import homeSlide8 from "../images/sch-9.png";
+import homeSlide9 from "../images/sch-10.png";
+import homeSlide10 from "../images/sch-11.png";
 
 import { User, Users, UsersThree, Briefcase,Student, GraduationCap    } from "phosphor-react";
 
@@ -30,4 +35,5 @@ export const workplaceCategory = [
     {icon:<Briefcase size={24} color={'white'}/>, color:"#e46974", title:"business"},
 ];
 
-export const homeCarouselImages = [homeSlide1, homeSlide2, homeSlide3, homeSlide4, homeSlide5]
+export const homeCarouselImages = [homeSlide1, homeSlide2,
+     homeSlide3, homeSlide4, homeSlide5, homeSlide6,homeSlide7, homeSlide8, homeSlide9, homeSlide10 ]

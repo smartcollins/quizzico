@@ -2,6 +2,7 @@ import React from "react";
 import CarouselSections from "../components/home-screen/CarouselSections";
 import DiscoverHeader from "../components/home-screen/DiscoverHeader";
 import HomeCarousel from "../components/home-screen/HomeCarousel";
+import { homeCarouselImages as Sliders }from "../assets/data";
 
 const HomeScreen = () => {
   return (
@@ -11,15 +12,15 @@ const HomeScreen = () => {
        <div className="w-full">
        <DiscoverHeader caption={"Discover"}/>
           <HomeCarousel 
-          slide1={<CarouselSections headerOne={"Get smater with"} headerTwo={"productive quizzico"} title={"Titus Katmura"} image={""}/>}
-          slide2={<CarouselSections headerOne={"Great Ideas comes"} headerTwo={"from brilliant mindset"} title={"Alfonzo Schuesster"}/>}
-          slide3={<CarouselSections headerOne={"up ideas, worth"} headerTwo={"greater height to attain"} title={"John Romauld"}/>}
+          slide1={<CarouselSections headerOne={"Get smater with"} headerTwo={"productive quizzico"} title={"Titus Katmura"} image={Sliders[0]}/>}
+          slide2={<CarouselSections headerOne={"Great Ideas comes"} headerTwo={"from brilliant mindset"} title={"Alfonzo Schuesster"} image={Sliders[4]}/>}
+          slide3={<CarouselSections headerOne={"up ideas, worth"} headerTwo={"greater height to attain"} title={"John Romauld" } image={Sliders[3]}/>}
           />
        </div>
         <div>
         <DiscoverHeader caption={"Top Collections"}/>
         <HomeCarousel 
-          slide1={<CarouselSections headerOne={"Get smater with"} headerTwo={"productive quizzico"} title={"Titus Katmura"}/>}
+          slide1={<CarouselSections headerOne={"Get smater with"} headerTwo={"productive quizzico"} title={"Titus Katmura"} image={Sliders[1]}/>}
           slide2={<CarouselSections headerOne={"Great Ideas comes"} headerTwo={"from brilliant mindset"} title={"Alfonzo Schuesster"}/>}
           slide3={<CarouselSections headerOne={"up ideas, worth"} headerTwo={"greater height to attain"} title={"John Romauld"}/>}
           />
@@ -27,7 +28,7 @@ const HomeScreen = () => {
         <div>
         <DiscoverHeader caption={"Top Pics"}/>
         <HomeCarousel 
-          slide1={<CarouselSections headerOne={"Get smater with"} headerTwo={"productive quizzico"} title={"Titus Katmura"}/>}
+          slide1={<CarouselSections headerOne={"Get smater with"} headerTwo={"productive quizzico"} title={"Titus Katmura"} image={Sliders[2]}/>}
           slide2={<CarouselSections headerOne={"Great Ideas comes"} headerTwo={"from brilliant mindset"} title={"Alfonzo Schuesster"}/>}
           slide3={<CarouselSections headerOne={"up ideas, worth"} headerTwo={"greater height to attain"} title={"John Romauld"}/>}
           />
