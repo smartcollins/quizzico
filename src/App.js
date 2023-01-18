@@ -13,6 +13,7 @@ import {
 import WorkPlace from "./pages/WorkPlace";
 import ErrorPage from "./pages/ErrorPage";
 import ProgressBar from "./components/ProgressBar";
+import Account from "./components/Account";
 
 function App() {
   const [spinner, setSpinner] = useState(true);
@@ -26,6 +27,11 @@ function App() {
     {
       path: "/",
       element: <Carousel />,
+      errorElement: <ErrorPage />,
+    },
+    {
+      path: "account",
+      element: <Account />,
       errorElement: <ErrorPage />,
     },
     {
@@ -45,11 +51,11 @@ function App() {
     <Loader />
   ) : (
     <div className="App h-screen">
-      <Modal
+      {/* <Modal
         visible={true}
         desc="Sucessful!"
         txt="Please wait a moment, we are preparing for you..."
-      />
+      /> */}
       <RouterProvider router={router} />
     </div>
   );
