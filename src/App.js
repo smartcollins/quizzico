@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react";
 import Loader from "./components/loader/Loader";
 import Carousel from "./components/Carousel";
-import AccountType from "./components/AccountType";
 import AccountTypePage from "./pages/AccountTypePage";
-import Progress from "./components/Progress";
-import Modal from "./components/Modal";
+
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -14,6 +12,8 @@ import {
 import WorkPlace from "./pages/WorkPlace";
 import ErrorPage from "./pages/ErrorPage";
 import ProgressBar from "./components/ProgressBar";
+import CreateAccount from "./pages/CreateAccount";
+import HomeScreen from "./pages/HomeScreen";
 
 function App() {
   const [spinner, setSpinner] = useState(true);
@@ -40,18 +40,20 @@ function App() {
         },
       ],
     },
+    {
+      path: "create-account",
+      element: <CreateAccount />,
+    },
+    {
+      path: "home-screen",
+      element: <HomeScreen/>,
+    },
   ]);
 
   return spinner ? (
     <Loader />
   ) : (
     <div className="App h-screen">
-      <Progress />
-      <Modal
-        visible={true}
-        desc="Sucessful!"
-        txt="Please wait a moment, we are preparing for you..."
-      />
       <RouterProvider router={router} />
     </div>
   );
