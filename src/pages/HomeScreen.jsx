@@ -13,24 +13,24 @@ const HomeScreen = () => {
        <DiscoverHeader caption={"Discover"}/>
           <HomeCarousel 
           slide1={<CarouselSections headerOne={"Get smater with"} headerTwo={"productive quizzico"} title={"Titus Katmura"} image={Sliders[0]}/>}
-          slide2={<CarouselSections headerOne={"Great Ideas comes"} headerTwo={"from brilliant mindset"} title={"Alfonzo Schuesster"} image={Sliders[4]}/>}
-          slide3={<CarouselSections headerOne={"up ideas, worth"} headerTwo={"greater height to attain"} title={"John Romauld" } image={Sliders[3]}/>}
+          slide2={<CarouselSections headerOne={"Great Ideas comes"} headerTwo={"from brilliant mindset"} title={"Alfonzo Schuesster"} image={Sliders[3]}/>}
+          slide3={<CarouselSections headerOne={"up ideas, worth"} headerTwo={"greater height to attain"} title={"John Romauld" } image={Sliders[8]}/>}
           />
        </div>
         <div>
         <DiscoverHeader caption={"Top Collections"}/>
         <HomeCarousel 
-          slide1={<CarouselSections headerOne={"Get smater with"} headerTwo={"productive quizzico"} title={"Titus Katmura"} image={Sliders[1]}/>}
-          slide2={<CarouselSections headerOne={"Great Ideas comes"} headerTwo={"from brilliant mindset"} title={"Alfonzo Schuesster"}/>}
-          slide3={<CarouselSections headerOne={"up ideas, worth"} headerTwo={"greater height to attain"} title={"John Romauld"}/>}
+          slide1={<CarouselSections headerOne={"Get smater with"} headerTwo={"productive quizzico"} title={"Titus Katmura"} image={Sliders[9]}/>}
+          slide2={<CarouselSections headerOne={"Great Ideas comes"} headerTwo={"from brilliant mindset"} title={"Alfonzo Schuesster"} image={Sliders[5]}/>}
+          slide3={<CarouselSections headerOne={"up ideas, worth"} headerTwo={"greater height to attain"} title={"John Romauld"} image={Sliders[6]}/>}
           />
         </div>
         <div>
         <DiscoverHeader caption={"Top Pics"}/>
         <HomeCarousel 
           slide1={<CarouselSections headerOne={"Get smater with"} headerTwo={"productive quizzico"} title={"Titus Katmura"} image={Sliders[2]}/>}
-          slide2={<CarouselSections headerOne={"Great Ideas comes"} headerTwo={"from brilliant mindset"} title={"Alfonzo Schuesster"}/>}
-          slide3={<CarouselSections headerOne={"up ideas, worth"} headerTwo={"greater height to attain"} title={"John Romauld"}/>}
+          slide2={<CarouselSections headerOne={"Great Ideas comes"} headerTwo={"from brilliant mindset"} title={"Alfonzo Schuesster"} image={Sliders[7]}/>}
+          slide3={<CarouselSections headerOne={"up ideas, worth"} headerTwo={"greater height to attain"} title={"John Romauld"} image={Sliders[8]}/>}
           />
         </div>
         </div>
