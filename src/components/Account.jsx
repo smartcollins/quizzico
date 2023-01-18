@@ -14,7 +14,28 @@ const Account = ()=>{
             <p>Don't worry your data will remain private and only you can see it.</p>
             {/* <p>Please enter your username, email address,and password. If you forget it, then you have to do forgot password.</p> */}
             <div className='text-left'>
-                <Inputs/>
+                <Inputs
+                    title="Full Name"
+                    type="text"
+                />
+                <Inputs
+                    title="Date of Birth"
+                    type="date"
+                />
+                <Inputs
+                    title="Phone Number"
+                    type="text"
+                />
+                <Inputs
+                    title="Country"
+                    type="text"
+                    option={true}
+                />
+                <Inputs
+                    title="Age"
+                    type="number"
+                    option={true}
+                />
                 {/* <p className='font-bold'>Full Name</p>
                 <input className=' border-gray-400 border-b-2 b-2' type="text"/>
                 <p>Full Name</p>
