@@ -3,9 +3,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-
-const HomeCarousel = ({slide1, slide2, slide3}) => {
-  const settings = {    
+const HomeCarousel = ({ slide1, slide2, slide3 }) => {
+  const settings = {
     dots: false,
     infinite: true,
     speed: 500,
@@ -14,34 +13,24 @@ const HomeCarousel = ({slide1, slide2, slide3}) => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
-    responsive:[
-        {
-            breakpoint: 640,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
-              infinite: true,
-              autoplaySpeed: 2500,
-            }
-          }
-    ]
+    responsive: [
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          autoplaySpeed: 2500,
+        },
+      },
+    ],
   };
   return (
-    <div >
-   
+    <div className="mb-10">
       <Slider {...settings}>
-        <div>
-            {slide1}
-        </div>
-        <div>
-        {slide2}
-          {/* <CarouselSections /> */}
-        </div>
-        <div>
-        {slide3}
-          {/* <CarouselSections /> */}
-        </div>
-        
+        <div>{slide1}</div>
+        <div>{slide2}</div>
+        <div>{slide3}</div>
       </Slider>
     </div>
   );
