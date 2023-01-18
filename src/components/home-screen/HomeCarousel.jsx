@@ -2,10 +2,10 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import CarouselSections from "./CarouselSections";
 
-const HomeCarousel = () => {
-  const settings = {
+
+const HomeCarousel = ({slide1, slide2, slide3}) => {
+  const settings = {    
     dots: false,
     infinite: true,
     speed: 500,
@@ -28,15 +28,18 @@ const HomeCarousel = () => {
   };
   return (
     <div >
+   
       <Slider {...settings}>
         <div>
-          <CarouselSections />
+            {slide1}
         </div>
         <div>
-          <CarouselSections />
+        {slide2}
+          {/* <CarouselSections /> */}
         </div>
         <div>
-          <CarouselSections />
+        {slide3}
+          {/* <CarouselSections /> */}
         </div>
         
       </Slider>
