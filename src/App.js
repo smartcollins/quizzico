@@ -1,25 +1,20 @@
 import { useEffect, useState } from "react";
+import {createBrowserRouter, RouterProvider} from "react-router-dom";
+
 import Loader from "./components/loader/Loader";
 import Carousel from "./components/Carousel";
 import AccountTypePage from "./pages/AccountTypePage";
-
-import {
-  createBrowserRouter,
-  createRoutesFromElements,
-  RouterProvider,
-  Route,
-} from "react-router-dom";
 import WorkPlace from "./pages/WorkPlace";
 import ErrorPage from "./pages/ErrorPage";
 import ProgressBar from "./components/ProgressBar";
-import CreateAccount from "./pages/CreateAccount";
+import Account from "./pages/Account";
 import HomeScreen from "./pages/HomeScreen";
 
 function App() {
   const [spinner, setSpinner] = useState(true);
 
   useEffect(() => {
-    const timeOut = setTimeout(() => setSpinner(false), 3000);
+    const timeOut = setTimeout(() => setSpinner(false), 2500);
     return () => timeOut;
   }, []);
 
@@ -41,8 +36,8 @@ function App() {
       ],
     },
     {
-      path: "create-account",
-      element: <CreateAccount />,
+      path: "account",
+      element: <Account />,
     },
     {
       path: "home-screen",

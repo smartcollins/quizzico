@@ -2,7 +2,7 @@ import React from 'react';
 import Progress from "../components/Progress";
 import Modal from "../components/Modal";
 
-const CreateAccount = () => {
+const Account = () => {
   return (
     <div> 
         
@@ -15,4 +15,4 @@ const CreateAccount = () => {
   )
 }
 
-export default CreateAccount
+export default Account

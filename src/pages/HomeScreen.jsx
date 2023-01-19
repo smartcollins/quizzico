@@ -7,6 +7,9 @@ import { homeCarouselImages as Sliders }from "../assets/data";
 import { homeMiniImage as miniSliders }from "../assets/data";
 
 const HomeScreen = () => {
+  /**
+   * !Take this component as an OutLet for your navBar page
+   */
   
   return (
     <div>
