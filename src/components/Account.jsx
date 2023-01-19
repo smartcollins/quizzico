@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import Inputs from "./Inputs";
 import ProgressBar from "./ProgressBar";
 import Modal from "./Modal";
@@ -10,6 +10,7 @@ import { GoogleLogo, AppleLogo } from "phosphor-react";
 const Account = () => {
   const [account,setAccount] = useState(false);
   const [signup,setSignup] = useState(false);
+  const [home,setHome] = useState(false);
 
   const dispatch = useDispatch();
 
@@ -22,6 +23,11 @@ const Account = () => {
     setSignup(true)
     dispatch(incrementByamount())
   }
+
+  useEffect(() => {
+    const timeOut = setTimeout(() => setSignup(true), 3000);
+    return () => timeOut;
+  }, []);
 
   return (
     <div className="text-center px-2">
