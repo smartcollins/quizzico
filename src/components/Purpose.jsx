@@ -21,7 +21,7 @@ const Purpose = ({txt,txt2,input,input2,pass,forget,btn_txt})=>{
                         option={true}
                         pass={true}
                     />
-                    <div>
+                    <div className='border-b border-gray-400 pb-4 mb-4'>
                         <input id='check' type="checkbox"/>
                         <label className='ml-2' htmlFor='check'>Remember me</label>
                     </div>
@@ -34,7 +34,7 @@ const Purpose = ({txt,txt2,input,input2,pass,forget,btn_txt})=>{
                     />
                 </div>
             }
-            <div className='w-full bg-red-500 text-center fixed bottom-0'>
+            <div className='w-full text-center fixed bottom-0'>
                 <button className='bg-[#6949ff] text-white text-center w-4/5 py-2 rounded-full'>{btn_txt}</button>
             </div>
         </div>

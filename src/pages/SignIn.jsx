@@ -4,7 +4,7 @@ import Purpose from '../components/Purpose';
 
 const SignIn = ()=>{
     return(
-        <div>
+        <div className='px-2'>
             <Purpose
                 txt="Hello there 👋"
                 pass={true}
