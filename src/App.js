@@ -14,6 +14,8 @@ import WorkPlace from "./pages/WorkPlace";
 import ErrorPage from "./pages/ErrorPage";
 import ProgressBar from "./components/ProgressBar";
 import Account from "./components/Account";
+import SignIn from "./components/SignIn";
+// import { SignIn } from "phosphor-react";
 
 function App() {
   const [spinner, setSpinner] = useState(true);
@@ -32,6 +34,11 @@ function App() {
     {
       path: "account",
       element: <Account />,
+      errorElement: <ErrorPage />,
+    },
+    {
+      path: "sign-in",
+      element: <SignIn />,
       errorElement: <ErrorPage />,
     },
     {
