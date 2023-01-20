@@ -44,7 +44,7 @@ const Purpose = ({txt,extra,txt2,pass,forget,mail,mail_txt,mail_txt2,btn_txt})=>
                         <button className='border-transparent bg-gray-100 rounded-md w-12 h-12'></button>
                     </div>
                     <p className='my-4 mt-8'>{mail_txt}</p>
-                    <p>{mail_txt2} <span>55</span> s</p>
+                    <p>{mail_txt2} <span className='text-[#694bff]'>55</span> s</p>
                 </div>
             }
             <div className='w-full text-center fixed bottom-0'>
