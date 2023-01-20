@@ -1,9 +1,16 @@
 import React from 'react';
+import Purpose from '../components/Purpose';
 
 
 const SignIn = ()=>{
     return(
-        <div></div>
+        <div>
+            <Purpose
+                txt="Hello there 👋"
+                pass={true}
+                forget={true}
+            />
+        </div>
     )
 }
 
