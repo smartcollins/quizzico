@@ -15,6 +15,7 @@ import ErrorPage from "./pages/ErrorPage";
 import ProgressBar from "./components/ProgressBar";
 import Account from "./components/Account";
 import SignIn from "./pages/SignIn";
+import Forgot from "./pages/Forgot";
 // import { SignIn } from "phosphor-react";
 
 function App() {
@@ -39,6 +40,11 @@ function App() {
     {
       path: "sign-in",
       element: <SignIn />,
+      errorElement: <ErrorPage />,
+    },
+    {
+      path: "forgot",
+      element: <Forgot/>,
       errorElement: <ErrorPage />,
     },
     {
