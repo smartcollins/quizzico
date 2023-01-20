@@ -3,11 +3,12 @@ import Inputs from './Inputs';
 import { ArrowLeft } from 'phosphor-react';
 
 
-const Purpose = ({txt,txt2,input,input2,pass,forget,btn_txt})=>{
+const Purpose = ({txt,extra,txt2,input,input2,pass,forget,btn_txt})=>{
     return(
         <div>
             <ArrowLeft size={30} color="#000000" weight="light" />
             <p className=' font-medium text-lg my-4'>{txt}</p>
+            {extra&&<p>{txt2}</p>}
             {
                 pass?
                 <div>
