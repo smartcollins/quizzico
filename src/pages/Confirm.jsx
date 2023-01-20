@@ -4,7 +4,7 @@ import Purpose from '../components/Purpose';
 
 const Confirm = ()=>{
     return(
-        <div>
+        <div className='px-2'>
             <Purpose
                 txt="You've got mail 📩"
                 extra={true}

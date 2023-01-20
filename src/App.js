@@ -17,6 +17,7 @@ import Account from "./components/Account";
 import SignIn from "./pages/SignIn";
 import Forgot from "./pages/Forgot";
 import Confirm from "./pages/Confirm";
+import New from "./pages/New";
 // import { SignIn } from "phosphor-react";
 
 function App() {
@@ -51,6 +52,11 @@ function App() {
     {
       path: "confirm",
       element: <Confirm />,
+      errorElement: <ErrorPage />,
+    },
+    {
+      path: "new",
+      element: <New />,
       errorElement: <ErrorPage />,
     },
     {
