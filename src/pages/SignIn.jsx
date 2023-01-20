@@ -9,6 +9,7 @@ const SignIn = ()=>{
                 txt="Hello there 👋"
                 pass={true}
                 forget={true}
+                btn_txt="SIGN IN"
             />
         </div>
     )
