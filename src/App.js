@@ -14,7 +14,7 @@ import WorkPlace from "./pages/WorkPlace";
 import ErrorPage from "./pages/ErrorPage";
 import ProgressBar from "./components/ProgressBar";
 import Account from "./components/Account";
-import SignIn from "./components/SignIn";
+import SignIn from "./pages/SignIn";
 // import { SignIn } from "phosphor-react";
 
 function App() {
