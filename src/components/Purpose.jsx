@@ -18,12 +18,14 @@ const Purpose = ({txt,txt2,input,input2,pass,forget,btn_txt})=>{
                     <Inputs
                         title="Password"
                         type="password"
+                        option={true}
+                        pass={true}
                     />
                     <div>
                         <input id='check' type="checkbox"/>
-                        <label htmlFor='check'>Remember me</label>
+                        <label className='ml-2' htmlFor='check'>Remember me</label>
                     </div>
-                    {forget&&<p className='text-[#694bff] text-center mx-auto'>Forgot Password?</p>}
+                    {forget&&<p className='text-[#694bff] text-center mx-auto font-medium'>Forgot Password?</p>}
                 </div>:
                 <div>
                     <Inputs
