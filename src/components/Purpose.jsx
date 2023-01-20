@@ -3,7 +3,7 @@ import Inputs from './Inputs';
 import { ArrowLeft } from 'phosphor-react';
 
 
-const Purpose = ({txt,extra,txt2,pass,forget,mail,mail_txt,mail_txt2,btn_txt})=>{
+const Purpose = ({txt,extra,txt2,pass,forget,mail,mail_txt,mail_txt2,btn_txt,new_pass})=>{
     return(
         <div>
             <ArrowLeft size={30} color="#000000" weight="light" />
@@ -27,6 +27,25 @@ const Purpose = ({txt,extra,txt2,pass,forget,mail,mail_txt,mail_txt2,btn_txt})=>
                         <label className='ml-2' htmlFor='check'>Remember me</label>
                     </div>
                     {forget&&<p className='text-[#694bff] text-center mx-auto font-medium'>Forgot Password?</p>}
+                </div>:
+                new_pass?
+                <div>
+                    <Inputs
+                        title="Create a new password"
+                        type="password"
+                        option={true}
+                        pass={true}
+                    />
+                    <Inputs
+                        title="Confirm a new password"
+                        type="password"
+                        option={true}
+                        pass={true}
+                    />
+                    <div>
+                        <input id='check' type="checkbox"/>
+                        <label className='ml-2' htmlFor='check'>Remember me</label>
+                    </div>
                 </div>:
                 <div>
                     {mail?null:<Inputs
