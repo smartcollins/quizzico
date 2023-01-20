@@ -1,11 +1,13 @@
 import React from 'react';
 import Inputs from './Inputs';
+import { ArrowLeft } from 'phosphor-react';
 
 
 const Purpose = ({txt,txt2,input,input2,pass,forget,btn_txt})=>{
     return(
         <div>
-            <p>{txt}</p>
+            <ArrowLeft size={30} color="#000000" weight="light" />
+            <p className=' font-medium text-lg my-4'>{txt}</p>
             {
                 pass?
                 <div>
@@ -21,7 +23,7 @@ const Purpose = ({txt,txt2,input,input2,pass,forget,btn_txt})=>{
                         <input id='check' type="checkbox"/>
                         <label htmlFor='check'>Remember me</label>
                     </div>
-                    {forget&&<p>Forgot Password</p>}
+                    {forget&&<p className='text-[#694bff] text-center mx-auto'>Forgot Password?</p>}
                 </div>:
                 <div>
                     <Inputs
@@ -30,7 +32,9 @@ const Purpose = ({txt,txt2,input,input2,pass,forget,btn_txt})=>{
                     />
                 </div>
             }
-            <button>{btn_txt}</button>
+            <div className='w-full bg-red-500 text-center fixed bottom-0'>
+                <button className='bg-[#6949ff] text-white text-center w-4/5 py-2 rounded-full'>{btn_txt}</button>
+            </div>
         </div>
     )
 }
