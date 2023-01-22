@@ -9,6 +9,7 @@ import ErrorPage from "./pages/ErrorPage";
 import ProgressBar from "./components/ProgressBar";
 import Account from "./pages/Account";
 import HomeScreen from "./pages/HomeScreen";
+import FindFriends from "./pages/FindFriends";
 
 function App() {
   const [spinner, setSpinner] = useState(true);
@@ -42,6 +43,10 @@ function App() {
     {
       path: "home-screen",
       element: <HomeScreen/>,
+    },
+    {
+      path: "find-friends",
+      element: <FindFriends/>,
     },
   ]);
 
