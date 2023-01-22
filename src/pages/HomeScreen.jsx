@@ -9,6 +9,7 @@ import { homeMiniImage as miniSliders }from "../assets/data";
 const HomeScreen = () => {
   /**
    * !Take this component as an OutLet for your navBar page
+   * !insert the link to the differenr pages via the page prop in DiscoverHeader Component
    */
   
   return (
@@ -16,7 +17,7 @@ const HomeScreen = () => {
       <section className="flex w-full justify-center h-screen pt-5">
         <div className="w-1/2  h-full max-md:w-full px-5 py-4 space-y-10">  
        <div className="w-full">
-       <DiscoverHeader caption={"Discover"}/>
+       <DiscoverHeader caption={"Discover"} page={"/"}/>
           <HomeCarousel 
           slide1={<CarouselSections headerOne={"Get smater with"} headerTwo={"productive quizzico"} title={"Titus Katmura"} image={Sliders[0]} miniImg={miniSliders[0]} />}
           slide2={<CarouselSections headerOne={"Great Ideas comes"} headerTwo={"from brilliant mindset"} title={"Alfonzo Schuesster"} image={Sliders[1]} miniImg={miniSliders[2]}/>}
@@ -24,12 +25,12 @@ const HomeScreen = () => {
           />
        </div>
        <div>
-       <DiscoverHeader caption={"Top Collections"}/>
+       <DiscoverHeader caption={"Top Collections"} page={"/"}/>
        <TopCollection/>
 
        </div>
         <div>
-        <DiscoverHeader caption={"Trending Quiz "}/>  
+        <DiscoverHeader caption={"Trending Quiz "} page={"/"}/>  
         <HomeCarousel 
           slide1={<CarouselSections headerOne={"Get smater with"} headerTwo={"productive quizzico"} title={"Titus Katmura"} image={Sliders[2]} miniImg={miniSliders[3]}/>}
           slide2={<CarouselSections headerOne={"Great Ideas comes"} headerTwo={"from brilliant mindset"} title={"Alfonzo Schuesster"} image={Sliders[5]} miniImg={miniSliders[1]}/>}
@@ -37,7 +38,7 @@ const HomeScreen = () => {
           />
         </div>
         <div>
-        <DiscoverHeader caption={"Top Pics"}/>
+        <DiscoverHeader caption={"Top Pics"} page={"/"}/>
         <HomeCarousel 
           slide1={<CarouselSections headerOne={"Get smater with"} headerTwo={"productive quizzico"} title={"Titus Katmura"} image={Sliders[3]} miniImg={miniSliders[0]}/>}
           slide2={<CarouselSections headerOne={"Great Ideas comes"} headerTwo={"from brilliant mindset"} title={"Alfonzo Schuesster"} image={Sliders[7]} miniImg={miniSliders[5]}/>}
