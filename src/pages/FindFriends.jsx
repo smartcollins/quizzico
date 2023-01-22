@@ -1,9 +1,16 @@
 import React from 'react';
 import {ArrowArcRight, ArrowLeft, CaretRight, MagnifyingGlass  } from "phosphor-react";
+import DiscoverHeader from '../components/home-screen/DiscoverHeader';
+
 import bookImg from '../images/book.png';
 import featherImg from '../images/feather.png';
 import fbImg from '../images/fbook.png';
-import DiscoverHeader from '../components/home-screen/DiscoverHeader';
+
+import followImg1 from '../images/know-1.png';
+import followImg2 from '../images/know-2.png';
+import followImg3 from '../images/know-3.png';
+import followImg4 from '../images/know-4.png';
+
 
 const FindFriends = () => {
   return (
@@ -27,6 +34,13 @@ const FindFriends = () => {
     <div>
         <DiscoverHeader caption={"People You may Know"}/>
     </div>
+    <div className='space-y-'>
+        < PeopleYouMayKnow image={followImg1} name={"Daron Kulikoski"}/>
+        < PeopleYouMayKnow image={followImg2} name={"Daron Kulikoski"}/>
+        < PeopleYouMayKnow image={followImg3} name={"Daron Kulikoski"}/>
+        < PeopleYouMayKnow image={followImg4} name={"Daron Kulikoski"}/>
+    
+    </div>
   </div>
   </section>
   )
@@ -43,10 +57,24 @@ const ShareContacts = ({image, caption, detail}) => {
         </div>
         <div className='space-y-2'>
             <h2 className='text-xl  font-[700]'>{caption}</h2>
-            <p className='truncate w-40 font-mono text-[18px]'>{detail}</p>
+            <p className='truncate w-40 font-mono text-[18px]  nowrap'>{detail}</p>
         </div>
 
         <CaretRight size={24}/>
+    </div>
+  )
+}
+
+const PeopleYouMayKnow = ({image, name}) => {
+  return (
+    <div className='w-full flex items-center capitalize justify-between  py-2'>
+        <div className='pl-3 max-sm:pl-0 rounded-full overflow-hidden'>
+            <img src={image} alt="" />
+        </div>
+        <div className='space-y-2'>
+            <h2 className='text-xl  font-[700]'>{name}</h2>
+        </div>
+     <button className='bg-[#6949ff] w-content px-3 py-1     rounded-[20px] text-white'>Follow</button>
     </div>
   )
 }
