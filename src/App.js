@@ -5,6 +5,7 @@ import AccountType from "./components/AccountType";
 import AccountTypePage from "./pages/AccountTypePage";
 import Progress from "./components/Progress";
 import Modal from "./components/Modal";
+import Home from "./pages/Home";
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -27,6 +28,11 @@ function App() {
     {
       path: "/",
       element: <Carousel />,
+      errorElement: <ErrorPage />,
+    },
+    {
+      path: "/home",
+      element: <Home />,
       errorElement: <ErrorPage />,
     },
     {
