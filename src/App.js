@@ -52,12 +52,12 @@ function App() {
     <Loader />
   ) : (
     <div className="App h-screen">
-      <Progress />
+      {/* <Progress />
       <Modal
         visible={true}
         desc="Sucessful!"
         txt="Please wait a moment, we are preparing for you..."
-      />
+      /> */}
       <RouterProvider router={router} />
     </div>
   );
