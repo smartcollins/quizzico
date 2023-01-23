@@ -10,6 +10,7 @@ import ProgressBar from "./components/ProgressBar";
 import Account from "./pages/Account";
 import HomeScreen from "./pages/HomeScreen";
 import FindFriends from "./pages/FindFriends";
+import DiscoverPage from "./components/home-screen/DiscoverPage";
 
 function App() {
   const [spinner, setSpinner] = useState(true);
@@ -47,6 +48,10 @@ function App() {
     {
       path: "find-friends",
       element: <FindFriends/>,
+    },
+    {
+      path: "discover",
+      element: <DiscoverPage/>,
     },
   ]);
 

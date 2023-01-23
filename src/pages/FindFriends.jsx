@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
-import { ArrowLeft, MagnifyingGlass  } from "phosphor-react";
+import { ArrowLeft } from "phosphor-react";
 import DiscoverHeader from '../components/home-screen/DiscoverHeader';
-import useDebounce from '../assets/useDecounce';
+import useDebounce from '../assets/useDebounce';
 import ShareContacts from '../components/home-screen/ShareContacts';
 import bookImg from '../images/book.png';
 import featherImg from '../images/feather.png';
 import fbImg from '../images/fbook.png';
+
 import { peopleYouMayKnow } from '../assets/data';
 import SearchPeople from '../components/home-screen/SearchPeople';
+import SearchInput from '../components/home-screen/SearchInput';
 
 
  
@@ -32,10 +34,7 @@ const FindFriends = () => {
       </div>
       <div className='text-2xl capitalize font-[600]'>find friends</div>
     </div>
-    <form className='flex items-center bg-red-500 w-full max-md:w-full  bg-[#f5f5f5] px-2 rounded-md overflow-hidden'>
-    <MagnifyingGlass size={24} weight="light" />
-        <input type="text" placeholder='Search email, name, or phone number' className='w-full bg-inherit p-3 outline-none' onChange={(e)=>setSearchValue(e.target.value)}/>
-    </form>
+   <SearchInput setSearchValue={setSearchValue}/>
     <article className='shadow-md p-4   rounded-md space-y-5'>
     <ShareContacts image={bookImg} caption={"search contact"} detail={"find friends by phone number"}/>
     <ShareContacts image={fbImg} caption={"search contact"} detail={"find contacts via facebook"}/>

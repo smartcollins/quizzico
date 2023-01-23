@@ -19,10 +19,17 @@ import miniSlide4 from "../images/mini-img3.png";
 import miniSlide5 from "../images/mini-img4.png";
 import miniSlide6 from "../images/mini-img2.jpg";
 
-import followImg1 from '../images/know-1.png';
-import followImg2 from '../images/know-2.png';
-import followImg3 from '../images/know-3.png';
-import followImg4 from '../images/know-4.png';
+import followImg1 from "../images/know-1.png";
+import followImg2 from "../images/know-2.png";
+import followImg3 from "../images/know-3.png";
+import followImg4 from "../images/know-4.png";
+
+import discoverImg1 from "../images/discover-1.png";
+import discoverImg2 from "../images/discover-2.png";
+import discoverImg3 from "../images/discover-3.png";
+import discoverImg4 from "../images/discover-4.png";
+import discoverImg5 from "../images/discover-5.png";
+import discoverImg6 from "../images/discover-6.png";
 
 import {
   User,
@@ -51,6 +58,9 @@ export const sliderData = [
   },
 ];
 
+/**
+ * ?This is the data for the account category page that is passed as prop from the account category  page.
+ */
 export const accountCategory = [
   {
     icon: <User size={24} color={"white"} />,
@@ -74,6 +84,9 @@ export const accountCategory = [
   },
 ];
 
+/**
+ * ?This is the data for the workplace page that is passed as prop from the workplace page.
+ */
 export const workplaceCategory = [
   {
     icon: <GraduationCap r size={24} color={"white"} />,
@@ -97,6 +110,9 @@ export const workplaceCategory = [
   },
 ];
 
+/**
+ * ?This is the large images of the home slider or carousel component
+ */
 export const homeCarouselImages = [
   homeSlide1,
   homeSlide2,
@@ -109,6 +125,9 @@ export const homeCarouselImages = [
   homeSlide10,
 ];
 
+/**
+ * ?This is the smaller images beneath the home slider or carousel component
+ */
 export const homeMiniImage = [
   miniSlide1,
   miniSlide2,
@@ -118,9 +137,94 @@ export const homeMiniImage = [
   miniSlide6,
 ];
 
+/**
+ * ?Images for people you may know. This is supposed to come from the backend
+ * ?But let use this data for now
+ */
 export const peopleYouMayKnow = [
-  {image: followImg1, title:"king delee", id:"1", email:"test@test.com", contact:'09030099916'},
-  {image: followImg2, title:"samuel delee", id:"2", email:"sam@test.com", contact:'09030099916'},
-  {image: followImg3, title:"Ben manny", id:"3", email:"oguaju@test.com", contact:'0813253611'}, 
-  {image: followImg4, title:"pinkin vim", id:"4", email:"neche@test.com", contact:'722920026'},
-]
+  {
+    image: followImg1,
+    title: "king delee",
+    id: "1",
+    email: "test@test.com",
+    contact: "09030099916",
+  },
+  {
+    image: followImg2,
+    title: "samuel delee",
+    id: "2",
+    email: "sam@test.com",
+    contact: "09030099916",
+  },
+  {
+    image: followImg3,
+    title: "Ben manny",
+    id: "3",
+    email: "oguaju@test.com",
+    contact: "0813253611",
+  },
+  {
+    image: followImg4,
+    title: "pinkin vim",
+    id: "4",
+    email: "neche@test.com",
+    contact: "722920026",
+  },
+];
+
+export const discoverData = [
+  {
+    image: discoverImg1,
+    miniImage: miniSlide1,
+    timeAgo: "6 months ago",
+    caption: "Smater with Productivity",
+    writer: "Titus Kitamura",
+    played: 1000,
+    id: "6",
+  },
+  {
+    image: discoverImg2,
+    miniImage: miniSlide2,
+    timeAgo: "6 months ago",
+    caption: "Smater with Productivity",
+    writer: "Titus Kitamura",
+    played: 1000,
+    id: "5",
+  },
+  {
+    image: discoverImg3,
+    miniImage: miniSlide3,
+    timeAgo: "6 months ago",
+    caption: "Smater with Productivity",
+    writer: "Titus Kitamura",
+    played: 1000,
+    id: "4",
+  },
+  {
+    image: discoverImg4,
+    miniImage: miniSlide4,
+    timeAgo: "6 months ago",
+    caption: "Smater with Productivity",
+    writer: "Titus Kitamura",
+    played: 1000,
+    id: "3",
+  },
+  {
+    image: discoverImg5,
+    miniImage: miniSlide5,
+    timeAgo: "2 years ago",
+    caption: "Smater with Productivity",
+    writer: "Titus Kitamura",
+    played: 1000,
+    id: "2",
+  },
+  {
+    image: discoverImg6,
+    miniImage: miniSlide6,
+    timeAgo: "2 months ago",
+    caption: "Smater with Productivity",
+    writer: "Titus Kitamura",
+    played: 200,
+    id: "1",
+  },
+];

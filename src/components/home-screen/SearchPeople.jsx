@@ -1,4 +1,4 @@
-const SearchPeople = ({ image, title, id }) => {
+const SearchPeople = ({ image, title }) => {
   const followUser = (e) => {
     e.target.classList.toggle("bg-purple-400");
     e.target.classList.contains("bg-purple-400")
