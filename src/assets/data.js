@@ -19,6 +19,11 @@ import miniSlide4 from "../images/mini-img3.png";
 import miniSlide5 from "../images/mini-img4.png";
 import miniSlide6 from "../images/mini-img2.jpg";
 
+import followImg1 from '../images/know-1.png';
+import followImg2 from '../images/know-2.png';
+import followImg3 from '../images/know-3.png';
+import followImg4 from '../images/know-4.png';
+
 import {
   User,
   Users,
@@ -112,3 +117,10 @@ export const homeMiniImage = [
   miniSlide5,
   miniSlide6,
 ];
+
+export const peopleYouMayKnow = [
+  {image: followImg1, title:"king delee", id:"1", email:"test@test.com", contact:'09030099916'},
+  {image: followImg2, title:"samuel delee", id:"2", email:"sam@test.com", contact:'09030099916'},
+  {image: followImg3, title:"Ben manny", id:"3", email:"oguaju@test.com", contact:'0813253611'}, 
+  {image: followImg4, title:"pinkin vim", id:"4", email:"neche@test.com", contact:'722920026'},
+]

@@ -1,17 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ArrowLeft, CaretRight, MagnifyingGlass  } from "phosphor-react";
 import DiscoverHeader from '../components/home-screen/DiscoverHeader';
+import useDebounce from '../assets/useDecounce';
 
 import bookImg from '../images/book.png';
 import featherImg from '../images/feather.png';
 import fbImg from '../images/fbook.png';
+import { peopleYouMayKnow } from '../assets/data';
+import SearchPeople from '../components/home-screen/SearchPeople';
 
-import followImg1 from '../images/know-1.png';
-import followImg2 from '../images/know-2.png';
-import followImg3 from '../images/know-3.png';
-import followImg4 from '../images/know-4.png';
+
  
 const FindFriends = () => {
+  const [searchValue, setSearchValue] = useState('')
+  const debounceSearch = useDebounce (searchValue , 1000);
+ const keys = ["contact", "email", "title"];
+
+ const search = (data)=>{
+  return data.filter((items)=>
+  keys.some((key)=> items[key].toLowerCase().includes(debounceSearch))
+  )
+ }
+
+
   return (
     <section  className="flex w-full justify-center h-screen pt-5">
     <div className="w-1/2  h-full max-md:w-full px-5 py-4 space-y-5">
@@ -23,7 +34,7 @@ const FindFriends = () => {
     </div>
     <form className='flex items-center bg-red-500 w-full max-md:w-full  bg-[#f5f5f5] px-2 rounded-md overflow-hidden'>
     <MagnifyingGlass size={24} weight="light" />
-        <input type="text" placeholder='Search email, name, or phone number' className='w-full bg-inherit p-3 outline-none'/>
+        <input type="text" placeholder='Search email, name, or phone number' className='w-full bg-inherit p-3 outline-none' onChange={(e)=>setSearchValue(e.target.value)}/>
     </form>
     <article className='shadow-md p-4   rounded-md space-y-5'>
     <ShareContacts image={bookImg} caption={"search contact"} detail={"find friends by phone number"}/>
@@ -34,10 +45,12 @@ const FindFriends = () => {
         <DiscoverHeader caption={"People You may Know"} page={"/"}/>
     </div>
     <div className=''>
-        < PeopleYouMayKnow image={followImg1} name={"Daron Kulikoski"}/>
-        < PeopleYouMayKnow image={followImg2} name={"Maryland Winkles"}/>
-        < PeopleYouMayKnow image={followImg3} name={"Lauralee Quintero"}/>
-        < PeopleYouMayKnow image={followImg4} name={"Alfonzo Schuessler"}/>
+      {
+        search(peopleYouMayKnow).length < 1 ? (<p className='text-center text-xl font-[600] '>User Not Found</p>): search(peopleYouMayKnow).map((data)=>(
+          <SearchPeople {...data} key={data.id}/>
+         ))
+      }
+       
     </div>
   </div>
   </section>
@@ -63,17 +76,5 @@ const ShareContacts = ({image, caption, detail}) => {
   )
 }
 
-const PeopleYouMayKnow = ({image, name}) => {
-  return (
-    <div className='w-full flex items-center capitalize justify-between  py-2'>
-        <div className='pl-3 max-sm:pl-0 rounded-full overflow-hidden'>
-            <img src={image} alt="" />
-        </div>
-        <div className='space-y-2'>
-            <h2 className='text-xl  font-[700]'>{name}</h2>
-        </div>
-     <button className='bg-[#6949ff] w-content px-3 py-1     rounded-[20px] text-white'>Follow</button>
-    </div>
-  )
-}
+
 
