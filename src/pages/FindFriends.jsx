@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { ArrowLeft, CaretRight, MagnifyingGlass  } from "phosphor-react";
+import { ArrowLeft, MagnifyingGlass  } from "phosphor-react";
 import DiscoverHeader from '../components/home-screen/DiscoverHeader';
 import useDebounce from '../assets/useDecounce';
-
+import ShareContacts from '../components/home-screen/ShareContacts';
 import bookImg from '../images/book.png';
 import featherImg from '../images/feather.png';
 import fbImg from '../images/fbook.png';
@@ -18,7 +18,7 @@ const FindFriends = () => {
 
  const search = (data)=>{
   return data.filter((items)=>
-  keys.some((key)=> items[key].toLowerCase().includes(debounceSearch))
+  keys.some((key)=> items[key].toLowerCase().includes(debounceSearch.trim().toLowerCase()))
   )
  }
 
@@ -60,21 +60,7 @@ const FindFriends = () => {
 export default FindFriends;
 
 
-const ShareContacts = ({image, caption, detail}) => {
-  return (
-    <div className='w-full flex items-center capitalize justify-between border-b-2 border-[#f5f5f5] py-4 max-sm:gap-4'>
-        <div className='pl-3 max-sm:pl-0'>
-            <img src={image} alt="" />
-        </div>
-        <div className='space-y-2'>
-            <h2 className='text-xl  font-[700]'>{caption}</h2>
-            <p className='truncate w-[200px] max-sm:w-w-[190px] font-serif text-[18px] text-[grey]'>{detail}</p>
-        </div>
 
-        <CaretRight size={24}/>
-    </div>
-  )
-}
 
 
 
