@@ -7,17 +7,13 @@ import { homeCarouselImages as Sliders }from "../assets/data";
 import { homeMiniImage as miniSliders }from "../assets/data";
 
 const HomeScreen = () => {
-  /**
-   * !Take this component as an OutLet for your navBar page
-   * !insert the link to the differenr pages via the page prop in DiscoverHeader Component
-   */
-  
+ 
   return (
     <div>
       <section className="flex w-full justify-center h-screen pt-5">
         <div className="w-1/2  h-full max-md:w-full px-5 py-4 space-y-10">  
        <div className="w-full">
-       <DiscoverHeader caption={"Discover"} page={"/"}/>
+       <DiscoverHeader caption={"Discover"} page={"/discover"}/>
           <HomeCarousel 
           slide1={<CarouselSections headerOne={"Get smater with"} headerTwo={"productive quizzico"} title={"Titus Katmura"} image={Sliders[0]} miniImg={miniSliders[0]} />}
           slide2={<CarouselSections headerOne={"Great Ideas comes"} headerTwo={"from brilliant mindset"} title={"Alfonzo Schuesster"} image={Sliders[1]} miniImg={miniSliders[2]}/>}
@@ -25,7 +21,7 @@ const HomeScreen = () => {
           />
        </div>
        <div>
-       <DiscoverHeader caption={"Top Collections"} page={"/"}/>
+       <DiscoverHeader caption={"Top Collections"} page={"/discover"}/>
        <TopCollection/>
 
        </div>
