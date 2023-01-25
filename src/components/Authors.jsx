@@ -1,8 +1,8 @@
 import React from 'react';
-import author from '../images/author.jpg.'
-import author2 from '../images/author2.jpg.'
-import author3 from '../images/author3.jpg.'
-import author4 from '../images/author4.jpg.'
+import author from '../images/author.jpg'
+import author2 from '../images/author2.jpg'
+import author3 from '../images/author3.jpg'
+import author4 from '../images/author4.jpg'
 import { ArrowRight } from 'phosphor-react';
 
 
