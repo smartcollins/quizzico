@@ -3,7 +3,6 @@ import Loader from "./components/loader/Loader";
 import Carousel from "./components/Carousel";
 import AccountType from "./components/AccountType";
 import AccountTypePage from "./pages/AccountTypePage";
-import Progress from "./components/Progress";
 import Modal from "./components/Modal";
 import Home from "./pages/Home";
 import {
@@ -15,6 +14,12 @@ import {
 import WorkPlace from "./pages/WorkPlace";
 import ErrorPage from "./pages/ErrorPage";
 import ProgressBar from "./components/ProgressBar";
+import Account from "./components/Account";
+import SignIn from "./pages/SignIn";
+import Forgot from "./pages/Forgot";
+import Confirm from "./pages/Confirm";
+import New from "./pages/New";
+// import { SignIn } from "phosphor-react";
 
 function App() {
   const [spinner, setSpinner] = useState(true);
@@ -29,6 +34,30 @@ function App() {
       path: "/",
       element: <Carousel />,
       errorElement: <ErrorPage />,
+    },
+    {
+      path: "account",
+      element: <Account />,
+      errorElement: <ErrorPage />,
+    },
+    {
+      path: "sign-in",
+      element: <SignIn />,
+      errorElement: <ErrorPage />,
+    },
+    {
+      path: "forgot",
+      element: <Forgot/>,
+      errorElement: <ErrorPage />,
+    },
+    {
+      path: "confirm",
+      element: <Confirm />,
+      errorElement: <ErrorPage />,
+    },
+    {
+      path: "new",
+      element: <New />,
     },
     {
       path: "/home",
@@ -52,12 +81,6 @@ function App() {
     <Loader />
   ) : (
     <div className="App h-screen">
-      {/* <Progress />
-      <Modal
-        visible={true}
-        desc="Sucessful!"
-        txt="Please wait a moment, we are preparing for you..."
-      /> */}
       <RouterProvider router={router} />
     </div>
   );

@@ -19,8 +19,10 @@ const progressWidth = useSelector(barSelection);
       };
 
   return (
-    <section className="flex w-full justify-center h-screen pt-5">
-      <div className="w-1/2  h-full max-md:w-full px-5 py-4 ">
+    // <section className="flex w-full justify-center h-screen pt-5">
+    <section className="flex w-full justify-center h-full">
+      {/* <div className="w-1/2  h-full max-md:w-full px-5 py-4 "> */}
+      <div className="w-1/2  h-full max-md:w-full py-4 ">
       <div className="flex gap-10 items-center">
         <div onClick={() => navigate(-1)}>
           <ArrowLeft size={24} />
