@@ -5,6 +5,7 @@ import AccountType from "./components/AccountType";
 import AccountTypePage from "./pages/AccountTypePage";
 import Progress from "./components/Progress";
 import Modal from "./components/Modal";
+import Home from "./pages/Home";
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -30,6 +31,11 @@ function App() {
       errorElement: <ErrorPage />,
     },
     {
+      path: "/home",
+      element: <Home />,
+      errorElement: <ErrorPage />,
+    },
+    {
       path: "occupation",
       element: <ProgressBar />,
       children: [
@@ -46,12 +52,12 @@ function App() {
     <Loader />
   ) : (
     <div className="App h-screen">
-      <Progress />
+      {/* <Progress />
       <Modal
         visible={true}
         desc="Sucessful!"
         txt="Please wait a moment, we are preparing for you..."
-      />
+      /> */}
       <RouterProvider router={router} />
     </div>
   );
