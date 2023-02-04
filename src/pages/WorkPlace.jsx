@@ -17,7 +17,7 @@ const WorkPlace = () => {
         mapContent={workplaceCategory}
         accountHeader={"Describe a workplace that suits you"}
         emoji={"💼"}
-        pathName={"/"}
+        pathName={"/account"}
         handleProgessWidth={handleProgessWidth}
       />
     </>

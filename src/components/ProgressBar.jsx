@@ -1,16 +1,21 @@
+import React from "react";
 import {ArrowLeft  } from "phosphor-react";
-import React, { useState } from "react";
-
 import {  useSelector } from "react-redux";
 import {barSelection} from "../redux/bar-features/barSlice";
-
-import { Link, Outlet, useNavigate } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
+import { useDispatch} from "react-redux";
+import { decrementByamount } from "../redux/bar-features/barSlice";
 
 const ProgressBar = () => {
 const progressWidth = useSelector(barSelection);   
+const dispatch = useDispatch();
   const navigate = useNavigate();
-  console.log(progressWidth);
 
+ const handlePrev = ()=>{
+  dispatch(decrementByamount())
+  navigate(-1)
+ }
+ 
     const progressStyle = () => {
         return {
           width: `${progressWidth}%`,
@@ -24,7 +29,7 @@ const progressWidth = useSelector(barSelection);
       {/* <div className="w-1/2  h-full max-md:w-full px-5 py-4 "> */}
       <div className="w-1/2  h-full max-md:w-full py-4 ">
       <div className="flex gap-10 items-center">
-        <div onClick={() => navigate(-1)}>
+        <div onClick={handlePrev}>
           <ArrowLeft size={24} />
     
         </div>

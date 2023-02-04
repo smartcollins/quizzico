@@ -13,9 +13,12 @@ export const barSlice = createSlice({
     incrementByamount:(state) =>{
       state.progressBar += 25;
     },
+    decrementByamount:(state) =>{
+    state.progressBar = state.progressBar > 0 && state.progressBar - 25
+    },
   },
 });
 
-export const { increment, incrementByamount } = barSlice.actions;
+export const { increment, incrementByamount, decrementByamount } = barSlice.actions;
 export const barSelection = (state) => state.progressBar.progressBar;
 export default barSlice.reducer;

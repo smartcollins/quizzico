@@ -1,8 +1,12 @@
 import { useEffect, useState } from "react";
+import {createBrowserRouter, RouterProvider} from "react-router-dom";
+
 import Loader from "./components/loader/Loader";
 import Carousel from "./components/Carousel";
-import AccountType from "./components/AccountType";
 import AccountTypePage from "./pages/AccountTypePage";
+import HomeScreen from "./pages/HomeScreen";
+import FindFriends from "./pages/FindFriends";
+import DiscoverPage from "./components/home-screen/DiscoverPage";
 import Modal from "./components/Modal";
 import Home from "./pages/Home";
 import {
@@ -25,7 +29,7 @@ function App() {
   const [spinner, setSpinner] = useState(true);
 
   useEffect(() => {
-    const timeOut = setTimeout(() => setSpinner(false), 3000);
+    const timeOut = setTimeout(() => setSpinner(false), 2500);
     return () => timeOut;
   }, []);
 
@@ -74,6 +78,22 @@ function App() {
           element: <WorkPlace />,
         },
       ],
+    },
+    {
+      path: "account",
+      element: <Account />,
+    },
+    {
+      path: "home-screen",
+      element: <HomeScreen/>,
+    },
+    {
+      path: "find-friends",
+      element: <FindFriends/>,
+    },
+    {
+      path: "discover",
+      element: <DiscoverPage/>,
     },
   ]);
 

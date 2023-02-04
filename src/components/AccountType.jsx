@@ -1,14 +1,7 @@
-import { ArrowLeft } from "phosphor-react";
+
 import { Link } from "react-router-dom";
 
 const AccountType = ({ mapContent, accountHeader, emoji, pathName, handleProgessWidth }) => {
-  /**
-   * *created a progress bar for the top section progress
-   * todo: i guess you try to install better comment extensioin to write and view my comment, for easy understanding
-   * ?this progress bar should be moved to the redux section to be accessible to the create account page. what do you thing?
-   * !kkdddkdkdk
-   * @returns
-   */
 
   const renderCategories = mapContent.map(({ icon, title, color }) => (
     <li key={title} className="hover:bg-zinc-100 rounded-xl" onClick={handleProgessWidth}>
@@ -26,6 +19,7 @@ const AccountType = ({ mapContent, accountHeader, emoji, pathName, handleProgess
     </li>
   ));
 
+
   return (
     <>
       <h2 className="text-center font text-3xl font-[700] max-sm:text-2xl mt-8 mb-4">
@@ -36,14 +30,15 @@ const AccountType = ({ mapContent, accountHeader, emoji, pathName, handleProgess
       </p>
       <ul className="space-y-5 my-10">{renderCategories}</ul>
       <div className="flex justify-center mt-5">
-        <Link className=" w-full">
+        <Link to={pathName} className=" w-full">
         <button
           className="shadow-sm shadow-[#bbb] px-3  w-full uppercase text-sm
          text-[#6949ff]  py-3 rounded-[30px] block bg-[#f0edff] 
          hover:opacity-75 hover:text-[13px]"
         >
           skip
-        </button> </Link>
+        </button> 
+        </Link>
       </div>
     </>
   );
