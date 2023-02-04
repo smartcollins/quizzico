@@ -4,6 +4,7 @@ import Carousel from "./components/Carousel";
 import AccountType from "./components/AccountType";
 import AccountTypePage from "./pages/AccountTypePage";
 import Modal from "./components/Modal";
+import Home from "./pages/Home";
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -57,6 +58,10 @@ function App() {
     {
       path: "new",
       element: <New />,
+    },
+    {
+      path: "/home",
+      element: <Home />,
       errorElement: <ErrorPage />,
     },
     {
@@ -76,11 +81,6 @@ function App() {
     <Loader />
   ) : (
     <div className="App h-screen">
-      {/* <Modal
-        visible={true}
-        desc="Sucessful!"
-        txt="Please wait a moment, we are preparing for you..."
-      /> */}
       <RouterProvider router={router} />
     </div>
   );
