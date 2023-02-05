@@ -7,7 +7,6 @@ import AccountTypePage from "./pages/AccountTypePage";
 import HomeScreen from "./pages/HomeScreen";
 import FindFriends from "./pages/FindFriends";
 import DiscoverPage from "./components/home-screen/DiscoverPage";
-// import Modal from "./components/Modal";
 import Home from "./pages/Home";
 import WorkPlace from "./pages/WorkPlace";
 import ErrorPage from "./pages/ErrorPage";
@@ -17,7 +16,8 @@ import SignIn from "./pages/SignIn";
 import Forgot from "./pages/Forgot";
 import Confirm from "./pages/Confirm";
 import New from "./pages/New";
-// import { SignIn } from "phosphor-react";
+import { ROUTE_PATHS } from "./assets/data_two";
+
 
 function App() {
   const [spinner, setSpinner] = useState(true);
@@ -29,64 +29,64 @@ function App() {
 
   const router = createBrowserRouter([
     {
-      path: "/",
+      path: ROUTE_PATHS.INDEX,
       element: <Carousel />,
       errorElement: <ErrorPage />,
     },
     {
-      path: "account",
+      path: ROUTE_PATHS.ACCOUNT,
       element: <Account />,
       errorElement: <ErrorPage />,
     },
     {
-      path: "sign-in",
+      path: ROUTE_PATHS.SIGNIN,
       element: <SignIn />,
       errorElement: <ErrorPage />,
     },
     {
-      path: "forgot",
+      path: ROUTE_PATHS.FORGOT,
       element: <Forgot/>,
       errorElement: <ErrorPage />,
     },
     {
-      path: "confirm",
+      path: ROUTE_PATHS.CONFIRM,
       element: <Confirm />,
       errorElement: <ErrorPage />,
     },
     {
-      path: "new",
+      path: ROUTE_PATHS.NEW,
       element: <New />,
     },
     {
-      path: "/home",
+      path: ROUTE_PATHS.HOME,
       element: <Home />,
       errorElement: <ErrorPage />,
     },
     {
-      path: "occupation",
+      path: ROUTE_PATHS.OCCUPATION,
       element: <ProgressBar />,
       children: [
         { index: true, element: <AccountTypePage /> },
         {
-          path: "workplace",
+          path: ROUTE_PATHS.WORKPLACE,
           element: <WorkPlace />,
         },
       ],
     },
     {
-      path: "account",
+      path: ROUTE_PATHS.ACCOUNT,
       element: <Account />,
     },
     {
-      path: "home-screen",
+      path: ROUTE_PATHS.HOME,
       element: <HomeScreen/>,
     },
     {
-      path: "find-friends",
+      path: ROUTE_PATHS.FINDFRIENDS,
       element: <FindFriends/>,
     },
     {
-      path: "discover",
+      path: ROUTE_PATHS.DISCOVER,
       element: <DiscoverPage/>,
     },
   ]);

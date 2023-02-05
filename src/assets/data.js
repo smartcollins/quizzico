@@ -89,7 +89,7 @@ export const accountCategory = [
  */
 export const workplaceCategory = [
   {
-    icon: <GraduationCap r size={24} color={"white"} />,
+    icon: <GraduationCap size={24} color={"white"} />,
     color: "#2e72fd",
     title: "school",
   },
