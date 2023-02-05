@@ -28,7 +28,7 @@ const AccountType = ({ mapContent, accountHeader, emoji, pathName, handleProgess
       <p className="text-center font-extralight">
         You can skip if you are not sure.
       </p>
-      <ul className="space-y-5 my-10">{renderCategories}</ul>
+      <ul className="space-y-5 my-10 px-5">{renderCategories}</ul>
       <div className="flex justify-center mt-5">
         <Link to={pathName} className=" w-full">
         <button

@@ -1,14 +1,8 @@
-import { Suspense, useEffect, useState } from "react";
+import {Suspense, useEffect, useState, lazy } from "react";
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
-
-import Loader from "./components/loader/Loader";
-import Carousel from "./components/Carousel";
-import AccountTypePage from "./pages/AccountTypePage";
 import HomeScreen from "./pages/HomeScreen";
 import FindFriends from "./pages/FindFriends";
 import DiscoverPage from "./components/home-screen/DiscoverPage";
-import Home from "./pages/Home";
-import WorkPlace from "./pages/WorkPlace";
 import ErrorPage from "./pages/ErrorPage";
 import ProgressBar from "./components/ProgressBar";
 import Account from "./components/Account";
@@ -17,6 +11,14 @@ import Forgot from "./pages/Forgot";
 import Confirm from "./pages/Confirm";
 import New from "./pages/New";
 import { ROUTE_PATHS } from "./assets/data_two";
+import Loader from "./components/loader/Loader";
+
+
+const Home =  lazy(()=> import("./pages/Home" ));
+const WorkPlace = lazy(()=> import('./pages/WorkPlace'));
+const AccountTypePage = lazy(()=> import('./pages/AccountTypePage'));
+const Carousel =  lazy(()=> import('./components/Carousel'));
+
 
 
 function App() {
@@ -91,11 +93,11 @@ function App() {
     },
   ]);
 
-  return spinner ? (
-    <Loader />
-  ) : (
+  return(
     <div className="App h-screen">
+      <Suspense fallback={<Loader />}>
       <RouterProvider router={router} />
+      </Suspense>
     </div>
   );
 }

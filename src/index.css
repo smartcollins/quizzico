@@ -29,8 +29,16 @@ body {
   width: 20px !important;
   border-radius: 20px;
   background-color: #6949ff;
+
 }
 .font{
 font-family: 'Raleway', sans-serif;
 font-family: 'STIX Two Text', serif;
 }
+
+.parallelogram::before {
+  
+  transform: skew(20deg);
+  transform-origin: left bottom;
+}
+
