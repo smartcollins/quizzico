@@ -14,7 +14,7 @@ const New = ()=>{
                 btn_txt="Continue"
             />
             <Modal
-                visible={true}
+                // visible={true}
                 desc="Welcome Back!"
                 txt="You have successfully reset and created a new password."
                 btn={true}

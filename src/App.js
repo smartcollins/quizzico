@@ -1,20 +1,16 @@
 import { useEffect, useState } from "react";
-import {createBrowserRouter, RouterProvider} from "react-router-dom";
 
 import Loader from "./components/loader/Loader";
 import Carousel from "./components/Carousel";
 import AccountTypePage from "./pages/AccountTypePage";
-import HomeScreen from "./pages/HomeScreen";
 import FindFriends from "./pages/FindFriends";
 import DiscoverPage from "./components/home-screen/DiscoverPage";
-import Modal from "./components/Modal";
 import Home from "./pages/Home";
 import {
   createBrowserRouter,
-  createRoutesFromElements,
   RouterProvider,
-  Route,
 } from "react-router-dom";
+
 import WorkPlace from "./pages/WorkPlace";
 import ErrorPage from "./pages/ErrorPage";
 import ProgressBar from "./components/ProgressBar";
@@ -82,10 +78,6 @@ function App() {
     {
       path: "account",
       element: <Account />,
-    },
-    {
-      path: "home-screen",
-      element: <HomeScreen/>,
     },
     {
       path: "find-friends",

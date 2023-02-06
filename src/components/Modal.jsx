@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 const Modal = ({visible,desc,txt,btn,btn_txt,duty})=>{
-    const navigate =useNavigate();
+    const navigate = useNavigate();
 
     return(
         <div>

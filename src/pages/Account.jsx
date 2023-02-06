@@ -8,7 +8,7 @@ const Account = () => {
         
         <Progress />
     <Modal
-      visible={true}
+      // visible={true}
       desc="Sucessful!"
       txt="Please wait a moment, we are preparing for you..."
     />t</div>

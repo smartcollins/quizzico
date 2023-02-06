@@ -5,7 +5,7 @@ import { House,SquaresFour,Plus,User } from 'phosphor-react';
 
 const BtmNavbar = ()=>{
     return(
-        <div className='flex items-center justify-around inset-0 fixed bottom-0'>
+        <div className='flex items-center justify-around fixed bottom-0 w-full bg-white py-4 '>
             <House size={30} weight="fill" />
             <SquaresFour size={30} weight="light" />
             <img className='h-12' src={logo} alt="logo"/>

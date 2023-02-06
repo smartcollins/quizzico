@@ -10,7 +10,6 @@ import { GoogleLogo, AppleLogo } from "phosphor-react";
 const Account = () => {
   const [account,setAccount] = useState(false);
   const [signup,setSignup] = useState(false);
-  const [home,setHome] = useState(false);
 
   const dispatch = useDispatch();
 
@@ -24,10 +23,10 @@ const Account = () => {
     dispatch(incrementByamount())
   }
 
-  useEffect(() => {
-    const timeOut = setTimeout(() => setSignup(true), 3000);
-    return () => timeOut;
-  }, []);
+  // useEffect(() => {
+  //   const timeOut = setTimeout(() => setSignup(true), 3000);
+  //   return () => timeOut;
+  // }, []);
 
   return (
     <div className="text-center px-2">
