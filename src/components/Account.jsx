@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState } from "react";
 import Inputs from "./Inputs";
 import ProgressBar from "./ProgressBar";
 import Modal from "./Modal";
@@ -22,11 +22,6 @@ const Account = () => {
     setSignup(true)
     dispatch(incrementByamount())
   }
-
-  // useEffect(() => {
-  //   const timeOut = setTimeout(() => setSignup(true), 3000);
-  //   return () => timeOut;
-  // }, []);
 
   return (
     <div className="text-center px-2">
@@ -85,9 +80,9 @@ const Account = () => {
       {
         signup&&
         <Modal
-          visible={true}
           desc="Sucessful!"
           txt="Please wait a moment, we are preparing for you..."
+          duty='/home'
       />
       }
     </div>
