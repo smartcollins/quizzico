@@ -40,7 +40,7 @@ const HomeScreen = () => {
           />
         </div>
         <div>
-        <DiscoverHeader caption={"Top Pics"} page={"/"}/>
+        <DiscoverHeader caption={"Top Picks"} page={"/"}/>
         <HomeCarousel 
           slide1={<CarouselSections headerOne={"Get smater with"} headerTwo={"productive quizzico"} title={"Titus Katmura"} image={Sliders[3]} miniImg={miniSliders[0]}/>}
           slide2={<CarouselSections headerOne={"Great Ideas comes"} headerTwo={"from brilliant mindset"} title={"Alfonzo Schuesster"} image={Sliders[7]} miniImg={miniSliders[5]}/>}
