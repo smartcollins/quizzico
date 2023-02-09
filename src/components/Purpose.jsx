@@ -1,12 +1,15 @@
 import React from 'react';
 import Inputs from './Inputs';
 import { ArrowLeft } from 'phosphor-react';
+import { Link } from 'react-router-dom';
 
 
-const Purpose = ({txt,extra,txt2,pass,forget,mail,mail_txt,mail_txt2,btn_txt,new_pass})=>{
+const Purpose = ({place,txt,extra,txt2,pass,forget,mail,mail_txt,mail_txt2,btn_txt,new_pass})=>{
     return(
         <div>
-            <ArrowLeft size={30} color="#000000" weight="light" />
+            <Link to={place}>
+                <ArrowLeft  size={30} color="#000000" weight="light" />
+            </Link>
             <p className=' font-medium text-lg my-4'>{txt}</p>
             {extra&&<p>{txt2}</p>}
             {
