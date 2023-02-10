@@ -6,7 +6,7 @@ export const ROUTE_PATHS = {
     CONFIRM: "/confirm",
     OCCUPATION: "/occupation",
     WORKPLACE: "workplace",
-    HOME: "/home-screen",
+    HOME: "/home",
     FINDFRIENDS: "/find-friends",
     DISCOVER: "/discover",
     NEW:"/new"

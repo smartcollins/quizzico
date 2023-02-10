@@ -1,5 +1,4 @@
-import { useEffect } from "react";
-import React from "react";
+import React, { useEffect } from "react"; 
 import {ArrowLeft } from "phosphor-react";
 import {  useSelector } from "react-redux";
 import {barSelection} from "../redux/bar-features/barSlice";

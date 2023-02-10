@@ -29,22 +29,29 @@ const FindFriends = () => {
           <div className="text-2xl capitalize font-[600]">find friends</div>
         </div>
         <SearchInput setSearchValue={setSearchValue} />
-        <article className="shadow-md p-4   rounded-md space-y-5">
+        <article className="shadow-md p-4   rounded-[25px] space-y-5 shadow-lg">
+          <div className="border-b-2 border-[#f5f5f5] py-4">
           <ShareContacts
             image={bookImg}
             caption={"search contact"}
             detail={"find friends by phone number"}
           />
-          <ShareContacts
+          </div>
+          
+         <div className="border-b-2 border-[#f5f5f5] py-4">
+         <ShareContacts
             image={fbImg}
             caption={"search contact"}
             detail={"find contacts via facebook"}
           />
+         </div>
+         <div className="py-4">
           <ShareContacts
             image={featherImg}
             caption={"search contact"}
             detail={"invite friends to play together"}
           />
+         </div>
         </article>
         <div>
           <DiscoverHeader caption={"People You may Know"} page={"/"} />

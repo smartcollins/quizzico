@@ -4,10 +4,9 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-
-import { sliderData } from "../assets/data";
+import { sliderData } from "../../assets/data";
 import GetStartedButton from "./GetStartedButton";
-import Layout from "./Layout";
+import Layout from "../Layout";
 
 const Carousel = () => {
   const settings = {

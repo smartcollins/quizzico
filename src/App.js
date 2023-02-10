@@ -1,6 +1,5 @@
 import {Suspense, useEffect, useState, lazy } from "react";
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
-import HomeScreen from "./pages/HomeScreen";
 import FindFriends from "./pages/FindFriends";
 import DiscoverPage from "./components/home-screen/DiscoverPage";
 import ErrorPage from "./pages/ErrorPage";
@@ -14,10 +13,10 @@ import { ROUTE_PATHS } from "./assets/data_two";
 import Loader from "./components/loader/Loader";
 
 
-const Home =  lazy(()=> import("./pages/Home" ));
+const HomeScreen =  lazy(()=> import("./pages/HomeScreen"));
 const WorkPlace = lazy(()=> import('./pages/WorkPlace'));
 const AccountTypePage = lazy(()=> import('./pages/AccountTypePage'));
-const Carousel =  lazy(()=> import('./components/Carousel'));
+const Carousel =  lazy(()=> import('./components/intro/Carousel'));
 
 
 
@@ -61,7 +60,7 @@ function App() {
     },
     {
       path: ROUTE_PATHS.HOME,
-      element: <Home />,
+      element: <HomeScreen />,
       errorElement: <ErrorPage />,
     },
     {
@@ -78,10 +77,6 @@ function App() {
     {
       path: ROUTE_PATHS.ACCOUNT,
       element: <Account />,
-    },
-    {
-      path: ROUTE_PATHS.HOME,
-      element: <HomeScreen/>,
     },
     {
       path: ROUTE_PATHS.FINDFRIENDS,
