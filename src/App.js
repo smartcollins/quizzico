@@ -90,6 +90,11 @@ function App() {
     {
       path: ROUTE_PATHS.TOPAUTHORSID,
       element: <EachUser/>,
+      children: [
+        {path: ROUTE_PATHS.USERBOARD,
+        element: <TopAuthors/>,
+      }
+      ]
     },
   ]);
 

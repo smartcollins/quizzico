@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowLeft, X, MagnifyingGlass } from 'phosphor-react';
-import { useParams } from 'react-router-dom';
+import { Outlet, useParams, Link } from 'react-router-dom';
 import { peopleYouMayKnow } from '../assets/data';
 import SearchPeople from './home-screen/SearchPeople';
 import UserBoard from './UserBoard';
@@ -38,6 +38,28 @@ export const EachUser = () => {
           <UserBoard {...userItems[0]}/>
           <UserBoard {...userItems[1]}/>
         </div>
+        <div className='grid grid-cols-3 gap-3'>
+        <button
+          className={ `w-content px-4 py-1 rounded-[20px] bg-[#6949ff] text-white border-2 border-[#6949ff] `}
+         
+        >
+          Quizzico
+        </button>
+        <Link
+        to={`/topAuthor/${title}/userCollection`}
+          className={ `w-content px-4 py-1 rounded-[20px] bg-[#6949ff] text-white border-2 border-[#6949ff] `}
+         
+        >
+          Collections
+        </Link>
+        <button
+          className={ `w-content px-4 py-1 rounded-[20px] bg-[#6949ff] text-white border-2 border-[#6949ff] border-none `}
+         
+        >
+          About
+        </button>
+        </div>
+        <Outlet/>
       </div>
     </section>
   )
