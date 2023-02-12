@@ -12,5 +12,7 @@ export const    ROUTE_PATHS = {
     NEW:"/new",
     TOPAUTHORS: "/topAuthor",
     TOPAUTHORSID:"/topAuthor/:title",
-    USERBOARD:"/topAuthor/:title/userCollection"
+    USERQUIZZO:"/topAuthor/:title/userQuizzo",
+    USERCOLLECTION:"/topAuthor/:title/userCollection",
+    USERABOUT:"/topAuthor/:title/userAbout",
 }

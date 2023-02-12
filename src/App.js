@@ -14,6 +14,8 @@ import Loader from "./components/loader/Loader";
 import TopAuthors from "./pages/TopAuthors";
 import { EachUser } from "./components/EachUser";
 import UserQuizzo from "./pages/UserQuizzo";
+import UserCollection from "./pages/UserCollection";
+import UserAbout from "./pages/UserAbout";
 
 
 const HomeScreen =  lazy(()=> import("./pages/HomeScreen"));
@@ -93,8 +95,16 @@ function App() {
       element: <EachUser/>,
       children: [
         {index: true,
-        path: ROUTE_PATHS.USERBOARD,
+        path: ROUTE_PATHS.USERQUIZZO,
         element: <UserQuizzo/>
+      },
+       {
+        path: ROUTE_PATHS.USERCOLLECTION,
+        element: <UserCollection/>
+      },
+       {
+        path: ROUTE_PATHS.USERABOUT,
+        element: <UserAbout/>
       }
       ]
     },

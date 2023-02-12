@@ -4,6 +4,7 @@ import { Outlet, useParams, Link } from 'react-router-dom';
 import { peopleYouMayKnow } from '../assets/data';
 import SearchPeople from './home-screen/SearchPeople';
 import UserBoard from './UserBoard';
+import { useState } from 'react';
 
 export const EachUser = () => {
   const {title} = useParams()
@@ -39,26 +40,9 @@ export const EachUser = () => {
           <UserBoard {...userItems[1]}/>
         </div>
         <div className='grid grid-cols-3 gap-3'>
-        <Link
-        to={`/topAuthor/${title}/userCollection`}
-          className={ `w-content px-4 py-1 rounded-[20px] bg-[#6949ff] text-white border-2 border-[#6949ff] `}
-         
-        >
-          Quizzico
-        </Link>
-        <Link
-        to={`/topAuthor/${title}/userCollection`}
-          className={ `w-content px-4 py-1 rounded-[20px] bg-[#6949ff] text-white border-2 border-[#6949ff] text-center`}
-         
-        >
-          Collections
-        </Link>
-        <Link
-        to={`/topAuthor/${title}/userCollection`}
-          className={ `w-content px-4 py-1 rounded-[20px] bg-[#6949ff] text-white border-2 border-[#6949ff] border-none `}
-        >
-          About
-        </Link>
+        <EachULink path={`/topAuthor/${title}/userQuizzo`} text={" Quizzico"} targetId={"quiz"}/>
+        <EachULink path={`/topAuthor/${title}/userCollection`} text={"Collections"} targetId={"collection"}/>
+        <EachULink path={`/topAuthor/${title}/userAbout`} text={"About"} targetId={"about"}/>
         </div>
        <div className='w-full'>
        <Outlet/>
@@ -67,3 +51,27 @@ export const EachUser = () => {
     </section>
   )
 }
+
+export const EachULink = ({path, text, targetId}) => {
+  const [handler, setHandler] = useState(null);
+  const [btn, setBtn] = useState(null);
+ 
+  const btnHandler = (e)=>{
+  setHandler(handler === e.target.id ? null : e.target.id)
+  setBtn(handler === e.target.id ? null : 'g-[#6949ff]')
+  console.log(btn);
+  }
+  // }bg-[#6949ff] text-white
+  return (
+    <Link
+    onClick={btnHandler}
+    id = {targetId}
+    to={path} 
+      className={ `text-center w-content px-3 font-semibold py-1 rounded-[20px] 
+       border-spacing-5 ${handler === targetId ?'bg-[#6949ff] text-white' : 'text-[#6949ff] bg-white border-2 border-[#6949ff]'}`}
+    >
+     {text}
+    </Link>
+  )
+}
+
