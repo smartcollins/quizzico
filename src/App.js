@@ -1,7 +1,7 @@
 import {Suspense, lazy } from "react";
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import FindFriends from "./pages/FindFriends";
-import DiscoverPage from "./components/home-screen/DiscoverPage";
+import DiscoverPage from "./pages/DiscoverPage";
 import ErrorPage from "./pages/ErrorPage";
 import ProgressBar from "./components/ProgressBar";
 import Account from "./components/Account";
@@ -13,6 +13,7 @@ import { ROUTE_PATHS } from "./assets/data_two";
 import Loader from "./components/loader/Loader";
 import TopAuthors from "./pages/TopAuthors";
 import { EachUser } from "./components/EachUser";
+import UserQuizzo from "./pages/UserQuizzo";
 
 
 const HomeScreen =  lazy(()=> import("./pages/HomeScreen"));
@@ -91,8 +92,9 @@ function App() {
       path: ROUTE_PATHS.TOPAUTHORSID,
       element: <EachUser/>,
       children: [
-        {path: ROUTE_PATHS.USERBOARD,
-        element: <TopAuthors/>,
+        {index: true,
+        path: ROUTE_PATHS.USERBOARD,
+        element: <UserQuizzo/>
       }
       ]
     },

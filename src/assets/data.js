@@ -186,15 +186,7 @@ export const discoverData = [
     played: 5600,
     id: "6",
   },
-  {
-    image: discoverImg2,
-    miniImage: miniSlide2,
-    timeAgo: "6 months ago",
-    caption: "great ideas comes from experience",
-    writer: "Alfonzo Schuessler",
-    played: 10300,
-    id: "5",
-  },
+  
   {
     image: discoverImg3,
     miniImage: miniSlide3,

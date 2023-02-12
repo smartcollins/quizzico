@@ -39,27 +39,30 @@ export const EachUser = () => {
           <UserBoard {...userItems[1]}/>
         </div>
         <div className='grid grid-cols-3 gap-3'>
-        <button
-          className={ `w-content px-4 py-1 rounded-[20px] bg-[#6949ff] text-white border-2 border-[#6949ff] `}
-         
-        >
-          Quizzico
-        </button>
         <Link
         to={`/topAuthor/${title}/userCollection`}
           className={ `w-content px-4 py-1 rounded-[20px] bg-[#6949ff] text-white border-2 border-[#6949ff] `}
          
         >
-          Collections
+          Quizzico
         </Link>
-        <button
-          className={ `w-content px-4 py-1 rounded-[20px] bg-[#6949ff] text-white border-2 border-[#6949ff] border-none `}
+        <Link
+        to={`/topAuthor/${title}/userCollection`}
+          className={ `w-content px-4 py-1 rounded-[20px] bg-[#6949ff] text-white border-2 border-[#6949ff] text-center`}
          
         >
+          Collections
+        </Link>
+        <Link
+        to={`/topAuthor/${title}/userCollection`}
+          className={ `w-content px-4 py-1 rounded-[20px] bg-[#6949ff] text-white border-2 border-[#6949ff] border-none `}
+        >
           About
-        </button>
+        </Link>
         </div>
-        <Outlet/>
+       <div className='w-full'>
+       <Outlet/>
+       </div>
       </div>
     </section>
   )
