@@ -1,4 +1,4 @@
-import {Suspense, useEffect, useState, lazy } from "react";
+import {Suspense, lazy } from "react";
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import FindFriends from "./pages/FindFriends";
 import DiscoverPage from "./components/home-screen/DiscoverPage";
@@ -11,6 +11,8 @@ import Confirm from "./pages/Confirm";
 import New from "./pages/New";
 import { ROUTE_PATHS } from "./assets/data_two";
 import Loader from "./components/loader/Loader";
+import TopAuthors from "./pages/TopAuthors";
+import { EachUser } from "./components/EachUser";
 
 
 const HomeScreen =  lazy(()=> import("./pages/HomeScreen"));
@@ -21,12 +23,7 @@ const Carousel =  lazy(()=> import('./components/intro/Carousel'));
 
 
 function App() {
-  const [spinner, setSpinner] = useState(true);
-
-  useEffect(() => {
-    const timeOut = setTimeout(() => setSpinner(false), 2500);
-    return () => timeOut;
-  }, []);
+ 
 
   const router = createBrowserRouter([
     {
@@ -85,6 +82,14 @@ function App() {
     {
       path: ROUTE_PATHS.DISCOVER,
       element: <DiscoverPage/>,
+    },
+    {
+      path: ROUTE_PATHS.TOPAUTHORS,
+      element: <TopAuthors/>,
+    },
+    {
+      path: ROUTE_PATHS.TOPAUTHORSID,
+      element: <EachUser/>,
     },
   ]);
 

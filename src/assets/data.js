@@ -148,6 +148,7 @@ export const peopleYouMayKnow = [
     id: "1",
     email: "test@test.com",
     contact: "09030099916",
+    verify: true,
   },
   {
     image: followImg2,
@@ -155,13 +156,15 @@ export const peopleYouMayKnow = [
     id: "2",
     email: "sam@test.com",
     contact: "09030099916",
+    verify: false,
   },
   {
     image: followImg3,
-    title: "Ben manny",
+    title: "ben manny",
     id: "3",
     email: "oguaju@test.com",
     contact: "0813253611",
+    verify: false,
   },
   {
     image: followImg4,
@@ -169,6 +172,7 @@ export const peopleYouMayKnow = [
     id: "4",
     email: "neche@test.com",
     contact: "722920026",
+    verify: true,
   },
 ];
 

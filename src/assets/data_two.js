@@ -1,4 +1,4 @@
-export const ROUTE_PATHS = {
+export const    ROUTE_PATHS = {
     INDEX:"/",
     ACCOUNT: "/account",
     SIGNIN: "/sign-in",
@@ -9,6 +9,7 @@ export const ROUTE_PATHS = {
     HOME: "/home",
     FINDFRIENDS: "/find-friends",
     DISCOVER: "/discover",
-    NEW:"/new"
-
+    NEW:"/new",
+    TOPAUTHORS: "/topAuthor",
+    TOPAUTHORSID:"/topAuthor/:title"
 }

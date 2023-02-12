@@ -30,10 +30,10 @@ const DiscoverPage = () => {
             </div>
             <div className="text-2xl capitalize font-[600]">Discover</div>
           </div>
-          <dov className="cursor-pointer" onClick={handleSearchIcon}>
+          <div className="cursor-pointer" onClick={handleSearchIcon}>
             {dropAction? <X size={24}/> : <MagnifyingGlass size={24} />}
             
-          </dov>
+          </div>
         </nav>
         {
             dropAction && <SearchInput setSearchValue={setSearchValue} />

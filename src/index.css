@@ -16,7 +16,9 @@ body {
 }
 .slick-arrow {
   display: none !important;
+
 }
+
 .slick-dots li button::before {
   content: "" !important;
   background-color: black;

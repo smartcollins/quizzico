@@ -29,7 +29,7 @@ const FindFriends = () => {
           <div className="text-2xl capitalize font-[600]">find friends</div>
         </div>
         <SearchInput setSearchValue={setSearchValue} />
-        <article className="shadow-md p-4   rounded-[25px] space-y-5 shadow-lg">
+        <article className="p-4  rounded-[25px] space-y-5 shadow-lg">
           <div className="border-b-2 border-[#f5f5f5] py-4">
           <ShareContacts
             image={bookImg}
