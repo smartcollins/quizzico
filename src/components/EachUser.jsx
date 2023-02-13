@@ -40,7 +40,7 @@ export const EachUser = () => {
     },
   ];
 
-  const [successfull, error, cli] = useShareApi({
+  const [successfull, error, btnShare] = useShareApi({
     title: "Quizzo",
     text: "Join quizzo - the fun, free way to learn",
     url: "https://github.com/Elochukwu3",
@@ -58,7 +58,7 @@ export const EachUser = () => {
           </Link>
 
           <div className="cursor-pointer flex space-x-3 ">
-            <div className={iconsHover} onClick={cli}>
+            <div className={iconsHover} onClick={btnShare}>
               <CloudArrowUp size={24} />
             </div>
             <div className={iconsHover}>
