@@ -31,6 +31,11 @@ import discoverImg4 from "../images/discover-4.png";
 import discoverImg5 from "../images/discover-5.png";
 import discoverImg6 from "../images/discover-6.png";
 
+import author from '../images/author.jpg'
+import author2 from '../images/author2.jpg'
+import author3 from '../images/author3.jpg'
+import author4 from '../images/author4.jpg'
+
 import {
   User,
   Users,
@@ -228,3 +233,30 @@ export const discoverData = [
     id: "1",
   },
 ];
+
+
+export const author = [{
+  img: author,
+  name: "Rayford"
+},{
+  img: author2,
+  name: "Wilard"
+},{
+  img: author3,
+  name: "Hannah"
+},{
+  img: author4,
+  name: "Geoffrey"
+},{
+  img: author,
+  name: "Hoseh"
+},{
+  img: author2,
+  name: "Auora"
+},{
+  img: author3,
+  name: "Jasmine"
+},{
+  img: author,
+  name: "Saliem"
+}]
