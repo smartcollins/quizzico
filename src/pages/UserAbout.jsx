@@ -1,4 +1,4 @@
-import { FacebookLogo, Globe, InstagramLogo, PinterestLogo, TwitchLogo } from "phosphor-react";
+import { FacebookLogo, Globe, InstagramLogo, PinterestLogo, TwitchLogo, DiscordLogo } from "phosphor-react";
 import React from "react";
 
 const UserAbout = () => {
@@ -14,13 +14,13 @@ const UserAbout = () => {
         magnam eius et ipsa error id, iusto totam animi doloremque eum cum
         molestiae voluptates quia, debitis illo est nulla! Temporibus?
       </p>
-      <div className="flex gap-1 shadow-md w-fit space-x-4 py-3 px-2">
+      <div className="flex shadow-md w-fit space-x-3 py-3 px-2">
         <Globe size={24} color="#6949ff" weight="fill" className="cursor-pointer"/>
         <TwitchLogo size={24} color="#6949ff" weight="fill" className="cursor-pointer"/>
         <InstagramLogo size={24} color="#6949ff" weight="fill" className="cursor-pointer"/>
         <FacebookLogo size={24} color="#6949ff" weight="fill" className="cursor-pointer"/>
         <PinterestLogo size={24} color="#6949ff" weight="fill" className="cursor-pointer"/>
-        
+        <DiscordLogo size={24} color="#6949ff" weight="fill" className="cursor-pointer" />
       </div>
     </div>
   );

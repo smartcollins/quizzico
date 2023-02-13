@@ -1,5 +1,5 @@
-import {Suspense, lazy } from "react";
-import {createBrowserRouter, RouterProvider} from "react-router-dom";
+import { Suspense, lazy } from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import FindFriends from "./pages/FindFriends";
 import DiscoverPage from "./pages/DiscoverPage";
 import ErrorPage from "./pages/ErrorPage";
@@ -17,17 +17,12 @@ import UserQuizzo from "./pages/UserQuizzo";
 import UserCollection from "./pages/UserCollection";
 import UserAbout from "./pages/UserAbout";
 
-
-const HomeScreen =  lazy(()=> import("./pages/HomeScreen"));
-const WorkPlace = lazy(()=> import('./pages/WorkPlace'));
-const AccountTypePage = lazy(()=> import('./pages/AccountTypePage'));
-const Carousel =  lazy(()=> import('./components/intro/Carousel'));
-
-
+const HomeScreen = lazy(() => import("./pages/HomeScreen"));
+const WorkPlace = lazy(() => import("./pages/WorkPlace"));
+const AccountTypePage = lazy(() => import("./pages/AccountTypePage"));
+const Carousel = lazy(() => import("./components/intro/Carousel"));
 
 function App() {
- 
-
   const router = createBrowserRouter([
     {
       path: ROUTE_PATHS.INDEX,
@@ -46,7 +41,7 @@ function App() {
     },
     {
       path: ROUTE_PATHS.FORGOT,
-      element: <Forgot/>,
+      element: <Forgot />,
       errorElement: <ErrorPage />,
     },
     {
@@ -80,40 +75,40 @@ function App() {
     },
     {
       path: ROUTE_PATHS.FINDFRIENDS,
-      element: <FindFriends/>,
+      element: <FindFriends />,
     },
     {
       path: ROUTE_PATHS.DISCOVER,
-      element: <DiscoverPage/>,
+      element: <DiscoverPage />,
     },
     {
       path: ROUTE_PATHS.TOPAUTHORS,
-      element: <TopAuthors/>,
+      element: <TopAuthors />,
     },
     {
       path: ROUTE_PATHS.TOPAUTHORSID,
-      element: <EachUser/>,
+      element: <EachUser />,
       children: [
-        {index: true,
-        path: ROUTE_PATHS.USERQUIZZO,
-        element: <UserQuizzo/>
-      },
-       {
-        path: ROUTE_PATHS.USERCOLLECTION,
-        element: <UserCollection/>
-      },
-       {
-        path: ROUTE_PATHS.USERABOUT,
-        element: <UserAbout/>
-      }
-      ]
+        {
+          index: true,
+          element: <UserQuizzo />,
+        },
+        {
+          path: ROUTE_PATHS.USERCOLLECTION,
+          element: <UserCollection />,
+        },
+        {
+          path: ROUTE_PATHS.USERABOUT,
+          element: <UserAbout />,
+        },
+      ],
     },
   ]);
 
-  return(
+  return (
     <div className="App h-screen">
       <Suspense fallback={<Loader />}>
-      <RouterProvider router={router} />
+        <RouterProvider router={router} />
       </Suspense>
     </div>
   );

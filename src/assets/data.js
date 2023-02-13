@@ -25,7 +25,6 @@ import followImg3 from "../images/know-3.png";
 import followImg4 from "../images/know-4.png";
 
 import discoverImg1 from "../images/discover-1.png";
-import discoverImg2 from "../images/discover-2.png";
 import discoverImg3 from "../images/discover-3.png";
 import discoverImg4 from "../images/discover-4.png";
 import discoverImg5 from "../images/discover-5.png";
