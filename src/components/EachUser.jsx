@@ -7,6 +7,7 @@ import SearchPeople from './home-screen/SearchPeople';
 import UserBoard from './UserBoard';
 import { useState } from 'react';
 import { details, iconsHover } from '../assets/data_two';
+import useShareApi from '../assets/useShareApi';
 
 export const EachUser = () => {
   const {title} = useParams();
@@ -19,8 +20,11 @@ export const EachUser = () => {
   const userItems = [{Quizzo :"Quizico", Plays: "Plays", Players: "Players", num1:"265", num2:"35M", num3:"274M"},
   {Quizzo :"Collections", Plays: "Follows", Players: "Following", num1:"49", num2:"969.8k", num3:"128"}, ];
 
+  const [successfull, error, cli]= useShareApi({ title: 'Quizzo',
+  text: 'Join quizzo - the fun, free way to learn',
+  url: 'https://github.com/Elochukwu3'
+})
 
-    
     return (
     <section className="flex w-full justify-center h-screen pt-5" >
       <div className="w-1/2  h-full max-md:w-full px-5 py-4 space-y-5">
@@ -33,7 +37,7 @@ export const EachUser = () => {
           </Link>
 
           <div className="cursor-pointer flex space-x-3 ">
-            <div className={iconsHover}><CloudArrowUp size={24}  /></div>
+            <div className={iconsHover} onClick={cli}><CloudArrowUp size={24}  /></div>
             <div className={iconsHover}><DotsThreeCircle size={24} weight="light" /></div>
           </div>
         </nav>

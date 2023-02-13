@@ -1,9 +1,10 @@
 import {useState} from 'react'
 
-const ShareApi = (object, shareButton) => {
+const useShareApi = (object) => {
     const [shareContent, setShareContent] = useState(object);
     const [error, setError] = useState(null);
     const [success, setSuccess] = useState(null);
+    
     const shareButton = async () => {
         if (navigator.share) {
           try {
@@ -11,7 +12,7 @@ const ShareApi = (object, shareButton) => {
             setSuccess('Content was shared successfully.');
             setError(null)
           } catch (err) {
-            setError.error('Error while sharing content: ', err);
+            setError('Error while sharing content: ', err);
             setSuccess(null)
           }
         } else {
@@ -19,10 +20,10 @@ const ShareApi = (object, shareButton) => {
             setSuccess(null)
         }
       };
-  return [success, error]
+  return [success, error, shareButton]
 }
 
-export default ShareApi
+export default useShareApi
 
   
 
