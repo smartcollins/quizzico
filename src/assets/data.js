@@ -235,28 +235,28 @@ export const discoverData = [
 ];
 
 
-export const author = [{
+export const authors = [{
   img: author,
-  name: "Rayford"
+  txt: "Rayford"
 },{
   img: author2,
-  name: "Wilard"
+  txt: "Wilard"
 },{
   img: author3,
-  name: "Hannah"
+  txt: "Hannah"
 },{
   img: author4,
-  name: "Geoffrey"
+  txt: "Geoffrey"
 },{
   img: author,
-  name: "Hoseh"
+  txt: "Hoseh"
 },{
   img: author2,
-  name: "Auora"
+  txt: "Auora"
 },{
   img: author3,
-  name: "Jasmine"
+  txt: "Jasmine"
 },{
-  img: author,
-  name: "Saliem"
+  img: author4,
+  txt: "Saliem"
 }]
