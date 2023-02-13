@@ -5,6 +5,7 @@ import Carousel from "./components/Carousel";
 import AccountTypePage from "./pages/AccountTypePage";
 import FindFriends from "./pages/FindFriends";
 import DiscoverPage from "./components/home-screen/DiscoverPage";
+import Collections from "./pages/Collections";
 import Home from "./pages/Home";
 import {
   createBrowserRouter,
@@ -86,6 +87,10 @@ function App() {
     {
       path: "discover",
       element: <DiscoverPage/>,
+    },
+    {
+      path: "collections",
+      element: <Collections/>,
     },
   ]);
 

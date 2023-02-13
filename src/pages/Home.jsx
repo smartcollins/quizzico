@@ -27,12 +27,12 @@ const HomeScreen = () => {
           />
        </div>
        <div>
-       <DiscoverHeader caption={"Top Collections"} page={"/discover"}/>
-       <TopCollection/>
-       </div>
-       <div>
         <DiscoverHeader caption={"Top Authors"} page={"/"}/>
         <AuthorSlides/>
+       </div>
+       <div>
+       <DiscoverHeader caption={"Top Collections"} page={"/collections"}/>
+       <TopCollection/>
        </div>
         <div>
         <DiscoverHeader caption={"Trending Quiz "} page={"/"}/>  
