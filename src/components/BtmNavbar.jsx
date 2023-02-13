@@ -6,7 +6,7 @@ import { House,SquaresFour,Plus,User } from 'phosphor-react';
 
 const BtmNavbar = ()=>{
     const num = value.md
-    console.log(num)
+    
     return(
         <div className='flex items-center justify-around fixed bottom-0 w-full bg-white py-4 '>
             <House size={num} weight="fill" />

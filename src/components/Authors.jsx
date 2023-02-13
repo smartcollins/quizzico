@@ -18,19 +18,19 @@ const Authors = ()=>{
             </div>
             <div className='flex items-center justify-between my-4'>
                 <div className='flex flex-col items-center md:gap-2'>
-                    <img  className=' w-2/4 md:w-full' src={author} alt="user"/>
+                    <img  className=' w-3/4 md:w-full' src={author} alt="user"/>
                     <p className=' md:text-lg md:font-medium'>Rayford</p>
                 </div>
                 <div className='flex flex-col items-center md:gap-2'>
-                    <img  className=' w-2/4 md:w-full' src={author2} alt="user"/>
+                    <img  className=' w-3/4 md:w-full' src={author2} alt="user"/>
                     <p className=' md:text-lg md:font-medium'>Willard</p>
                 </div>
                 <div className='flex flex-col items-center md:gap-2'>
-                    <img  className=' w-2/4 md:w-full' src={author3} alt="user"/>
+                    <img  className=' w-3/4 md:w-full' src={author3} alt="user"/>
                     <p className=' md:text-lg md:font-medium'>Hannah</p>
                 </div>
                 <div className='flex flex-col items-center md:gap-2'>
-                    <img  className=' w-2/4 md:w-full' src={author4} alt="user"/>
+                    <img  className=' w-3/4 md:w-full' src={author4} alt="user"/>
                     <p className=' md:text-lg md:font-medium'>Geoffrey</p>
                 </div>
             </div>
