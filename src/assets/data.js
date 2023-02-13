@@ -36,6 +36,17 @@ import author2 from '../images/author2.jpg'
 import author3 from '../images/author3.jpg'
 import author4 from '../images/author4.jpg'
 
+import lection from '../images/lection.jpg'
+import lection2 from '../images/lection2.jpg'
+import lection3 from '../images/lection3.jpg'
+import lection4 from '../images/lection4.jpg'
+import lection5 from '../images/lection5.jpg'
+import lection6 from '../images/lection6.jpg'
+import lection7 from '../images/lection7.jpg'
+import lection8 from '../images/lection8.jpg'
+import lection9 from '../images/lection9.jpg'
+import lection10 from '../images/lection10.jpg'
+
 import {
   User,
   Users,
@@ -260,3 +271,25 @@ export const authors = [{
   img: author4,
   txt: "Saliem"
 }]
+
+export const collections = [{
+  img: lection
+},{
+  img: lection2
+},{
+  img: lection3
+},{
+  img: lection4
+},{
+  img: lection5
+},{
+  img: lection6
+},{
+  img: lection7
+},{
+  img: lection8
+},{
+  img: lection9
+},{
+  img: lection10
+},]
