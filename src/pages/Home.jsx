@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Play from "../components/Play";
-import Authors from "../components/Authors";
+import AuthorSlides from "../components/AuthorSlides";
 import BtmNavbar from "../components/BtmNavbar";
 import CarouselSections from "../components/home-screen/CarouselSections";
 import DiscoverHeader from "../components/home-screen/DiscoverHeader";
@@ -30,7 +30,10 @@ const HomeScreen = () => {
        <DiscoverHeader caption={"Top Collections"} page={"/discover"}/>
        <TopCollection/>
        </div>
-       <Authors/>
+       <div>
+        <DiscoverHeader caption={"Top Authors"} page={"/"}/>
+        <AuthorSlides/>
+       </div>
         <div>
         <DiscoverHeader caption={"Trending Quiz "} page={"/"}/>  
         <HomeCarousel 
