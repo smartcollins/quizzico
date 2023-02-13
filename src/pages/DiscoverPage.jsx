@@ -5,6 +5,7 @@ import SearchInput from "../components/home-screen/SearchInput";
 import { discoverData } from "../assets/data";
 import { search } from "../assets/reusedFunc";
 import DiscoverFeature from "../components/home-screen/DiscoverFeature";
+import { cssValues } from "../assets/staticValues";
 
 
 const DiscoverPage = () => {
@@ -27,12 +28,12 @@ const DiscoverPage = () => {
         <nav className="flex gap-10 items-center justify-between">
           <div className="flex gap-10 items-center">
             <div>
-              <ArrowLeft size={24} />
+              <ArrowLeft size={cssValues.iconSize} />
             </div>
-            <div className="text-2xl capitalize font-[600]">Discover</div>
+            <div className="text-2xl capitalize font-semibold">Discover</div>
           </div>
           <div className="cursor-pointer" onClick={handleSearchIcon}>
-            {dropAction? <X size={24}/> : <MagnifyingGlass size={24} />}
+            {dropAction? <X size={cssValues.iconSize}/> : <MagnifyingGlass size={cssValues.iconSize} />}
             
           </div>
         </nav>

@@ -7,7 +7,7 @@ const ShareContacts = ({image, caption, detail}) => {
               <img src={image} alt="" className="w-11 h-11"/>
           </div>
           <div className='space-y-2 text-left'>
-              <h2 className='text-xl  font-[700]'>{caption}</h2>
+              <h2 className='text-xl  font-bold'>{caption}</h2>
               <p className=' font-serif text-lg text-[grey] truncate max-sm:w-48'>{detail}</p>
           </div>
   

@@ -41,7 +41,7 @@ const SearchPeople = ({ image, title, email, verify }) => {
       </div>
        </div>
         <button
-          className={follow && `w-content px-3 py-1 rounded-[20px] ${follow}`}
+          className={follow && `w-content px-3 py-1 rounded-full ${follow}`}
           onClick={followUser}
         >
           Follow

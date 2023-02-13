@@ -1,6 +1,7 @@
 import { ArrowRight } from "phosphor-react";
 import React from "react";
 import { Link } from "react-router-dom";
+import { cssValues } from "../../assets/staticValues";
 
 const DiscoverHeader = ({caption, page}) => {
   return (
@@ -10,7 +11,7 @@ const DiscoverHeader = ({caption, page}) => {
         <Link to={page} className="text-blue-600 block text-xl text-clip">View all</ Link>{" "}
         <span>
          
-          <ArrowRight color="blue" size={24}/>
+          <ArrowRight color="blue" size={cssValues.iconSize}/>
         </span>
       </div>
     </div>

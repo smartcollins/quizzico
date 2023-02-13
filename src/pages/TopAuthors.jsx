@@ -5,6 +5,7 @@ import { ArrowLeft, X, MagnifyingGlass } from "phosphor-react";
 import SearchInput from "../components/home-screen/SearchInput";
 import { peopleYouMayKnow } from "../assets/data";
 import SearchPeople from "../components/home-screen/SearchPeople";
+import { cssValues } from "../assets/staticValues";
 
 const TopAuthors = () => {
   const [searchValue, setSearchValue] = useState("");
@@ -25,17 +26,21 @@ const TopAuthors = () => {
         <nav className="flex gap-10 items-center justify-between">
           <div className="flex gap-10 items-center">
             <div>
-              <ArrowLeft size={24} className="cursor-pointer" />
+              <ArrowLeft size={cssValues.iconSize} className="cursor-pointer" />
             </div>
             <div className="text-2xl capitalize font-[600]">Discover</div>
           </div>
           <div className="cursor-pointer" onClick={handleSearchIcon}>
-            {dropAction ? <X size={24} /> : <MagnifyingGlass size={24} />}
+            {dropAction ? (
+              <X size={cssValues.iconSize} />
+            ) : (
+              <MagnifyingGlass size={cssValues.iconSize} />
+            )}
           </div>
         </nav>
         {dropAction && <SearchInput setSearchValue={setSearchValue} />}
         {filteredSearchValue.length < 1 ? (
-          <p className="text-center text-xl font-[600] ">User Not Found </p>
+          <p className="text-center text-xl font-semibold">User Not Found </p>
         ) : (
           filteredSearchValue.map((data) => (
             <SearchPeople {...data} key={data.id} />
