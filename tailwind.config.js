@@ -7,9 +7,8 @@ module.exports = {
     extend: {
       transitionDuration: {
         '900': '900ms',
-      }
-    },
-    colors:{
+      },
+      colors:{
         sbg: "#6949ff",
         ibg: "#f5f5f5",
         lw: "#f0edff",
@@ -17,6 +16,8 @@ module.exports = {
         maxb: "#00000022",
         minb: "#00000099"
     }
+    },
+  
   },
   plugins: [],
 }

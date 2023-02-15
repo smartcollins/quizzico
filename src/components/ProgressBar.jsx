@@ -22,7 +22,7 @@ useEffect(() => {
 window.onpopstate=(()=>{
   dispatch(decrementByamount())
 })
-}, [])
+}, [navigate])
 
     const progressStyle = () => {
         return {
@@ -39,7 +39,7 @@ window.onpopstate=(()=>{
         <div onClick={handlePrev}>
           <ArrowLeft size={cssValues.iconSize} className='cursor-pointer'/>
         </div>
-        <div className="h-4 w-1/2 bg-zinc-200 rounded-full max-sm:w-4/6">
+        <div className="h-4 w-1/2 bg-ibg rounded-full max-sm:w-4/6">
           <p
             className="w-0 h-full bg-sbg rounded-full"
             style={progressStyle()}
