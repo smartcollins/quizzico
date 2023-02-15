@@ -6,6 +6,7 @@ import { Outlet, useNavigate } from "react-router-dom";
 import { useDispatch} from "react-redux";
 import { decrementByamount } from "../redux/bar-features/barSlice";
 import Layout from "./Layout";
+import { cssValues } from "../assets/staticValues";
 
 const ProgressBar = () => {
 const progressWidth = useSelector(barSelection);   
@@ -36,11 +37,11 @@ window.onpopstate=(()=>{
       <div className="w-3/6  h-full max-md:w-full py-4 ">
       <div className="flex gap-10 items-center">
         <div onClick={handlePrev}>
-          <ArrowLeft size={24} className='cursor-pointer'/>
+          <ArrowLeft size={cssValues.iconSize} className='cursor-pointer'/>
         </div>
         <div className="h-4 w-1/2 bg-zinc-200 rounded-full max-sm:w-4/6">
           <p
-            className="w-0 h-full bg-[#7f65ff] rounded-full"
+            className="w-0 h-full bg-sbg rounded-full"
             style={progressStyle()}
           ></p>
         </div>

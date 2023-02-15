@@ -5,7 +5,7 @@ const TopColImages = ({ image, caption }) => {
       <div className="h-40 space-y-4 rounded-3xl overflow-hidden w-30 shadow-xl mx-3">
         <div className="h-full w-full overflow-hidden  relative">
           <img src={image} alt="" className="h-full w-full" />
-          <div className="absolute text-white px-5 font-medium text-2xl w-full bg-[#00000022] py-3 border-unset bottom-0 hover:bg-[#00000099]">
+          <div className="absolute text-white px-5 font-medium text-2xl w-full bg-maxb py-3 border-unset bottom-0 hover:bg-minb">
             <h2>{caption}</h2>
           </div>
         </div>

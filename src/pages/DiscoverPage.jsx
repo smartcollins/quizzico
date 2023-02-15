@@ -41,8 +41,8 @@ const DiscoverPage = () => {
             dropAction && <SearchInput setSearchValue={setSearchValue} />
         }
         {
-           filteredSearchValue.length < 1 ? (<p className='text-center text-xl font-[600] '>Search Value Not Found</p>) :filteredSearchValue.map((data)=>(
-                <DiscoverFeature {...data} key={data.id} className="duration-[900ms]"/>
+           filteredSearchValue.length < 1 ? (<p className='text-center text-xl font-semibold '>Search Value Not Found</p>) :filteredSearchValue.map((data)=>(
+                <DiscoverFeature {...data} key={data.id} className="duration-900"/>
             ))
         }
       </div>

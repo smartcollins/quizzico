@@ -20,7 +20,7 @@ const useShareApi = (object) => {
             setSuccess(null)
         }
       };
-  return [success, error, shareButton]
+  return shareButton
 }
 
 export default useShareApi

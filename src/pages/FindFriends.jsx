@@ -24,13 +24,13 @@ const FindFriends = () => {
       <div className="w-1/2  h-full max-md:w-full px-5 py-4 space-y-5">
         <div className="flex gap-10 items-center">
           <div>
-            <ArrowLeft size={24} />
+            <ArrowLeft size={24} className="cursor-pointer" />
           </div>
-          <div className="text-2xl capitalize font-[600]">find friends</div>
+          <div className="text-2xl capitalize font-semibold">find friends</div>
         </div>
         <SearchInput setSearchValue={setSearchValue} />
-        <article className="p-4  rounded-[25px] space-y-5 shadow-lg">
-          <div className="border-b-2 border-[#f5f5f5] py-4">
+        <article className="p-4  rounded-3xl space-y-5 shadow-lg">
+          <div className="border-b-2 border-ibg py-4">
           <ShareContacts
             image={bookImg}
             caption={"search contact"}
@@ -38,7 +38,7 @@ const FindFriends = () => {
           />
           </div>
           
-         <div className="border-b-2 border-[#f5f5f5] py-4">
+         <div className="border-b-2 border-ibg py-4">
          <ShareContacts
             image={fbImg}
             caption={"search contact"}
@@ -59,7 +59,7 @@ const FindFriends = () => {
         <div className="">
 
           {filteredSearchValue.length < 1 ? (
-            <p className="text-center text-xl font-[600] ">User Not Found</p>
+            <p className="text-center text-xl font-semibold ">User Not Found</p>
           ) : (
             filteredSearchValue.map((data) => (
               <SearchPeople {...data} key={data.id} />

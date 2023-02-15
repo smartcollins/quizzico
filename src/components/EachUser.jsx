@@ -9,7 +9,7 @@ import UserBoard from "./UserBoard";
 import { useState } from "react";
 import { details, iconsHover } from "../assets/data_two";
 import useShareApi from "../assets/useShareApi";
-import { cssValues } from "../assets/staticValues";
+
 
 export const EachUser = () => {
   const { title } = useParams();
@@ -40,7 +40,7 @@ export const EachUser = () => {
     },
   ];
 
-  const [successfull, error, btnShare] = useShareApi({
+  const  btnShare = useShareApi({
     title: "Quizzo",
     text: "Join quizzo - the fun, free way to learn",
     url: "https://github.com/Elochukwu3",
@@ -104,8 +104,8 @@ export const EachULink = ({ path, text, targetId, btnHandler, handler }) => {
       className={`text-center w-content px-3 font-semibold py-1 rounded-full
        border-spacing-5 ${
          handler === targetId
-           ? `bg-[${cssValues.bgPurple}] text-white`
-           : `text-[${cssValues.bgPurple}] bg-white border-2 border-[${cssValues.bgPurple}]`
+           ? "bg-sbg text-white"
+           : "text-sbg bg-white border-2 border-sbg"
        }`}
     >
       {text}

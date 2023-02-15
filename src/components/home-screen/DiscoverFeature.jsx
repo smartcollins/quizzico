@@ -4,7 +4,7 @@ import React from 'react'
 const DiscoverFeature = ({image, miniImage, caption, timeAgo, played, writer}) => {
     return (
       <div className="my-5">
-        <div className="flex gap-4 max-sm:gap-2 rounded-[21px] shadow-md  overflow-hidden">
+        <div className="flex gap-4 max-sm:gap-2 rounded-xl shadow-md  overflow-hidden">
           <div className="h-36 flex-1">
             <img src={image} alt="" className="h-full w-full  shrink-"/>
           </div>
@@ -15,7 +15,7 @@ const DiscoverFeature = ({image, miniImage, caption, timeAgo, played, writer}) =
               <div className="w-6 h-6 rounded-full overflow-hidden">
                 <img src={miniImage} alt="" className="w-full h-full" />
               </div>
-              <p className="text-[15px] leading-10 font-bold">{writer}</p>
+              <p className="text-sm leading-10 font-bold">{writer}</p>
             </div>
           </div>
         </div>

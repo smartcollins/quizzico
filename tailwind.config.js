@@ -5,10 +5,18 @@ module.exports = {
   ],
   theme: {
     extend: {
-      skew:{
-        "20": '20deg'
+      transitionDuration: {
+        '900': '900ms',
       }
     },
+    colors:{
+        sbg: "#6949ff",
+        ibg: "#f5f5f5",
+        lw: "#f0edff",
+        dw: "#bbb",
+        maxb: "#00000022",
+        minb: "#00000099"
+    }
   },
   plugins: [],
 }
