@@ -4,8 +4,9 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import { sliderData } from "../assets/data";
+import { sliderData } from "../../assets/data";
 import GetStartedButton from "./GetStartedButton";
+import Layout from "../Layout";
 
 const Carousel = () => {
   const settings = {
@@ -21,8 +22,10 @@ const Carousel = () => {
   };
 
   return (
-    <div className="w-full flex justify-center py-3 px-5 flex-col items-center h-full">
-      <div className="w-[34%] bg-white max-md:w-full mt-10">
+ 
+    <Layout>
+       <div className=" w-full flex justify-center py-3 px-1 flex-col items-center ">
+      <div className="w-[36%] bg-white max-md:w-full mt-5">
         <Slider {...settings}>
           {sliderData.length > 0 &&
             sliderData.map((slider) => (
@@ -30,11 +33,11 @@ const Carousel = () => {
                 <div className="w-full overflow-hidden">
                   <div className="flex justify-center">
                     {" "}
-                    <img src={slider.image} alt="" className="w-[auto]" />
+                    <img src={slider.image} alt=""/>
                   </div>
                   <h2
-                    className="font first-letter:capitalize text-3xl text-center px-5 max-sm:px-3 
-                  break-normal whitespace-pre-wrap subpixel-antialiased font-normal my-10"
+                    className="font first-letter:capitalize text-2xl text-center px-5 max-sm:px-3 
+                  break-normal whitespace-pre-wrap subpixel-antialiased font-normal my-4"
                   >
                     {slider.caption}
                   </h2>
@@ -45,6 +48,8 @@ const Carousel = () => {
       </div>
       <GetStartedButton />
     </div>
+
+    </Layout>
   );
 };
 

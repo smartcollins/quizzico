@@ -24,27 +24,34 @@ const FindFriends = () => {
       <div className="w-1/2  h-full max-md:w-full px-5 py-4 space-y-5">
         <div className="flex gap-10 items-center">
           <div>
-            <ArrowLeft size={24} />
+            <ArrowLeft size={24} className="cursor-pointer" />
           </div>
-          <div className="text-2xl capitalize font-[600]">find friends</div>
+          <div className="text-2xl capitalize font-semibold">find friends</div>
         </div>
         <SearchInput setSearchValue={setSearchValue} />
-        <article className="shadow-md p-4   rounded-md space-y-5">
+        <article className="p-4  rounded-3xl space-y-5 shadow-lg">
+          <div className="border-b-2 border-ibg py-4">
           <ShareContacts
             image={bookImg}
             caption={"search contact"}
             detail={"find friends by phone number"}
           />
-          <ShareContacts
+          </div>
+          
+         <div className="border-b-2 border-ibg py-4">
+         <ShareContacts
             image={fbImg}
             caption={"search contact"}
             detail={"find contacts via facebook"}
           />
+         </div>
+         <div className="py-4">
           <ShareContacts
             image={featherImg}
             caption={"search contact"}
             detail={"invite friends to play together"}
           />
+         </div>
         </article>
         <div>
           <DiscoverHeader caption={"People You may Know"} page={"/"} />
@@ -52,7 +59,7 @@ const FindFriends = () => {
         <div className="">
 
           {filteredSearchValue.length < 1 ? (
-            <p className="text-center text-xl font-[600] ">User Not Found</p>
+            <p className="text-center text-xl font-semibold ">User Not Found</p>
           ) : (
             filteredSearchValue.map((data) => (
               <SearchPeople {...data} key={data.id} />

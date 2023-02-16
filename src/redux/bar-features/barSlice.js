@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
+
 const initialState = {
-  progressBar: 0,
+  progressBar: sessionStorage.getItem("progress_bar") || 0,
 };
 
 export const barSlice = createSlice({
@@ -9,12 +10,15 @@ export const barSlice = createSlice({
   reducers: {
     increment: (state)=> {
       state.progressBar = 25;
+      sessionStorage.setItem("progress_bar", state.progressBar) 
     },
     incrementByamount:(state) =>{
       state.progressBar += 25;
+      sessionStorage.setItem("progress_bar", state.progressBar) 
     },
     decrementByamount:(state) =>{
-    state.progressBar = state.progressBar > 0 && state.progressBar - 25
+    state.progressBar = state.progressBar > 0 && state.progressBar - 25;
+    sessionStorage.setItem("progress_bar", state.progressBar) ;
     },
   },
 });

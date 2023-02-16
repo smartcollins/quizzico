@@ -1,10 +1,12 @@
-import React from "react";
-import {ArrowLeft  } from "phosphor-react";
+import React, { useEffect } from "react"; 
+import {ArrowLeft } from "phosphor-react";
 import {  useSelector } from "react-redux";
 import {barSelection} from "../redux/bar-features/barSlice";
 import { Outlet, useNavigate } from "react-router-dom";
 import { useDispatch} from "react-redux";
 import { decrementByamount } from "../redux/bar-features/barSlice";
+import Layout from "./Layout";
+import { cssValues } from "../assets/staticValues";
 
 const ProgressBar = () => {
 const progressWidth = useSelector(barSelection);   
@@ -16,6 +18,12 @@ const dispatch = useDispatch();
   navigate(-1)
  }
  
+useEffect(() => {
+window.onpopstate=(()=>{
+  dispatch(decrementByamount())
+})
+}, [navigate])
+
     const progressStyle = () => {
         return {
           width: `${progressWidth}%`,
@@ -24,25 +32,26 @@ const dispatch = useDispatch();
       };
 
   return (
-    // <section className="flex w-full justify-center h-screen pt-5">
+  <Layout>
     <section className="flex w-full justify-center h-full">
-      {/* <div className="w-1/2  h-full max-md:w-full px-5 py-4 "> */}
-      <div className="w-1/2  h-full max-md:w-full py-4 ">
+      <div className="w-3/6  h-full max-md:w-full py-4 ">
       <div className="flex gap-10 items-center">
         <div onClick={handlePrev}>
-          <ArrowLeft size={24} />
-    
+          <ArrowLeft size={cssValues.iconSize} className='cursor-pointer'/>
         </div>
-        <div className="h-4 w-1/2 bg-zinc-200 rounded-full max-sm:w-4/6">
+        <div className="h-4 w-1/2 bg-ash rounded-full max-sm:w-4/6">
           <p
-            className="w-0 h-full bg-[#7f65ff] rounded-full"
+            className="w-0 h-full bg-purple rounded-full"
             style={progressStyle()}
           ></p>
         </div>
       </div>
+      
       <Outlet/>
     </div>
     </section>
+  </Layout>
+
   );
 };
 
