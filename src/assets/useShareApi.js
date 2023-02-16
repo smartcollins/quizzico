@@ -1,8 +1,11 @@
 import {useState} from 'react'
 
 const useShareApi = (object) => {
+    // eslint-disable-next-line no-unused-vars
     const [shareContent, setShareContent] = useState(object);
+    // eslint-disable-next-line no-unused-vars
     const [error, setError] = useState(null);
+    // eslint-disable-next-line no-unused-vars
     const [success, setSuccess] = useState(null);
     
     const shareButton = async () => {
