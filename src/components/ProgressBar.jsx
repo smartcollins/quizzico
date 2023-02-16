@@ -39,9 +39,9 @@ window.onpopstate=(()=>{
         <div onClick={handlePrev}>
           <ArrowLeft size={cssValues.iconSize} className='cursor-pointer'/>
         </div>
-        <div className="h-4 w-1/2 bg-ibg rounded-full max-sm:w-4/6">
+        <div className="h-4 w-1/2 bg-ash rounded-full max-sm:w-4/6">
           <p
-            className="w-0 h-full bg-sbg rounded-full"
+            className="w-0 h-full bg-purple rounded-full"
             style={progressStyle()}
           ></p>
         </div>

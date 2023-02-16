@@ -1,4 +1,5 @@
 import { CaretRight} from "phosphor-react";
+import { cssValues } from "../../assets/staticValues";
 
 const ShareContacts = ({image, caption, detail}) => {
     return (
@@ -8,10 +9,10 @@ const ShareContacts = ({image, caption, detail}) => {
           </div>
           <div className='space-y-2 text-left'>
               <h2 className='text-xl  font-bold'>{caption}</h2>
-              <p className=' font-serif text-lg text-[grey] truncate max-sm:w-48'>{detail}</p>
+              <p className=' font-serif text-lg text-gray-400 truncate max-sm:w-48'>{detail}</p>
           </div>
   
-          <CaretRight size={24} className="cursor-pointer"/>
+          <CaretRight size={cssValues.iconSize} className="cursor-pointer"/>
       </div>
     )
   }

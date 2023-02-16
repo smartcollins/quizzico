@@ -10,7 +10,7 @@ const DiscoverHeader = ({caption, page}) => {
       <div className="flex items-center gap-3 cursor-pointer">
         <Link to={page} className="text-blue-600 block text-xl text-clip">View all</ Link>{" "}
         <span>
-          <ArrowRight color="blue" size={cssValues.iconSize}/>
+          <ArrowRight size={cssValues.iconSize} className="text-blue-600"/>
         </span>
       </div>
     </div>

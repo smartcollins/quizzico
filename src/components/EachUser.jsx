@@ -104,8 +104,8 @@ export const EachULink = ({ path, text, targetId, btnHandler, handler }) => {
       className={`text-center w-content px-3 font-semibold py-1 rounded-full
        border-spacing-5 ${
          handler === targetId
-           ? "bg-sbg text-white"
-           : "text-sbg bg-white border-2 border-sbg"
+           ? "bg-purple text-white"
+           : "text-purple bg-white border-2 border-purple"
        }`}
     >
       {text}

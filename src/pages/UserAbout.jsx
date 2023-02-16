@@ -16,12 +16,12 @@ const UserAbout = () => {
         molestiae voluptates quia, debitis illo est nulla! Temporibus?
       </p>
       <div className="flex shadow-md w-fit space-x-3 py-3 px-2">
-        <Globe size={cssValues.iconSize} color="#6949ff" weight="fill" className="cursor-pointer"/>
-        <TwitchLogo size={cssValues.iconSize} color="#6949ff" weight="fill" className="cursor-pointer"/>
-        <InstagramLogo size={cssValues.iconSize} color="#6949ff" weight="fill" className="cursor-pointer"/>
-        <FacebookLogo size={cssValues.iconSize} color="#6949ff" weight="fill" className="cursor-pointer"/>
-        <PinterestLogo size={cssValues.iconSize} color="#6949ff" weight="fill" className="cursor-pointer"/>
-        <DiscordLogo size={cssValues.iconSize} color="#6949ff" weight="fill" className="cursor-pointer" />
+        <Globe size={cssValues.iconSize}  weight="fill" className="cursor-pointer text-purple"/>
+        <TwitchLogo size={cssValues.iconSize} weight="fill" className="cursor-pointer text-purple"/>
+        <InstagramLogo size={cssValues.iconSize} weight="fill" className="cursor-pointer text-purple"/>
+        <FacebookLogo size={cssValues.iconSize} weight="fill" className="cursor-pointer text-purple"/>
+        <PinterestLogo size={cssValues.iconSize} weight="fill" className="cursor-pointer text-purple"/>
+        <DiscordLogo size={cssValues.iconSize} weight="fill" className="cursor-pointer text-purple" />
       </div>
     </div>
   );

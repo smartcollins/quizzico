@@ -33,7 +33,7 @@ const AccountType = ({ mapContent, accountHeader, emoji, pathName, handleProgess
         <Link to={pathName} className=" w-full">
         <button
           className="shadow-sm shadow-dw px-3  w-full uppercase text-sm
-         text-sbg  py-3 rounded-full block bg-lw"
+         text-purple  py-3 rounded-full block bg-lwhite"
         >
           skip
         </button> 

@@ -3,17 +3,17 @@ import { ROUTE_PATHS } from "../../assets/data_two";
 import { Link } from "react-router-dom";
 
 const SearchPeople = ({ image, title, email, verify }) => {
- const [follow, setFollow] = useState('bg-sbg text-white');
+ const [follow, setFollow] = useState('bg-purple text-white');
  const [isFollowing, setIsFollowing] = useState(false)
 
   const followUser = (e) => {
    
     if (isFollowing) { 
-      setFollow('bg-sbg text-red-500');
+      setFollow('bg-purple text-red-500');
       e.target.textContent = "follow";
       setIsFollowing(!isFollowing);
     } else { 
-      setFollow('bg-white text-sbg border-2 border-sbg');
+      setFollow('bg-white text-purple border-2 border-purple');
       e.target.textContent = "following";
       setIsFollowing(!isFollowing);
     }

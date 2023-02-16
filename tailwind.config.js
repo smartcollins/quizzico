@@ -9,12 +9,12 @@ module.exports = {
         '900': '900ms',
       },
       colors:{
-        sbg: "#6949ff",
-        ibg: "#f5f5f5",
-        lw: "#f0edff",
+       purple: "#6949ff",
+        ash: "#f5f5f5",
+        lwhite: "#f0edff",
         dw: "#bbb",
-        maxb: "#00000022",
-        minb: "#00000099"
+        maxblack: "#00000022",
+        minblack: "#00000099"
     }
     },
   
