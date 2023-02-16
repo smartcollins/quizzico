@@ -7,6 +7,7 @@ import { incrementByamount } from "../redux/bar-features/barSlice";
 import { GoogleLogo, AppleLogo } from "phosphor-react";
 
 
+
 const Account = () => {
   const [account,setAccount] = useState(false);
   const [signup,setSignup] = useState(false);

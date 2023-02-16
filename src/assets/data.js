@@ -25,7 +25,6 @@ import followImg3 from "../images/know-3.png";
 import followImg4 from "../images/know-4.png";
 
 import discoverImg1 from "../images/discover-1.png";
-import discoverImg2 from "../images/discover-2.png";
 import discoverImg3 from "../images/discover-3.png";
 import discoverImg4 from "../images/discover-4.png";
 import discoverImg5 from "../images/discover-5.png";
@@ -89,7 +88,7 @@ export const accountCategory = [
  */
 export const workplaceCategory = [
   {
-    icon: <GraduationCap r size={24} color={"white"} />,
+    icon: <GraduationCap size={24} color={"white"} />,
     color: "#2e72fd",
     title: "school",
   },
@@ -148,6 +147,7 @@ export const peopleYouMayKnow = [
     id: "1",
     email: "test@test.com",
     contact: "09030099916",
+    verify: true,
   },
   {
     image: followImg2,
@@ -155,13 +155,15 @@ export const peopleYouMayKnow = [
     id: "2",
     email: "sam@test.com",
     contact: "09030099916",
+    verify: false,
   },
   {
     image: followImg3,
-    title: "Ben manny",
+    title: "ben manny",
     id: "3",
     email: "oguaju@test.com",
     contact: "0813253611",
+    verify: false,
   },
   {
     image: followImg4,
@@ -169,6 +171,7 @@ export const peopleYouMayKnow = [
     id: "4",
     email: "neche@test.com",
     contact: "722920026",
+    verify: true,
   },
 ];
 
@@ -182,15 +185,7 @@ export const discoverData = [
     played: 5600,
     id: "6",
   },
-  {
-    image: discoverImg2,
-    miniImage: miniSlide2,
-    timeAgo: "6 months ago",
-    caption: "great ideas comes from experience",
-    writer: "Alfonzo Schuessler",
-    played: 10300,
-    id: "5",
-  },
+  
   {
     image: discoverImg3,
     miniImage: miniSlide3,
