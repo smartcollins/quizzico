@@ -15,7 +15,7 @@ const Layout = ({ children }) => {
         <div> {children}</div>
       </section>
 
-      <div className="bg-sbg py-4 w-full flex justify-around relative before:content-[''] before:absolute before:inset-y-0 before:w-full before:left-0  before:bg-sbg parallelogram">
+      <div className="bg-purple py-4 w-full flex justify-around relative before:content-[''] before:absolute before:inset-y-0 before:w-full before:left-0  before:bg-purple parallelogram">
         <img src={screenImg} alt="" className="z-10" />
       </div>
     </div>

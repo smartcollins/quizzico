@@ -13,4 +13,4 @@ const TopColImages = ({ image, caption }) => {
     );
   };
 
-export default TopColImages
+export default TopColImages 

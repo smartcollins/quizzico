@@ -20,6 +20,7 @@ const TopAuthors = () => {
     setDropAction(!dropAction);
   };
 
+
   return (
     <section className="flex w-full justify-center h-screen pt-5">
       <div className="w-1/2  h-full max-md:w-full px-5 py-4 space-y-5">
