@@ -39,7 +39,6 @@ font-family: 'STIX Two Text', serif;
 }
 
 .parallelogram::before {
-  
   transform: skew(20deg);
   transform-origin: left bottom;
 }

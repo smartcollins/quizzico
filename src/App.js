@@ -16,6 +16,7 @@ import { EachUser } from "./components/EachUser";
 import UserQuizzo from "./pages/UserQuizzo";
 import UserCollection from "./pages/UserCollection";
 import UserAbout from "./pages/UserAbout";
+import Library from "./pages/Library";
 
 const HomeScreen = lazy(() => import("./pages/HomeScreen"));
 const WorkPlace = lazy(() => import("./pages/WorkPlace"));
@@ -103,6 +104,10 @@ function App() {
         },
       ],
     },
+    {
+      path: ROUTE_PATHS.LIBRARY,
+      element: <Library/>
+    }
   ]);
 
   return (

@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-import useDebounce from "../assets/useDebounce";
-import { search } from "../assets/reusedFunc";
-import { ArrowLeft, X, MagnifyingGlass } from "phosphor-react";
-import SearchInput from "../components/home-screen/SearchInput";
-import { peopleYouMayKnow } from "../assets/data";
-import SearchPeople from "../components/home-screen/SearchPeople";
-import { cssValues } from "../assets/staticValues";
+  import React, { useState } from "react";
+  import useDebounce from "../assets/useDebounce";
+  import { search } from "../assets/reusedFunc";
+  import { ArrowLeft, X, MagnifyingGlass } from "phosphor-react";
+  import SearchInput from "../components/home-screen/SearchInput";
+  import { peopleYouMayKnow } from "../assets/data";
+  import SearchPeople from "../components/home-screen/SearchPeople";
+  import { cssValues } from "../assets/staticValues";
 
 const TopAuthors = () => {
   const [searchValue, setSearchValue] = useState("");
@@ -24,7 +24,8 @@ const TopAuthors = () => {
   return (
     <section className="flex w-full justify-center h-screen pt-5">
       <div className="w-1/2  h-full max-md:w-full px-5 py-4 space-y-5">
-        <nav className="flex gap-10 items-center justify-between">
+        <nav className="flex gap-10 items-center justify-between max-sm:fixed max-sm:top-0 
+        max-sm:w-full bg-white max-sm:left-0 max-sm:right-0 max-sm:p-3 ">
           <div className="flex gap-10 items-center">
             <div>
               <ArrowLeft size={cssValues.iconSize} className="cursor-pointer" />
@@ -46,7 +47,11 @@ const TopAuthors = () => {
           filteredSearchValue.map((data) => (
             <SearchPeople {...data} key={data.id} />
           ))
-        )}
+        )}{
+          filteredSearchValue.map((data) => (
+            <SearchPeople {...data} key={data.id} />
+          ))
+        }
       </div>
     </section>
   );
