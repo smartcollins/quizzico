@@ -24,8 +24,10 @@ const TopAuthors = () => {
   return (
     <section className="flex w-full justify-center h-screen pt-5">
       <div className="w-1/2  h-full max-md:w-full px-5 py-4 space-y-5">
-        <nav className="flex gap-10 items-center justify-between max-sm:fixed max-sm:top-0 
-        max-sm:w-full bg-white max-sm:left-0 max-sm:right-0 max-sm:p-3 ">
+      <div className="max-sm:fixed max-sm:top-0 
+        max-sm:w-full bg-white max-sm:left-0 max-sm:right-0 max-sm:p-3 space-y-4">
+        <nav className="flex gap-10 items-center justify-between 
+        ">
           <div className="flex gap-10 items-center">
             <div>
               <ArrowLeft size={cssValues.iconSize} className="cursor-pointer" />
@@ -41,8 +43,10 @@ const TopAuthors = () => {
           </div>
         </nav>
         {dropAction && <SearchInput setSearchValue={setSearchValue} />}
+        </div>
+        
         {filteredSearchValue.length < 1 ? (
-          <p className="text-center text-xl font-semibold">User Not Found </p>
+          <p className="text-center text-xl font-semibold max-sm:pt-20 overflow-hidden">User Not Found </p>
         ) : (
           filteredSearchValue.map((data) => (
             <SearchPeople {...data} key={data.id} />

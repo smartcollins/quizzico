@@ -15,6 +15,9 @@ module.exports = {
         dw: "#bbb",
         maxblack: "#00000022",
         minblack: "#00000099"
+    },
+    width:{
+      "36%":"36%"
     }
     },
   

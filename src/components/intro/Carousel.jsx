@@ -25,7 +25,7 @@ const Carousel = () => {
  
     <Layout>
        <div className=" w-full flex justify-center py-3 px-1 flex-col items-center">
-      <div className="w-[36%] bg-white max-md:w-full mt-5">
+      <div className="w-36% bg-white max-md:w-full mt-5">
         <Slider {...settings}>
           {sliderData.length > 0 &&
             sliderData.map((slider) => (
