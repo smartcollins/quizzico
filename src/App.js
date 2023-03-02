@@ -17,6 +17,9 @@ import UserQuizzo from "./pages/UserQuizzo";
 import UserCollection from "./pages/UserCollection";
 import UserAbout from "./pages/UserAbout";
 import Library from "./pages/Library";
+import Quizzo from "./components/library/Quizzo";
+import Favorites from "./components/library/Favorites";
+import Collabo from "./components/library/Collabo";
 
 const HomeScreen = lazy(() => import("./pages/HomeScreen"));
 const WorkPlace = lazy(() => import("./pages/WorkPlace"));
@@ -106,8 +109,24 @@ function App() {
     },
     {
       path: ROUTE_PATHS.LIBRARY,
-      element: <Library/>
-    }
+      element: <Library/>,
+      children: [
+        {
+          element: <Quizzo/>,
+          path: ROUTE_PATHS.LIBRARY_QUIZ,
+          // index: true,
+        },
+        {
+          path: ROUTE_PATHS.LIBRARY_FAVORITES,
+          element: <Favorites/>,
+        },
+        {
+          path: ROUTE_PATHS.LIBRARY_COLLABO,
+          element: <Collabo/>,
+        },
+
+      ]
+    },
   ]);
 
   return (

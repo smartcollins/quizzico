@@ -1,10 +1,11 @@
 import { useState } from "react";
+import { Outlet } from "react-router-dom";
 import Header from "../components/library/Header";
 import Menu from "../components/library/Menu";
 import Nav from "../components/library/Nav";
 
 const Library = () => {
-  const [active, setActive] = useState("");
+  const [active, setActive] = useState("Quizzo");
   const handler = (id) => {
     setActive(id);
   };
@@ -19,24 +20,25 @@ const Library = () => {
         <nav className="grid grid-cols-3 w-full py-2 ">
           <Menu
             title={"my quizzo"}
-            id={"heloo"}
-            handler={() => handler("heloo")}
+            id={"Quizzo"}
+            handler={() => handler("Quizzo")}
             active={active}
           />
           <Menu
             title={"favorites"}
-            id={"sam"}
-            handler={() => handler("sam")}
+            id={"Favorites"}
+            handler={() => handler("Favorites")}
             active={active}
           />
           <Menu
             title={"collaboration"}
-            id={"kelly"}
-            handler={() => handler("kelly")}
+            id={"Collaboration"}
+            handler={() => handler("Collaboration")}
             active={active}
           />
         </nav>
         <Header/>
+        <Outlet/>
       </div>
     </main>
   );

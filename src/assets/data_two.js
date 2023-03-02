@@ -15,6 +15,9 @@ export const    ROUTE_PATHS = {
     USERCOLLECTION:"/topAuthor/:title/userCollection",
     USERABOUT:"/topAuthor/:title/userAbout",
     LIBRARY: "/library",
+    LIBRARY_QUIZ: "/library/Quizzo",
+    LIBRARY_FAVORITES: "/library/Favorites",
+    LIBRARY_COLLABO: "/library/Collaboration",
 };
 
 // root path = topAuthor/:title/userCollection
