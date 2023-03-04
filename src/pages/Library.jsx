@@ -10,10 +10,12 @@ const Library = () => {
     setActive(id);
   };
   return (
-    <main className="w-full flex justify-center">
-      <div
-        className="w-11/12 max-sm:fixed max-sm:top-0 
-    max-sm:w-full max-sm:px-2 bg-white  max-sm:left-0 max-sm:right-0 max-sm:mx-auto"
+    <main className="w-full flex justify-center min-h-screen">
+     <div className="w-11/12 ">
+     <div
+        className="max-sm:fixed max-sm:top-0 
+        max-sm:w-full max-sm:px-2 bg-white  max-sm:left-0 
+        max-sm:right-0 max-sm:mx-auto"
       >
         <Nav />
 
@@ -23,23 +25,23 @@ const Library = () => {
             id={"Quizzo"}
             handler={() => handler("Quizzo")}
             active={active}
-          />
+            />
           <Menu
             title={"favorites"}
             id={"Favorites"}
             handler={() => handler("Favorites")}
             active={active}
-          />
+            />
           <Menu
             title={"collaboration"}
             id={"Collaboration"}
             handler={() => handler("Collaboration")}
             active={active}
-          />
+            />
         </nav>
-        <Header/>
-        <Outlet/>
-      </div>
+        </div>
+        <Outlet className="bg-green-600"/>
+     </div>
     </main>
   );
 };

@@ -1,8 +1,11 @@
 import React from 'react'
+import Header from './Header'
 
 const Collabo = () => {
   return (
-    <div>Collabo</div>
+    <div>
+      <Header caption={"20 collaboration"} iconText={"newest"}/>
+    </div>
   )
 }
 
