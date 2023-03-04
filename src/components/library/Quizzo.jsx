@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import Button from "./Button";
-import Quiz from "./Favorite";
+import Quiz from "./Collab";
 
 const Quizzo = () => {
   const [handler, setHandler] = useState("quizzo");
-
+  
   const btnHandler = (targetId) => setHandler(targetId);
   return (
     <div>

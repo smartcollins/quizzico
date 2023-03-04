@@ -1,12 +1,7 @@
 import React from 'react';
-import bimage from '../../images/bookbg.jpg';
-import bimage2 from '../../images/sch-10.png';
-import img1 from '../../images/know-1.png';
-import img2 from '../../images/know-2.png';
-import img3 from '../../images/know-3.png';
-import img4 from '../../images/know-4.png';
 
-const Favorite = ({image, img1, img2, img3, img4, img5, img6}) => {
+
+const Collab = ({image, img1, img2, img3, img4, img5, img6}) => {
   return (
     <div className="my-5 max-sm:my-1">
     <div className="flex gap-3 max-sm:gap-1 rounded-xl shadow-md h-40  overflow-hidden">
@@ -25,7 +20,7 @@ const Favorite = ({image, img1, img2, img3, img4, img5, img6}) => {
             <img src={img5} alt="" className="w-8 h-8 -ml-3 rounded-full" />
             <img src={img6} alt="" className="w-8 h-8 -ml-3 rounded-full" />
           </div>
-          <p className="text-sm  font-bold max-sm:overflow-scroll">10 collaborators</p>
+          <p className="text-sm  font-bold max-sm:overflow-scroll text-zinc-400">10 collaborators</p>
         </div>
       </div>
     </div>
@@ -33,4 +28,4 @@ const Favorite = ({image, img1, img2, img3, img4, img5, img6}) => {
   )
 }
 
-export default Favorite
+export default Collab
