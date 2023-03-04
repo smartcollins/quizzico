@@ -4,6 +4,7 @@ import useDebounce from "../../assets/useDebounce";
 import SearchInput from "./SearchInput";
 import { discoverData } from "../../assets/data";
 import { search } from "../../assets/reusedFunc";
+import { Link } from "react-router-dom";
 
 
 const DiscoverPage = () => {
@@ -25,15 +26,22 @@ const DiscoverPage = () => {
       <div className="w-1/2  h-full max-md:w-full px-5 py-4 space-y-5">
         <nav className="flex gap-10 items-center justify-between">
           <div className="flex gap-10 items-center">
-            <div>
+            {/* <div>
               <ArrowLeft size={24} />
-            </div>
+            </div> */}
+            <Link to="/home">
+              <ArrowLeft size={24} />
+            </Link>
             <div className="text-2xl capitalize font-[600]">Discover</div>
           </div>
-          <dov className="cursor-pointer" onClick={handleSearchIcon}>
+          {/* <dov className="cursor-pointer" onClick={handleSearchIcon}>
             {dropAction? <X size={24}/> : <MagnifyingGlass size={24} />}
             
-          </dov>
+          </dov> */}
+          <div className="cursor-pointer" onClick={handleSearchIcon}>
+            {dropAction? <X size={24}/> : <MagnifyingGlass size={24} />}
+            
+          </div>
         </nav>
         {
             dropAction && <SearchInput setSearchValue={setSearchValue} />

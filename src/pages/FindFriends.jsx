@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { ArrowLeft } from "phosphor-react";
 import DiscoverHeader from "../components/home-screen/DiscoverHeader";
 import useDebounce from "../assets/useDebounce";
@@ -23,9 +24,12 @@ const FindFriends = () => {
     <section className="flex w-full justify-center h-screen pt-5">
       <div className="w-1/2  h-full max-md:w-full px-5 py-4 space-y-5">
         <div className="flex gap-10 items-center">
-          <div>
+          <Link to="/home">
+            <ArrowLeft size={24} />  
+          </Link>
+          {/* <div>
             <ArrowLeft size={24} />
-          </div>
+          </div> */}
           <div className="text-2xl capitalize font-[600]">find friends</div>
         </div>
         <SearchInput setSearchValue={setSearchValue} />

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { collections } from '../assets/data';
 import { value } from '../assets/value';
 import { MagnifyingGlass, ArrowLeft } from 'phosphor-react';
@@ -12,7 +13,9 @@ const Collection = ()=>{
         <div className='p-2'>
             <div className='flex items-center justify-between my-4'>
                 <div className='flex items-center gap-4'>
-                    <ArrowLeft size={size} color="#000000" />
+                    <Link to="/home">
+                        <ArrowLeft size={size} color="#000000" />
+                    </Link>
                     <p className=' text-lg font-medium'>Top Collections</p>
                 </div>
                 <MagnifyingGlass size={size} color="#000000" />
