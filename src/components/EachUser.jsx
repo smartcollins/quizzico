@@ -49,7 +49,9 @@ export const EachUser = () => {
   return (
     <section className="flex w-full justify-center h-screen pt-5">
       <div className="w-1/2  h-full max-md:w-full px-5 py-4 space-y-5">
-        <nav className="flex gap-10 items-center justify-between">
+        <nav className="flex gap-10 items-center justify-between
+        max-sm:fixed max-sm:top-0 
+        max-sm:w-full bg-white max-sm:left-0 max-sm:right-0 max-sm:p-3 max-sm:py-3">
           <Link
             to={ROUTE_PATHS.TOPAUTHORS}
             className={` flex gap-10 items-center${iconsHover}`}

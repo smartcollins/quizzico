@@ -1,12 +1,12 @@
 import React from "react";
 
+import Layout from "../Layout";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import { sliderData } from "../../assets/data";
 import GetStartedButton from "./GetStartedButton";
-import Layout from "../Layout";
 
 const Carousel = () => {
   const settings = {
@@ -24,8 +24,8 @@ const Carousel = () => {
   return (
  
     <Layout>
-       <div className=" w-full flex justify-center py-3 px-1 flex-col items-center ">
-      <div className="w-[36%] bg-white max-md:w-full mt-5">
+       <div className=" w-full flex justify-center py-3 px-1 flex-col items-center">
+      <div className="w-36% bg-white max-md:w-full mt-5">
         <Slider {...settings}>
           {sliderData.length > 0 &&
             sliderData.map((slider) => (
