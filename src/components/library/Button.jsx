@@ -1,8 +1,11 @@
-const Button = ({ text, btnHandler, handler }) => {
+import { Link } from "react-router-dom";
+
+
+const Button = ({ text, btnHandler, handler, path }) => {
     return (
-      <button
+      <Link
         onClick={btnHandler}
-        // to={path}
+        to={path}
         className={`text-center w-40 px-3 font-semibold py-1 rounded-full
          border-spacing-5 ${
            handler === text
@@ -11,7 +14,7 @@ const Button = ({ text, btnHandler, handler }) => {
          }`}
       >
         {text}
-      </button>
+      </Link>
     );
   };
  

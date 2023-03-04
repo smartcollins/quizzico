@@ -2,7 +2,6 @@ import React from 'react'
 import Header from './Header';
 import Collab from './Collab'
 import image from '../../images/bookbg.jpg';
-// import bimage2 from '../../images/sch-10.png';
 import img1 from '../../images/know-1.png';
 import img2 from '../../images/know-2.png';
 import img3 from '../../images/know-3.png';
@@ -13,7 +12,7 @@ const miniImage = {image, img1, img2, img3, img4, img5, img6}
 
 const Collabo = () => {
   return (
-    <div>
+    <div className="w-full">
       <Header caption={"20 collaboration"} iconText={"newest"}/>
       <section className='grid grid-cols-2 max-md:grid-cols-1 gap-3 max-sm:gap-1'>
         <Collab {...miniImage}/>

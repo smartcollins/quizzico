@@ -13,7 +13,7 @@ const Library = () => {
      <div className="w-11/12 ">
      <div
         className="max-sm:fixed max-sm:top-0 
-        max-sm:w-full max-sm:px-2 bg-white  max-sm:left-0 
+        max-sm:w-full max-sm:px-2 bg-white max-sm:left-0 
         max-sm:right-0 max-sm:mx-auto"
       >
         <Nav />
@@ -39,7 +39,10 @@ const Library = () => {
             />
         </nav>
         </div>
-        <Outlet className="bg-green-600"/>
+        <div className='max-sm:my-16 pt-2'></div>
+       <div className="mx-auto bg-blue-800 flex justify-center">
+       <Outlet />
+       </div>
      </div>
     </main>
   );

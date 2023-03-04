@@ -16,12 +16,13 @@ export const    ROUTE_PATHS = {
     USERABOUT:"/topAuthor/:title/userAbout",
     LIBRARY: "/library",
     LIBRARY_QUIZ: "/library/Quizzo",
+    LIBRARY_QUIZ_COLLECTION: "Quizzo/collections",
     LIBRARY_FAVORITES: "/library/Favorites",
     LIBRARY_COLLABO: "/library/Collaboration",
 };
 
 // root path = topAuthor/:title/userCollection
-//This is the button/link details
+//This details is the button/link details
  export const details = (title)=> [
     {path: `/topAuthor/${title}`, targetId: "quizzo", text:"Quizzo"},
     {path: `/topAuthor/${title}/userCollection`, targetId: "collection", text:"Collections"},
