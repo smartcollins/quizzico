@@ -116,9 +116,9 @@ function App() {
         {
           element: <MyQuizzo />,
           path: ROUTE_PATHS.LIBRARY_QUIZ,
+
           children: [
             { element: <Quiz />, index: true },
-
             {
               element: <Collection />,
               path: ROUTE_PATHS.LIBRARY_QUIZ_COLLECTION,
@@ -128,6 +128,7 @@ function App() {
         {
           path: ROUTE_PATHS.LIBRARY_FAVORITES,
           element: <Favorites />,
+          index: true,
         },
         {
           path: ROUTE_PATHS.LIBRARY_COLLABO,
