@@ -1,4 +1,8 @@
 import { useEffect, useState } from "react";
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
 
 import Loader from "./components/loader/Loader";
 import Carousel from "./components/Carousel";
@@ -7,11 +11,7 @@ import FindFriends from "./pages/FindFriends";
 import DiscoverPage from "./components/home-screen/DiscoverPage";
 import Collections from "./pages/Collections";
 import Home from "./pages/Home";
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
-
+import Search from "./components/home-screen/Search";
 import WorkPlace from "./pages/WorkPlace";
 import ErrorPage from "./pages/ErrorPage";
 import ProgressBar from "./components/ProgressBar";
@@ -63,6 +63,11 @@ function App() {
     {
       path: "/home",
       element: <Home />,
+      errorElement: <ErrorPage />,
+    },
+    {
+      path: "search",
+      element: <Search />,
       errorElement: <ErrorPage />,
     },
     {
