@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {value} from "../../assets/value";
-import { category, peopleYouMayKnow } from "../../assets/data"
+import { category, peopleYouMayKnow, collections } from "../../assets/data"
 import SearchPeople from './SearchPeople';
 import { ArrowLeft, MagnifyingGlass, X } from 'phosphor-react';
 
 const Search = ()=>{
+    const sm = value.sm
+    const md = value.md
+
     const [cat, setCat] = useState(false);
     const [qz, setQz] = useState(false);
     const [ple, setPle] = useState(false);
     const [lt, setLt] = useState(false);
-
-    const sm = value.sm
-    const md = value.md
 
     const onCat = ()=>{
         setCat(true)
@@ -36,6 +36,8 @@ const Search = ()=>{
 
     const item = category.map((item,idx)=>(<div key={idx} className={item.bold?' border-b border-[#757575] flex items-center justify-between my-4 py-2':'flex items-center justify-between my-4'}><p onClick={onCat} className=' capitalize text-[#757575] font-medium text-lg'>{item.txt}</p><X size={sm} color="#757575" /></div>))
     const item2 = peopleYouMayKnow.map((item,idx)=><SearchPeople key={idx} {...item}/>)
+    // const item3 = collections.map((item,idx)=><div className="grid grid-cols-2 gap-2 md:flex md:flex-col md:items-center md:gap-4"><img key={idx} className="md:object-cover md:w-4/5" src={item.img} alt="collections"/></div>)
+    const item3 = collections.map((item,idx)=><img key={idx} className="md:object-cover md:w-4/5" src={item.img} alt="collections"/>)
 
 
 
@@ -52,16 +54,19 @@ const Search = ()=>{
                 </div>
             </div>
             <div>
-                <div className='flex justify-between items-center gap-4 my-4'>
+                {cat&&<div className='flex justify-between items-center gap-4 my-4'>
                     <button onClick={onQz} className={qz?"bg-[#6949ff] text-white rounded-3xl w-2/4":" bg-transparent text-[#6949ff] border border-[#6949ff] rounded-3xl w-2/4"}>Quiz</button>
                     <button onClick={onPle} className={ple?"bg-[#6949ff] text-white rounded-3xl w-2/4":" bg-transparent text-[#6949ff] border border-[#6949ff] rounded-3xl w-2/4"}>People</button>
                     <button onClick={onLt} className={lt?"bg-[#6949ff] text-white rounded-3xl w-2/4":" bg-transparent text-[#6949ff] border border-[#6949ff] rounded-3xl w-2/4"}>Collections</button>
-                </div>
-                {
+                </div>}
+                {/* {
                     cat?
                     <div>{item2}</div>:
                     <div>{item}</div>
-                }
+                } */}
+                {!cat&&<div>{item}</div>}
+                {qz&&<div>{item2}</div>}
+                {lt&&<div className="grid grid-cols-2 gap-2 md:flex md:flex-col md:items-center md:gap-4">{item3}</div>}
             </div>
         </div>
     )
