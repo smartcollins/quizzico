@@ -293,3 +293,24 @@ export const collections = [{
 },{
   img: lection10
 },]
+
+export const category = [{
+  txt:"recent",
+  bold:true
+},{
+  txt:"back to school"
+},{
+  txt:"finance and banking"
+},{
+  txt:"darron kulikowski"
+},{
+  txt:"business and marketing"
+},{
+  txt:"art & design"
+},{
+  txt:"geoferry dorrance"
+},{
+  txt:"food & drink"
+},{
+  txt:"productivity quiz"
+}]
