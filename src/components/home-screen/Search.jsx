@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { value } from "../../assets/value";
-import { category, peopleYouMayKnow, collections } from "../../assets/data"
+import { category, peopleYouMayKnow, collections, discoverData } from "../../assets/data"
 import SearchPeople from './SearchPeople';
+import DiscoverFeatures from './DiscoverFeatures';
 import { ArrowLeft, MagnifyingGlass, X } from 'phosphor-react';
 
 const Search = () => {
@@ -38,6 +39,7 @@ const Search = () => {
     const item2 = peopleYouMayKnow.map((item, idx) => <SearchPeople key={idx} {...item} />)
     // const item3 = collections.map((item,idx)=><div className="grid grid-cols-2 gap-2 md:flex md:flex-col md:items-center md:gap-4"><img key={idx} className="md:object-cover md:w-4/5" src={item.img} alt="collections"/></div>)
     const item3 = collections.map((item, idx) => <img key={idx} className="md:object-cover md:w-4/5" src={item.img} alt="collections" />)
+    const item4 = discoverData.map((item,idx)=><DiscoverFeatures key={idx} {...item}/>)
 
 
 
@@ -62,6 +64,7 @@ const Search = () => {
                 {!cat && <div>{item}</div>}
                 {ple && <div>{item2}</div>}
                 {lt && <div className="grid grid-cols-2 gap-2 md:flex md:flex-col md:items-center md:gap-4">{item3}</div>}
+                {qz && <div>{item4}</div>}
             </div>
         </div>
     )
