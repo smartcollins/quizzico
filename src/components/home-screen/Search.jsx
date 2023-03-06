@@ -1,13 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {value} from "../../assets/value";
-import {category} from "../../assets/data"
+import { category, peopleYouMayKnow } from "../../assets/data"
+import SearchPeople from './SearchPeople';
 import { ArrowLeft, MagnifyingGlass, X } from 'phosphor-react';
 
 const Search = ()=>{
+    const [cat, setCat] = useState(false);
+
     const sm = value.sm
     const md = value.md
-    const items = category.map((item,idx)=>(<div key={idx} className={item.bold?' border-b border-[#757575] flex items-center justify-between my-4 py-2':'flex items-center justify-between my-4'}><p className=' capitalize text-[#757575] font-medium text-lg'>{item.txt}</p><X size={sm} color="#757575" /></div>))
+
+    const onCat = ()=>{
+        setCat(true)
+    }
+
+    const item = category.map((item,idx)=>(<div key={idx} className={item.bold?' border-b border-[#757575] flex items-center justify-between my-4 py-2':'flex items-center justify-between my-4'}><p onClick={onCat} className=' capitalize text-[#757575] font-medium text-lg'>{item.txt}</p><X size={sm} color="#757575" /></div>))
+    const item2 = peopleYouMayKnow.map((item,idx)=><SearchPeople key={idx} {...item}/>)
+
+
+
     return(
         <div className='py-4 px-2'>
             <div className='flex gap-4 items-center'>
@@ -21,8 +33,15 @@ const Search = ()=>{
                 </div>
             </div>
             <div>
-                {items}
+                {
+                    cat?
+                    <div>{item2}</div>:
+                    <div>{item}</div>
+                }
             </div>
+            {/* <div>
+                {item}
+            </div> */}
         </div>
     )
 }
