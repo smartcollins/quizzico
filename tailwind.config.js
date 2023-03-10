@@ -4,7 +4,20 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      transitionDuration: {
+        '900': '900ms',
+      },
+      colors:{
+       purple: "#6949ff",
+        ash: "#f5f5f5",
+        lwhite: "#f0edff",
+        dw: "#bbb",
+        maxblack: "#00000022",
+        minblack: "#00000099"
+    }
+    },
+  
   },
   plugins: [],
 }
