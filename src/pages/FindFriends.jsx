@@ -23,14 +23,12 @@ const FindFriends = () => {
   return (
     <section className="flex w-full justify-center h-screen pt-5">
       <div className="w-1/2  h-full max-md:w-full px-5 py-4 space-y-5">
-        <div className="flex gap-10 items-center">
-          <Link to="/home">
-            <ArrowLeft size={24} />  
-          </Link>
-          {/* <div>
-            <ArrowLeft size={24} />
-          </div> */}
-          <div className="text-2xl capitalize font-[600]">find friends</div>
+        <div className="flex gap-10 items-center max-sm:fixed max-sm:top-0 
+        max-sm:w-full bg-white max-sm:left-0 max-sm:right-0 max-sm:p-3 ">
+          <div>
+            <ArrowLeft size={24} className="cursor-pointer" />
+          </div>
+          <div className="text-2xl capitalize font-semibold">find friends</div>
         </div>
         <SearchInput setSearchValue={setSearchValue} />
         <article className="p-4  rounded-3xl space-y-5 shadow-lg">

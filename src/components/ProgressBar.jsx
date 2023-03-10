@@ -35,7 +35,7 @@ window.onpopstate=(()=>{
   <Layout>
     <section className="flex w-full justify-center h-full">
       <div className="w-3/6  h-full max-md:w-full py-4 ">
-      <div className="flex gap-10 items-center">
+      <div className="flex gap-10 items-center  max-sm:justify-center">
         <div onClick={handlePrev}>
           <ArrowLeft size={cssValues.iconSize} className='cursor-pointer'/>
         </div>
