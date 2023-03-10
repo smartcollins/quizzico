@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { ArrowLeft } from "phosphor-react";
 import DiscoverHeader from "../components/home-screen/DiscoverHeader";
 import useDebounce from "../assets/useDebounce";

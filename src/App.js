@@ -1,5 +1,8 @@
-import { Suspense, lazy } from "react";
+import { Suspense, lazy, useEffect, useState } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+import Loader from "./components/loader/Loader";
+import Collections from "./pages/Collections";
 import FindFriends from "./pages/FindFriends";
 import DiscoverPage from "./pages/DiscoverPage";
 import ErrorPage from "./pages/ErrorPage";
@@ -10,7 +13,6 @@ import Forgot from "./pages/Forgot";
 import Confirm from "./pages/Confirm";
 import New from "./pages/New";
 import { ROUTE_PATHS } from "./assets/data_two";
-import Loader from "./components/loader/Loader";
 import TopAuthors from "./pages/TopAuthors";
 import { EachUser } from "./components/EachUser";
 import UserQuizzo from "./pages/UserQuizzo";

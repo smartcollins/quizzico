@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 
 const AccountType = ({ mapContent, accountHeader, emoji, pathName, handleProgessWidth }) => {

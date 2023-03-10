@@ -30,6 +30,22 @@ import discoverImg4 from "../images/discover-4.png";
 import discoverImg5 from "../images/discover-5.png";
 import discoverImg6 from "../images/discover-6.png";
 
+import author from '../images/author.jpg'
+import author2 from '../images/author2.jpg'
+import author3 from '../images/author3.jpg'
+import author4 from '../images/author4.jpg'
+
+import lection from '../images/lection.jpg'
+import lection2 from '../images/lection2.jpg'
+import lection3 from '../images/lection3.jpg'
+import lection4 from '../images/lection4.jpg'
+import lection5 from '../images/lection5.jpg'
+import lection6 from '../images/lection6.jpg'
+import lection7 from '../images/lection7.jpg'
+import lection8 from '../images/lection8.jpg'
+import lection9 from '../images/lection9.jpg'
+import lection10 from '../images/lection10.jpg'
+
 import {
   User,
   Users,
@@ -223,3 +239,73 @@ export const discoverData = [
     id: "1",
   },
 ];
+
+
+export const authors = [{
+  img: author,
+  txt: "Rayford"
+},{
+  img: author2,
+  txt: "Wilard"
+},{
+  img: author3,
+  txt: "Hannah"
+},{
+  img: author4,
+  txt: "Geoffrey"
+},{
+  img: author,
+  txt: "Hoseh"
+},{
+  img: author2,
+  txt: "Auora"
+},{
+  img: author3,
+  txt: "Jasmine"
+},{
+  img: author4,
+  txt: "Saliem"
+}]
+
+export const collections = [{
+  img: lection
+},{
+  img: lection2
+},{
+  img: lection3
+},{
+  img: lection4
+},{
+  img: lection5
+},{
+  img: lection6
+},{
+  img: lection7
+},{
+  img: lection8
+},{
+  img: lection9
+},{
+  img: lection10
+},]
+
+export const category = [{
+  txt:"recent",
+  bold:true
+},{
+  txt:"back to school"
+},{
+  txt:"finance and banking"
+},{
+  txt:"darron kulikowski"
+},{
+  txt:"business and marketing"
+},{
+  txt:"art & design"
+},{
+  txt:"geoferry dorrance"
+},{
+  txt:"food & drink"
+},{
+  txt:"productivity quiz"
+}]

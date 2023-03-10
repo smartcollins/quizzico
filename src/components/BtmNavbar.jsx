@@ -1,16 +1,19 @@
 import React from 'react';
 import logo from '../images/quizzo-logo.png'
+import {value} from '../assets/value'
 import { House,SquaresFour,Plus,User } from 'phosphor-react';
 
 
 const BtmNavbar = ()=>{
+    const num = value.md
+    
     return(
-        <div className='flex items-center justify-around inset-0 fixed bottom-0'>
-            <House size={30} weight="fill" />
-            <SquaresFour size={30} weight="light" />
+        <div className='flex items-center justify-around fixed bottom-0 w-full bg-white py-4 '>
+            <House size={num} weight="fill" />
+            <SquaresFour size={num} weight="light" />
             <img className='h-12' src={logo} alt="logo"/>
-            <Plus size={30} />
-            <User size={30} />
+            <Plus size={num} />
+            <User size={num} />
         </div>
     )
 }
