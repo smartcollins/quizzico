@@ -37,11 +37,7 @@ function App() {
       element: <Carousel />,
       errorElement: <ErrorPage />,
     },
-    {
-      path: ROUTE_PATHS.ACCOUNT,
-      element: <Account />,
-      errorElement: <ErrorPage />,
-    },
+   
     {
       path: ROUTE_PATHS.SIGNIN,
       element: <SignIn />,
@@ -75,11 +71,12 @@ function App() {
           path: ROUTE_PATHS.WORKPLACE,
           element: <WorkPlace />,
         },
+        {
+          path: ROUTE_PATHS.ACCOUNT,
+          element: <Account />,
+          errorElement: <ErrorPage />,
+        },
       ],
-    },
-    {
-      path: ROUTE_PATHS.ACCOUNT,
-      element: <Account />,
     },
     {
       path: ROUTE_PATHS.FINDFRIENDS,
