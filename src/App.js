@@ -32,12 +32,29 @@ const Carousel = lazy(() => import("./components/intro/Carousel"));
 
 function App() {
   const router = createBrowserRouter([
+
     {
       path: ROUTE_PATHS.INDEX,
       element: <Carousel />,
       errorElement: <ErrorPage />,
     },
-   
+    {
+      path: ROUTE_PATHS.OCCUPATION,
+      element: <ProgressBar />,
+      children: [
+        { index: true, element: <AccountTypePage /> },
+        {
+          path: ROUTE_PATHS.WORKPLACE,
+          element: <WorkPlace />,
+        },
+        {
+          path: ROUTE_PATHS.ACCOUNT,
+          element: <Account />,
+          errorElement: <ErrorPage />,
+        },
+      ],
+    },
+  
     {
       path: ROUTE_PATHS.SIGNIN,
       element: <SignIn />,
@@ -62,22 +79,7 @@ function App() {
       element: <HomeScreen />,
       errorElement: <ErrorPage />,
     },
-    {
-      path: ROUTE_PATHS.OCCUPATION,
-      element: <ProgressBar />,
-      children: [
-        { index: true, element: <AccountTypePage /> },
-        {
-          path: ROUTE_PATHS.WORKPLACE,
-          element: <WorkPlace />,
-        },
-        {
-          path: ROUTE_PATHS.ACCOUNT,
-          element: <Account />,
-          errorElement: <ErrorPage />,
-        },
-      ],
-    },
+    
     {
       path: ROUTE_PATHS.FINDFRIENDS,
       element: <FindFriends />,
@@ -115,7 +117,6 @@ function App() {
         {
           element: <MyQuizzo />,
           path: ROUTE_PATHS.LIBRARY_QUIZ,
-
           children: [
             { element: <Quiz />, index: true },
             {
@@ -135,6 +136,9 @@ function App() {
         },
       ],
     },
+    {
+      path: ROUTE_PATHS.NEWCOLLECTION
+    }
   ]);
 
   return (
