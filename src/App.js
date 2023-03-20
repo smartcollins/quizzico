@@ -33,7 +33,6 @@ const Carousel = lazy(() => import("./components/intro/Carousel"));
 
 function App() {
   const router = createBrowserRouter([
-
     {
       path: ROUTE_PATHS.INDEX,
       element: <Carousel />,
@@ -55,7 +54,7 @@ function App() {
         },
       ],
     },
-  
+
     {
       path: ROUTE_PATHS.SIGNIN,
       element: <SignIn />,
@@ -80,7 +79,7 @@ function App() {
       element: <HomeScreen />,
       errorElement: <ErrorPage />,
     },
-    
+
     {
       path: ROUTE_PATHS.FINDFRIENDS,
       element: <FindFriends />,
@@ -139,8 +138,8 @@ function App() {
     },
     {
       path: ROUTE_PATHS.NEWCOLLECTION,
-      element: <NewCollection/>
-    }
+      element: <NewCollection />,
+    },
   ]);
 
   return (
