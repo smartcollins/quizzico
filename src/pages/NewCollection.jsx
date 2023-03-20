@@ -6,7 +6,7 @@ import DropDown from "../components/library/DropDown";
 
 const NewCollection = () => {
   const [dropArrow, setDropArrow] = useState(false);
-  const handleDropAction =() => setDropArrow(!dropArrow);
+  const handleDropAction = () => setDropArrow(!dropArrow);
 
   return (
     <div className=" w-full">
@@ -34,7 +34,13 @@ const NewCollection = () => {
           placeholder={"Enter a Collection Title"}
           type={"text"}
         />
-       <DropDown title={"Visible to"} handleDropAction={handleDropAction} dropAction={dropArrow} contents={["Only Me", "Public"]}/>
+        <DropDown
+          title={"Visible to"}
+          handleDropAction={handleDropAction}
+          dropAction={dropArrow}
+          contents={["Only Me", "Public"]}
+        />
+        
       </div>
     </div>
   );
