@@ -24,6 +24,7 @@ import Favorites from "./components/library/Favorites";
 import Collabo from "./components/library/Collabo";
 import Quiz from "./components/library/Quiz";
 import Collection from "./components/library/Collection";
+import NewCollection from "./pages/NewCollection";
 
 const HomeScreen = lazy(() => import("./pages/HomeScreen"));
 const WorkPlace = lazy(() => import("./pages/WorkPlace"));
@@ -137,7 +138,8 @@ function App() {
       ],
     },
     {
-      path: ROUTE_PATHS.NEWCOLLECTION
+      path: ROUTE_PATHS.NEWCOLLECTION,
+      element: <NewCollection/>
     }
   ]);
 
