@@ -1,8 +1,7 @@
-import { CaretDown, CaretUp, Image, X } from "phosphor-react";
+import { CaretDown, CaretUp} from "phosphor-react";
 import { useState } from "react";
 
 const DropDown = ({ title, dropAction, handleDropAction, contents }) => {
-    
   const [inputValue, setInputValue] = useState("Select");
 
   const selectInput = (item) => {

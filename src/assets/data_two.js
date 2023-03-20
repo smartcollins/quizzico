@@ -33,6 +33,7 @@ export const details = (title) => [
   },
   { path: `/topAuthor/${title}/userAbout`, targetId: "about", text: "About" },
 ];
+
 export const iconsHover = ` relative cursor-pointer h-fit w-6 h-6 
   hover:after:scale-x-125  hover:after:scale-y-150 after:content-[''] 
   after:block after:h-full after:w-full after:rounded-full after:absolute after:top-0

@@ -3,7 +3,6 @@ import { Image, X } from "phosphor-react";
 import { cssValues } from "../assets/staticValues";
 import Inputs from "../components/Inputs";
 import DropDown from "../components/library/DropDown";
-import Button from "../components/library/Button";
 import { useNavigate } from "react-router-dom";
 
 const NewCollection = () => {
