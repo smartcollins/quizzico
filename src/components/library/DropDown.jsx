@@ -11,7 +11,7 @@ const DropDown = ({ title, dropAction, handleDropAction, contents }) => {
   };
 
   return (
-    <div>
+    <div className="space-y-4">
       <p className="font-bold">{title}</p>
       <div
         className="flex items-center justify-between  border-gray-400 border-b-2"
@@ -28,7 +28,7 @@ const DropDown = ({ title, dropAction, handleDropAction, contents }) => {
         </span>
       </div>
       {dropAction && (
-        <div className="m-0 space-y-2  shadow-sm">
+        <div className="m-0 space-y-2  shadow-sm ">
           {contents.map((item) => (
             <p
               className="capitalize font-semibold py-1"
