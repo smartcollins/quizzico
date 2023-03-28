@@ -10,7 +10,7 @@ const Menu = ({ title, id, handler, active }) => {
         onClick={handler}
         className={
           active === id
-            ? "py-3 capitalize cursor-pointer text-center select-none border-b-4 border-purple text-purple text-xl font-semibold"
+            ? "py-3 capitalize cursor-pointer text-center select-none border-b-4 border-purple text-purple text-xl max-sm:text-base font-semibold"
             : "py-3 capitalize cursor-pointer text-center select-none border-b-4 border-gray-100 font-semibold"
         }
       >

@@ -24,9 +24,6 @@ const Account = () => {
 
   return (
     <div className="text-center px-2">
-      <div className="">
-        <ProgressBar />
-      </div>
       <p className="font-bold text-2xl mb-3">Create an account✏</p>
       <div>
         {account ? (

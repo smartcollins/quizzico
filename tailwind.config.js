@@ -10,6 +10,7 @@ module.exports = {
       },
       colors:{
        purple: "#6949ff",
+      "purple-100": "#fafafa",
         ash: "#f5f5f5",
         lwhite: "#f0edff",
         dw: "#bbb",
@@ -17,7 +18,8 @@ module.exports = {
         minblack: "#00000099"
     },
     width:{
-      "36%":"36%"
+      "36%":"36%",
+      "270px": "270px",
     }
     },
   

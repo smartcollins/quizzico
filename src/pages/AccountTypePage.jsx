@@ -1,17 +1,17 @@
 import React from "react";
 import AccountType from "../components/AccountType";
 import { accountCategory } from "../assets/data";
-import { useDispatch} from "react-redux";
+import { useDispatch } from "react-redux";
 import { increment } from "../redux/bar-features/barSlice";
 import { ROUTE_PATHS } from "../assets/data_two";
 
 const AccountTypePage = () => {
   const dispatch = useDispatch();
-  
-  const handleProgessWidth =()=>{
-    dispatch(increment())
-  }
-  
+
+  const handleProgessWidth = () => {
+    dispatch(increment());
+  };
+
   return (
     <>
       <AccountType
@@ -20,7 +20,6 @@ const AccountTypePage = () => {
         emoji={"👨"}
         pathName={ROUTE_PATHS.WORKPLACE}
         handleProgessWidth={handleProgessWidth}
-        
       />
     </>
   );
