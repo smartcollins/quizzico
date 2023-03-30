@@ -1,12 +1,12 @@
 export const ROUTE_PATHS = {
   INDEX: "/",
-  ACCOUNT: "/account",
-  SIGNIN: "/sign-in",
-  FORGOT: "/forgot",
-  CONFIRM: "/confirm",
   OCCUPATION: "/occupation",
-  WORKPLACE: "workplace",
+  WORKPLACE: "/occupation/workplace",
+  ACCOUNT: "/occupation/account",
+  CONFIRM: "/confirm",
+  FORGOT: "/forgot",
   HOME: "/home",
+  SIGNIN: "/sign-in",
   FINDFRIENDS: "/find-friends",
   DISCOVER: "/discover",
   NEW: "/new",
@@ -19,6 +19,7 @@ export const ROUTE_PATHS = {
   LIBRARY_QUIZ_COLLECTION: "Quizzo/collections",
   LIBRARY_FAVORITES: "/library/Favorites",
   LIBRARY_COLLABO: "/library/Collaboration",
+  NEWCOLLECTION:"/collection/createNew"
 };
 
 // root path = topAuthor/:title/userCollection
@@ -32,6 +33,7 @@ export const details = (title) => [
   },
   { path: `/topAuthor/${title}/userAbout`, targetId: "about", text: "About" },
 ];
+
 export const iconsHover = ` relative cursor-pointer h-fit w-6 h-6 
   hover:after:scale-x-125  hover:after:scale-y-150 after:content-[''] 
   after:block after:h-full after:w-full after:rounded-full after:absolute after:top-0

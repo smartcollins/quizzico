@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import Button from "./Button";
 import { ROUTE_PATHS } from "../../assets/data_two";
 
 const MyQuizzo = () => {
   const [handler, setHandler] = useState("quizzo");
-  const btnHandler = (targetId) => setHandler(targetId);
+  const btnHandler = (targetId) => {return setHandler(targetId);}
+  
 
   return (
     <div>

@@ -24,6 +24,7 @@ import Favorites from "./components/library/Favorites";
 import Collabo from "./components/library/Collabo";
 import Quiz from "./components/library/Quiz";
 import Collection from "./components/library/Collection";
+import NewCollection from "./pages/NewCollection";
 
 const HomeScreen = lazy(() => import("./pages/HomeScreen"));
 const WorkPlace = lazy(() => import("./pages/WorkPlace"));
@@ -38,10 +39,22 @@ function App() {
       errorElement: <ErrorPage />,
     },
     {
-      path: ROUTE_PATHS.ACCOUNT,
-      element: <Account />,
-      errorElement: <ErrorPage />,
+      path: ROUTE_PATHS.OCCUPATION,
+      element: <ProgressBar />,
+      children: [
+        { index: true, element: <AccountTypePage /> },
+        {
+          path: ROUTE_PATHS.WORKPLACE,
+          element: <WorkPlace />,
+        },
+        {
+          path: ROUTE_PATHS.ACCOUNT,
+          element: <Account />,
+          errorElement: <ErrorPage />,
+        },
+      ],
     },
+
     {
       path: ROUTE_PATHS.SIGNIN,
       element: <SignIn />,
@@ -66,21 +79,7 @@ function App() {
       element: <HomeScreen />,
       errorElement: <ErrorPage />,
     },
-    {
-      path: ROUTE_PATHS.OCCUPATION,
-      element: <ProgressBar />,
-      children: [
-        { index: true, element: <AccountTypePage /> },
-        {
-          path: ROUTE_PATHS.WORKPLACE,
-          element: <WorkPlace />,
-        },
-      ],
-    },
-    {
-      path: ROUTE_PATHS.ACCOUNT,
-      element: <Account />,
-    },
+
     {
       path: ROUTE_PATHS.FINDFRIENDS,
       element: <FindFriends />,
@@ -118,7 +117,6 @@ function App() {
         {
           element: <MyQuizzo />,
           path: ROUTE_PATHS.LIBRARY_QUIZ,
-
           children: [
             { element: <Quiz />, index: true },
             {
@@ -137,6 +135,10 @@ function App() {
           element: <Collabo />,
         },
       ],
+    },
+    {
+      path: ROUTE_PATHS.NEWCOLLECTION,
+      element: <NewCollection />,
     },
   ]);
 
