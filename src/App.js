@@ -93,6 +93,10 @@ function App() {
       element: <TopAuthors />,
     },
     {
+      path: ROUTE_PATHS.COLLECTIONS,
+      element: <Collections/>,
+    },
+    {
       path: ROUTE_PATHS.TOPAUTHORSID,
       element: <EachUser />,
       children: [
