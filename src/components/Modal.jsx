@@ -17,7 +17,8 @@ const Modal = ({ desc, txt, btn, btn_txt, duty }) => {
                 navigate(`${duty}`);
               }
         }
-        className="bg-white p-4 rounded-3xl w-4/5 md:w-2/4 md:h-[45%] md:flex  md:flex-col md:justify-center"
+        // className="bg-white p-4 rounded-3xl w-4/5 md:w-2/4 md:h-[45%] md:flex  md:flex-col md:justify-center"
+        className="bg-white p-4 rounded-3xl w-4/5 md:w-2/4 md:flex md:flex-col md:justify-center md:[90%] md:absolute md:left-12 "
       >
         <div className="bg-[#7355ff] rounded-2xl p-4 w-fit mx-auto">
           {btn ? <img src={check} alt="user" /> : <img src={user} alt="user" />}

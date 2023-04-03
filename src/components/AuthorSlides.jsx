@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 
-const Author_slides = () => {
+const AuthorSlides = () => {
   const settings = {
     dots: false,
     infinite: true,
@@ -38,4 +38,4 @@ const Author_slides = () => {
   );
 };
 
-export default Author_slides;
+export default AuthorSlides;
