@@ -268,24 +268,34 @@ export const authors = [{
 }]
 
 export const collections = [{
+  id: 1,
   img: lection
 },{
+  id: 2,
   img: lection2
 },{
+  id: 3,
   img: lection3
 },{
+  id: 4,
   img: lection4
 },{
+  id: 5,
   img: lection5
 },{
+  id: 6,
   img: lection6
 },{
+  id: 7,
   img: lection7
 },{
+  id: 8,
   img: lection8
 },{
+  id: 9,
   img: lection9
 },{
+  id: 10,
   img: lection10
 },]
 

@@ -25,6 +25,7 @@ import Collabo from "./components/library/Collabo";
 import Quiz from "./components/library/Quiz";
 import Collection from "./components/library/Collection";
 import NewCollection from "./pages/NewCollection";
+import CollectionInfo from "./pages/CollectionInfo";
 
 const HomeScreen = lazy(() => import("./pages/HomeScreen"));
 const WorkPlace = lazy(() => import("./pages/WorkPlace"));
@@ -95,6 +96,16 @@ function App() {
     {
       path: ROUTE_PATHS.COLLECTIONS,
       element: <Collections/>,
+      // children: [
+      //   {
+      //     path: ROUTE_PATHS.COLLECTIONSINFO,
+      //     element: <CollectionInfo/>,
+      //   },
+      // ]
+    },
+    {
+      path: ROUTE_PATHS.COLLECTIONSINFO,
+      element: <CollectionInfo/>,
     },
     {
       path: ROUTE_PATHS.TOPAUTHORSID,
