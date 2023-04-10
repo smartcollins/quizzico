@@ -46,6 +46,10 @@ import lection8 from '../images/lection8.jpg'
 import lection9 from '../images/lection9.jpg'
 import lection10 from '../images/lection10.jpg'
 
+import infoimg from "../images/info.jpg"
+import infoimg2 from "../images/info2.jpg"
+import infoimg3 from "../images/info3.jpg"
+
 import {
   User,
   Users,
@@ -298,6 +302,29 @@ export const collections = [{
   id: 9,
   img: lection10
 },]
+
+export const infoAry = [{
+  img: infoimg,
+  title: "re-train your brain with knowledge",
+  dur: "2-weeks ago",
+  play: "2.6k",
+  avt: author,
+  txt: "thad eddings"
+},{
+  img: infoimg2,
+  title: "book is a window tommorrow",
+  dur: "2 months ago",
+  play: "5.9k",
+  avt: author2,
+  txt: "sanjuanita ordonez"
+},{
+  img: infoimg3,
+  title: "back to school quizzes for newbies",
+  dur: "2 years ago",
+  play: "16.4k",
+  avt: author3,
+  txt: "alfonzo schuessler"
+}]
 
 export const category = [{
   txt:"recent",
