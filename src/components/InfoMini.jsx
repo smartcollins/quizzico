@@ -1,7 +1,4 @@
 import React from 'react';
-// import infoimg from "../images/info.jpg"
-// import author from "../images/author.jpg"
-
 
 const InfoMini = ({ img, title, dur, play, avt, txt }) => {
     return (
@@ -24,6 +21,5 @@ const InfoMini = ({ img, title, dur, play, avt, txt }) => {
         </div>
     )
 }
-
 
 export default InfoMini;
