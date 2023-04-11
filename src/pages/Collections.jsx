@@ -1,12 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { collections } from '../assets/data';
 import { value } from '../assets/value';
+import { ROUTE_PATHS } from '../assets/data_two';
 import { MagnifyingGlass, ArrowLeft } from 'phosphor-react';
 
 const Collection = ()=>{
-    
-    const items = collections.map((item,idx) => <img key={idx} className="md:object-cover md:w-4/5" src={item.img} alt="collections"/>)
+    // const {infoId} = useParams();
+    // console.log(infoId)
+    // console.log(useParams())
+    // const items = collections.map((item,idx) => <Link key={idx} to={`${ROUTE_PATHS.COLLECTIONS}/${infoId}`} ><img key={idx} className="md:object-cover md:w-4/5" src={item.img} alt="collections"/></Link>)
+    // const items = collections.map((item,idx) =><img key={idx} className="md:object-cover md:w-4/5" src={item.img} alt="collections"/>)
+    const items = collections.map((item,idx) => <Link key={idx} to={`${ROUTE_PATHS.COLLECTIONS}/${idx}`} ><img key={idx} className="md:object-cover md:w-4/5" src={item.img} alt="collections"/></Link>)
     const size = value.md
 
     return(

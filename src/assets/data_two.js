@@ -11,6 +11,8 @@ export const ROUTE_PATHS = {
   DISCOVER: "/discover",
   NEW: "/new",
   TOPAUTHORS: "/topAuthor",
+  COLLECTIONS: "/collections",
+  COLLECTIONSINFO: "/collections/:infoId",
   TOPAUTHORSID: "/topAuthor/:title",
   USERCOLLECTION: "/topAuthor/:title/userCollection",
   USERABOUT: "/topAuthor/:title/userAbout",

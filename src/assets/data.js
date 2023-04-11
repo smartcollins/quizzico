@@ -46,6 +46,10 @@ import lection8 from '../images/lection8.jpg'
 import lection9 from '../images/lection9.jpg'
 import lection10 from '../images/lection10.jpg'
 
+import infoimg from "../images/info.jpg"
+import infoimg2 from "../images/info2.jpg"
+import infoimg3 from "../images/info3.jpg"
+
 import {
   User,
   Users,
@@ -201,7 +205,7 @@ export const discoverData = [
     played: 5600,
     id: "6",
   },
-  
+
   {
     image: discoverImg3,
     miniImage: miniSlide3,
@@ -244,68 +248,101 @@ export const discoverData = [
 export const authors = [{
   img: author,
   txt: "Rayford"
-},{
+}, {
   img: author2,
   txt: "Wilard"
-},{
+}, {
   img: author3,
   txt: "Hannah"
-},{
+}, {
   img: author4,
   txt: "Geoffrey"
-},{
+}, {
   img: author,
   txt: "Hoseh"
-},{
+}, {
   img: author2,
   txt: "Auora"
-},{
+}, {
   img: author3,
   txt: "Jasmine"
-},{
+}, {
   img: author4,
   txt: "Saliem"
 }]
 
 export const collections = [{
+  id: 0,
   img: lection
-},{
+}, {
+  id: 1,
   img: lection2
-},{
+}, {
+  id: 2,
   img: lection3
-},{
+}, {
+  id: 3,
   img: lection4
-},{
+}, {
+  id: 4,
   img: lection5
-},{
+}, {
+  id: 5,
   img: lection6
-},{
+}, {
+  id: 6,
   img: lection7
-},{
+}, {
+  id: 7,
   img: lection8
-},{
+}, {
+  id: 8,
   img: lection9
-},{
+}, {
+  id: 9,
   img: lection10
 },]
 
+export const infoAry = [{
+  img: infoimg,
+  title: "re-train your brain with knowledge",
+  dur: "2-weeks ago",
+  play: "2.6k",
+  avt: author,
+  txt: "thad eddings"
+}, {
+  img: infoimg2,
+  title: "book is a window tommorrow",
+  dur: "2 months ago",
+  play: "5.9k",
+  avt: author2,
+  txt: "sanjuanita ordonez"
+}, {
+  img: infoimg3,
+  title: "back to school quizzes for newbies",
+  dur: "2 years ago",
+  play: "16.4k",
+  avt: author3,
+  txt: "alfonzo schuessler"
+}]
+
 export const category = [{
-  txt:"recent",
-  bold:true
-},{
-  txt:"back to school"
-},{
-  txt:"finance and banking"
-},{
-  txt:"darron kulikowski"
-},{
-  txt:"business and marketing"
-},{
-  txt:"art & design"
-},{
-  txt:"geoferry dorrance"
-},{
-  txt:"food & drink"
-},{
-  txt:"productivity quiz"
+  txt: "recent",
+  bold: true
+}, {
+  txt: "back to school"
+}, {
+  txt: "finance and banking"
+}, {
+  txt: "darron kulikowski"
+}, {
+  txt: "business and marketing"
+}, {
+  txt: "art & design"
+}, {
+  txt: "geoferry dorrance"
+}, {
+  txt: "food & drink"
+}, {
+  txt: "productivity quiz"
 }]
