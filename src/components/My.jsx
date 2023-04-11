@@ -25,7 +25,9 @@ const My = ({item,sm,md}) => {
       },
     ],
   };
-  console.log(settings.responsive[0].settings.slidesToShow)
+  
+  // console.log(settings.responsive[0].settings.slidesToShow)
+
   return (
     <div>
         <Slider {...settings}>
