@@ -22,10 +22,10 @@ const HomeScreen = () => {
       {/* <section className="flex w-full justify-center h-screen pt-5"> */}
       <section className="w-full flex">
         {/* <div className="w-1/2  h-full max-md:w-full px-5 py-4 space-y-10">   */}
-        <div className="bg-blue-500 w-1/4">
+        <div className="w-1/4 hidden lg:block">
           <SideNav/>
         </div>
-        <div className="bg-red-500 w-[85%] h-screen overflow-scroll">
+        <div className=" h-full w-full lg:w-[85%] lg:h-screen lg:overflow-scroll">
         <Navbar/>
        <div className="w-full">
         <Play/>
