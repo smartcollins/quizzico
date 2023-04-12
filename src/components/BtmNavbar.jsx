@@ -8,7 +8,7 @@ const BtmNavbar = ()=>{
     const num = value.md
     
     return(
-        <div className='flex items-center justify-around fixed bottom-0 w-full bg-white py-4 '>
+        <div className='flex items-center justify-around fixed bottom-0 w-full bg-white py-4 lg:hidden'>
             <House size={num} weight="fill" />
             <SquaresFour size={num} weight="light" />
             <img className='h-12' src={logo} alt="logo"/>
