@@ -50,6 +50,8 @@ import infoimg from "../images/info.jpg"
 import infoimg2 from "../images/info2.jpg"
 import infoimg3 from "../images/info3.jpg"
 
+
+
 import {
   User,
   Users,
@@ -57,7 +59,9 @@ import {
   Briefcase,
   Student,
   GraduationCap,
+  ChartBar, ChatText, CheckSquare, ClipboardText, Gear,House,Newspaper,Tray
 } from "phosphor-react";
+
 
 export const sliderData = [
   {
@@ -325,6 +329,34 @@ export const infoAry = [{
   avt: author3,
   txt: "alfonzo schuessler"
 }]
+
+export const sideNavAry = [
+                
+  {    icon:House,
+      txt: "Home"},
+  
+  {    icon:ClipboardText,
+      txt: "Orders"},
+  
+  {    icon:CheckSquare,
+      txt: "Schedule"},
+  
+  {    icon:ChatText,
+      txt: "Messages"},
+  
+  {    icon:Tray,
+      txt: "inbox"},
+  
+  {    icon:ChartBar,
+      txt: "analytics"},
+  
+  {    icon:Newspaper,
+      txt: "news"},
+  
+  {    icon:Gear,
+      txt: "settings"},
+]
+
 
 export const category = [{
   txt: "recent",
