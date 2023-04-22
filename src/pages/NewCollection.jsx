@@ -1,12 +1,8 @@
-import { useState } from "react";
 import Inputs from "../components/Inputs";
 import DropDown from "../components/library/DropDown";
 import AddImage from "../components/AddImage";
 
 const NewCollection = () => {
-  const [dropArrow, setDropArrow] = useState(false);
-
-  const handleDropAction = () => setDropArrow(!dropArrow);
 
   return (
     <div className=" w-full">
@@ -18,9 +14,7 @@ const NewCollection = () => {
           type={"text"}
         />
         <DropDown
-          title={"Visible to"}
-          handleDropAction={handleDropAction}
-          dropAction={dropArrow}
+          title={"Visible to"}          
           contents={["Only Me", "Public"]}
         />
         <div>
