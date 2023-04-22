@@ -1,6 +1,7 @@
 import React from 'react'
-import AddImage from '../components/AddImage'
-import Inputs from '../components/Inputs'
+import AddImage from '../components/AddImage';
+import Inputs from '../components/Inputs';
+import DropDown from '../components/library/DropDown';
 
 const CreateQuiz = () => {
   return (

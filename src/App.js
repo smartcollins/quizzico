@@ -26,6 +26,7 @@ import Quiz from "./components/library/Quiz";
 import Collection from "./components/library/Collection";
 import NewCollection from "./pages/NewCollection";
 import CollectionInfo from "./pages/CollectionInfo";
+import CreateQuiz from "./pages/CreateQuiz";
 
 const HomeScreen = lazy(() => import("./pages/HomeScreen"));
 const WorkPlace = lazy(() => import("./pages/WorkPlace"));
@@ -148,6 +149,10 @@ function App() {
     {
       path: ROUTE_PATHS.NEWCOLLECTION,
       element: <NewCollection />,
+    },
+    {
+      path: ROUTE_PATHS.CREATEQUIZ,
+      element: <CreateQuiz/>
     },
   ]);
 
