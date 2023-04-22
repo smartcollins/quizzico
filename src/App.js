@@ -96,12 +96,6 @@ function App() {
     {
       path: ROUTE_PATHS.COLLECTIONS,
       element: <Collections/>,
-      // children: [
-      //   {
-      //     path: ROUTE_PATHS.COLLECTIONSINFO,
-      //     element: <CollectionInfo/>,
-      //   },
-      // ]
     },
     {
       path: ROUTE_PATHS.COLLECTIONSINFO,
