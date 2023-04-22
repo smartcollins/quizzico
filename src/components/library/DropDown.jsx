@@ -1,5 +1,5 @@
-import { CaretDown, CaretUp } from "phosphor-react";
 import { useRef, useState, useEffect } from "react";
+import { CaretDown, CaretUp } from "phosphor-react";
 
 const DropDown = ({ title, contents }) => {
   const [inputValue, setInputValue] = useState("Select");
