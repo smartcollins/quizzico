@@ -21,7 +21,8 @@ export const ROUTE_PATHS = {
   LIBRARY_QUIZ_COLLECTION: "Quizzo/collections",
   LIBRARY_FAVORITES: "/library/Favorites",
   LIBRARY_COLLABO: "/library/Collaboration",
-  NEWCOLLECTION:"/collection/createNew"
+  NEWCOLLECTION:"/collection/createNew",
+  CREATEQUIZ: "/createQuiz",
 };
 
 // root path = topAuthor/:title/userCollection
