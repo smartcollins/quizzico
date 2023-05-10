@@ -72,6 +72,10 @@ const QuizDetails = ({ description= true }) => {
                 </div>
               </>
             )}
+            <div className="flex justify-center capitalize font-semibold">
+                <span className="rounded-full text-center py-3 cursor-pointer w-2/6 bg-lwhite hover:bg-purple">play solo</span>
+                <span className="rounded-full text-center py-3 cursor-pointer w-2/6 bg-purple-100 hover:bg-purple">play with friends</span>
+            </div>
           </div>
         </div>
       </div>
