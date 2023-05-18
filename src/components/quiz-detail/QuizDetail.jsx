@@ -1,12 +1,16 @@
 import {ArrowRight, DotsThreeCircle, EyeSlash, Pen, Star } from "phosphor-react";
-import React from "react";
+import React, { useCallback, useState } from "react";
 import Nav from "./Nav";
 import img1 from "../../images/sch-10.png";
 import UserBoard from "../UserBoard";
 import SearchPeople from "../home-screen/SearchPeople";
 import QuRCode from "./QuRCode";
+import QuizBtn from "./QuizBtn";
 
 const QuizDetails = ({ description=false }) => {
+ const [bg, setBg]= useState("");
+ const btnHandler = useCallback((e)=>setBg(e.target.id),[])
+
   const details = [
     {
       Quizzo: "Questions",
@@ -75,8 +79,8 @@ const QuizDetails = ({ description=false }) => {
             )}
             <QuRCode/>
             <div className="flex justify-center capitalize font-semibold gap-x-5 max-md:fixed bottom-0 w-full right-0 left-0 z-30">
-                <span className="rounded-full text-center py-3 cursor-pointer w-2/6 bg-zinc-300 hover:bg-purple">play solo</span>
-                <span className="rounded-full text-center py-3 cursor-pointer w-2/6 bg-zinc-300 hover:bg-purple">play with friends</span>
+              <QuizBtn handler={bg} btnHandler={btnHandler}>play solo</QuizBtn>
+              <QuizBtn handler={bg} btnHandler={btnHandler}>play with friends</QuizBtn>
             </div>
           </div>
         </div>
