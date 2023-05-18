@@ -161,7 +161,7 @@ function App() {
       element: <QuizDetails/>
     },
     {
-      path: ROUTE_PATHS.QUIZDETAILS,
+      path: ROUTE_PATHS.QURCODE,
       element: <QuRCode/>
     },
   ]);

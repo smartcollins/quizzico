@@ -6,8 +6,9 @@ const QuRCode = () => {
     const [bg, setBg]= useState("");
     const btnHandler = useCallback((e)=>setBg(e.target.id),[]);
   return (
-    <div className="l">
-      <div className="flex items-center flex-col">
+    <div className="flex justify-center">
+      <div className="flex items-center flex-col xl:w-1/2 mt-5">
+      <span className="hidden xl:block lg:block md:block text-2xl font-serif underline">Generate PIN & QR Code</span>
         <span className="items-center gap-2  w-full hidden max-md:flex">
           <span>
             <ArrowLeft className="cursor-pointer text-xl" />
@@ -25,9 +26,9 @@ const QuRCode = () => {
           PIN & QRCode are unique and for each player, you can invite your
           friends to play quizzes on one server with the code above
         </div>
-        <div className="flex max-sm:flex-col max-sm:items-center bg-white max-sm:space-y-2 justify-center capitalize font-semibold gap-x-5 max-md:fixed bottom-0 w-full right-0 left-0 z-30">
-              <QuizBtn handler={bg} btnHandler={btnHandler}><Download/> save</QuizBtn>
-              <QuizBtn handler={bg} btnHandler={btnHandler}><Share/> share</QuizBtn>
+        <div className="flex max-sm:flex-col max-sm:items-center bg-white max-sm:space-y-2 justify-center capitalize font-semibold gap-x-5">
+              <QuizBtn handler={bg} btnHandler={btnHandler}><Download weight="fill"  className="mx-1"/> save</QuizBtn>
+              <QuizBtn handler={bg} btnHandler={btnHandler}><Share  className="mx-1" weight="fill" /> share</QuizBtn>
             </div>
       </div>
     </div>
