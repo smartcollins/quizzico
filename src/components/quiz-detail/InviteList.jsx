@@ -5,13 +5,14 @@ import SearchInput from "../home-screen/SearchInput";
 import useDebounce from "../../assets/useDebounce";
 import { search } from "../../assets/reusedFunc";
 import { peopleYouMayKnow } from "../../assets/data";
-import badgeImg from "../../images/red-badge.png"
+import badgeImg from "../../images/red-badge.png";
 
 const InviteList = () => {
   const [searchValue, setSearchValue] = useState("");
   const [selected, setSelected] = useState([]);
   const debounceValue = useDebounce(searchValue);
   const itemKeyWord = ["email", "title", "contact", "id"];
+
   const filteredSearchValue = search(
     peopleYouMayKnow,
     itemKeyWord,
@@ -55,7 +56,7 @@ const InviteList = () => {
             <div className="pl- max-sm:pl-0 rounded-full overflow-hidden max-sm:shrink-0 relative">
               <img src={image} alt="" className="w max-sm:w-10 w-12" />
               <img
-                src={badgeImg }
+                src={badgeImg}
                 className="absolute z-20 right-0  bottom-1"
                 alt=""
               />
