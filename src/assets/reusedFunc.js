@@ -19,12 +19,12 @@ export const saveAndDownload = (text)=>{
   const content = JSON.stringify(text);
   const blob = new Blob([content], {type: 'text/plain'});
   console.log(blob);
-  const URL = URL.createObjectURL(blob);
+  const url = URL.createObjectURL(blob);
   const link = document.createElement('a');
-  link.href = URL;
+  link.href = url;
   link.download = 'file.txt';
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
-  URL.revokeObjectURL(URL);
+  URL.revokeObjectURL(url);
 }

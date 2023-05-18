@@ -1,4 +1,5 @@
 import  { useState, useCallback, useRef } from "react";
+import useShareApi from "../../assets/useShareApi";
 import { ArrowLeft, Download, QrCode, Share } from "phosphor-react";
 import QuizBtn from "./QuizBtn";
 import { copyText, saveAndDownload } from "../../assets/reusedFunc";
@@ -6,12 +7,20 @@ import { copyText, saveAndDownload } from "../../assets/reusedFunc";
 const QuRCode = () => {
     const [bg, setBg]= useState();
 
-    const btnHandler = useCallback((e)=>setBg(e.target.id),[]);
+    const  btnShare = useShareApi({
+      title: "Quizzo",
+      text: "Join quizzo - the fun, free way to learn",
+      url: "https://github.com/Elochukwu3",
+    });
+    const btnHandler = useCallback((e)=>{
+      setBg(e.target.id)
+      btnShare()
+    },[]);
+
    const spanElem = useRef(null);
 
-   const handleCopy = ()=>{
-    copyText(spanElem?.current.textContent)
-   }
+   const handleCopy = e =>copyText(spanElem?.current.textContent)
+   
    const saveText= ()=>{
     saveAndDownload(spanElem?.current.textContent)
    }
