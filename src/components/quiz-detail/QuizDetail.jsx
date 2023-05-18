@@ -8,7 +8,7 @@ import QuRCode from "./QuRCode";
 import QuizBtn from "./QuizBtn";
 
 const QuizDetails = ({ description=false }) => {
- const [bg, setBg]= useState("");
+ const [bg, setBg]= useState("play solo");
  const btnHandler = useCallback((e)=>setBg(e.target.id),[])
 
   const details = [
@@ -77,7 +77,6 @@ const QuizDetails = ({ description=false }) => {
                 </div>
               </>
             )}
-            <QuRCode/>
             <div className="flex max-sm:flex-col max-sm:items-center bg-white max-sm:space-y-2 justify-center capitalize font-semibold gap-x-5 max-md:fixed bottom-0 w-full right-0 left-0 z-30">
               <QuizBtn handler={bg} btnHandler={btnHandler}>play solo</QuizBtn>
               <QuizBtn handler={bg} btnHandler={btnHandler}>play with friends</QuizBtn>

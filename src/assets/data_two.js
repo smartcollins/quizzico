@@ -23,7 +23,8 @@ export const ROUTE_PATHS = {
   LIBRARY_COLLABO: "/library/Collaboration",
   NEWCOLLECTION:"/collection/createNew",
   CREATEQUIZ: "/createQuiz",
-  QUIZDETAILS: "quiz-details",
+  QUIZDETAILS: "/quiz-details",
+  QURCODE: "/quiz-details/QRCode",
 };
 
 // root path = topAuthor/:title/userCollection
