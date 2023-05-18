@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { ROUTE_PATHS } from "../../assets/data_two";
-import { Link, useNavigate } from "react-router-dom";
+import {useNavigate } from "react-router-dom";
 
 const SearchPeople = ({ image, title, email, verify }) => {
   const [follow, setFollow] = useState("bg-purple text-white");
   const [isFollowing, setIsFollowing] = useState(false);
+
   const navigate = useNavigate();
   const followUser = (e) => {
     if (e.target.matches("button")) {

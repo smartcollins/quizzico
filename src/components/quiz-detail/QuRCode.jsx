@@ -1,10 +1,15 @@
-import  { useState, useCallback } from "react";
+import  { useState, useCallback, useRef } from "react";
 import { ArrowLeft, Download, QrCode, Share } from "phosphor-react";
 import QuizBtn from "./QuizBtn";
+import { copyText } from "../../assets/reusedFunc";
 
 const QuRCode = () => {
     const [bg, setBg]= useState();
     const btnHandler = useCallback((e)=>setBg(e.target.id),[]);
+   const spanElem = useRef(null);
+   const handleCopy = ()=>{
+    copyText(spanElem?.current.textContent)
+   }
   return (
     <div className="flex justify-center">
       <div className="flex items-center flex-col xl:w-1/2 mt-5 py-2 bg-white shadow-md shadow-zinc-400 xl:rounded-none">
@@ -16,10 +21,10 @@ const QuRCode = () => {
           <span>Generate PIN & QR Code</span>
         </span>
         <div className="h-48 w-10/12"><QrCode className="w-full text-3xl" size={200}/></div>
-        <span className="block font-bold text-2xl my-5">
+        <span className="block font-bold text-2xl my-5" ref={spanElem}>
           {Math.floor(Math.random() * 1000)} {Math.floor(Math.random() * 1000)}
         </span>
-        <span>
+        <span onClick={handleCopy}>
             Tap code to copy
         </span>
         <div className="text-center opacity-70 font-semibold my-5 w-10/12 max-sm:w-11/12">
