@@ -5,6 +5,7 @@ import SearchInput from "../home-screen/SearchInput";
 import useDebounce from "../../assets/useDebounce";
 import { search } from "../../assets/reusedFunc";
 import { peopleYouMayKnow } from "../../assets/data";
+import badgeImg from "../../images/red-badge.png"
 
 const InviteList = () => {
   const [searchValue, setSearchValue] = useState("");
@@ -54,8 +55,8 @@ const InviteList = () => {
             <div className="pl- max-sm:pl-0 rounded-full overflow-hidden max-sm:shrink-0 relative">
               <img src={image} alt="" className="w max-sm:w-10 w-12" />
               <img
-                src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.iconpacks.net%2Ffree-icon%2Fred-verified-badge-18763.html&psig=AOvVaw0ResNGZMZnDCLCaRKlUYvN&ust=1684538087276000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCPipgsX___4CFQAAAAAdAAAAABAE"
-                className="w-5 h-5 absolute z-10 right-0  bottom-0 filter brightness-0 saturate-3"
+                src={badgeImg }
+                className="absolute z-20 right-0  bottom-1"
                 alt=""
               />
             </div>
@@ -67,7 +68,7 @@ const InviteList = () => {
         {filteredSearchValue.map(
           ({ verify, image, email, isSelected, title, id }) => (
             <div
-              className="gap-5 flex items-center max-sm:shrink-0"
+              className="gap-5 flex items-center max-sm:shrink-0 cursor-pointer shadow-sm shadow-zinc-200"
               onClick={() =>
                 eachSelect({ id, verify, image, email, isSelected, title })
               }
