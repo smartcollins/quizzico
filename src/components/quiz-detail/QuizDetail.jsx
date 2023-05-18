@@ -78,7 +78,7 @@ const QuizDetails = ({ description=false }) => {
               </>
             )}
             <QuRCode/>
-            <div className="flex justify-center capitalize font-semibold gap-x-5 max-md:fixed bottom-0 w-full right-0 left-0 z-30">
+            <div className="flex max-sm:flex-col max-sm:items-center bg-white max-sm:space-y-2 justify-center capitalize font-semibold gap-x-5 max-md:fixed bottom-0 w-full right-0 left-0 z-30">
               <QuizBtn handler={bg} btnHandler={btnHandler}>play solo</QuizBtn>
               <QuizBtn handler={bg} btnHandler={btnHandler}>play with friends</QuizBtn>
             </div>

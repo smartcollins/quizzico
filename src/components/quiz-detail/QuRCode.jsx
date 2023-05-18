@@ -1,7 +1,10 @@
 import { ArrowLeft, QrCode } from "phosphor-react";
 import React from "react";
+import QuizBtn from "./QuizBtn";
 
 const QuRCode = () => {
+    const [bg, setBg]= useState("");
+    const btnHandler = useCallback((e)=>setBg(e.target.id),[])
   return (
     <div className="l">
       <div className="flex items-center flex-col">
@@ -22,6 +25,10 @@ const QuRCode = () => {
           PIN & QRCode are unique and for each player, you can invite your
           friends to play quizzes on one server with the code above
         </div>
+        <div className="flex max-sm:flex-col max-sm:items-center bg-white max-sm:space-y-2 justify-center capitalize font-semibold gap-x-5 max-md:fixed bottom-0 w-full right-0 left-0 z-30">
+              <QuizBtn handler={bg} btnHandler={btnHandler}>play solo</QuizBtn>
+              <QuizBtn handler={bg} btnHandler={btnHandler}>play with friends</QuizBtn>
+            </div>
       </div>
     </div>
   );

@@ -5,7 +5,7 @@ const QuizBtn = ({btnHandler, handler="button", path, children}) => {
     <Link
       onClick={btnHandler}
       to={path||null}
-      className={`flex items-center justify-center w-40 px-3 font-semibold py-1 rounded-full
+      className={`flex items-center justify-center w-40 px-3 py-1 rounded-full max-sm:w-11/12 xl:p-2 font-semibold
          border-spacing-5 capitalize ${
            handler === children
              ? "bg-purple  text-zinc-300"
