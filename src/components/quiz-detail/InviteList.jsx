@@ -22,17 +22,16 @@ const InviteList = () => {
       ...item,
       isSelected: true,
     };
-  
-   
-        if (selected.findIndex((item) => item.id === newItem.id)=== -1) {
-            setSelected([...selected, newItem]);
-        } else {
-            setSelected((oldState)=>{
-                return oldState.map((items)=>{
-                    return items.id === newItem.id ? {...items} : {...items}
-                })
-            })
-        }
+
+    if (selected.findIndex((item) => item.id === newItem.id) === -1) {
+      setSelected([...selected, newItem]);
+    } else {
+      setSelected((oldState) => {
+        return oldState.map((items) => {
+          return items.id === newItem.id ? { ...items } : { ...items };
+        });
+      });
+    }
     console.log(selected);
   };
   return (
@@ -47,22 +46,32 @@ const InviteList = () => {
       </div>
       <SearchInput setSearchValue={setSearchValue} />
       <div>
-        <span>Friends selected (10)</span>
-       <div className="flex gap-3">
-       {
-            selected.map(({image})=>(
-                <div className="pl- max-sm:pl-0 rounded-full overflow-hidden max-sm:shrink-0">
-                <img src={image} alt="" className="w max-sm:w-10 w-12" />
-              </div>
-            ))
-        }   
-       </div>
+        {selected.length > 0 && (
+          <span>Friends selected ({selected.length})</span>
+        )}
+        <div className="flex gap-3">
+          {selected.map(({ image }) => (
+            <div className="pl- max-sm:pl-0 rounded-full overflow-hidden max-sm:shrink-0 relative">
+              <img src={image} alt="" className="w max-sm:w-10 w-12" />
+              <img
+                src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.iconpacks.net%2Ffree-icon%2Fred-verified-badge-18763.html&psig=AOvVaw0ResNGZMZnDCLCaRKlUYvN&ust=1684538087276000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCPipgsX___4CFQAAAAAdAAAAABAE"
+                className="w-5 h-5 absolute z-10 right-0  bottom-0 filter brightness-0 saturate-3"
+                alt=""
+              />
+            </div>
+          ))}
+        </div>
       </div>
       <div>{/* choosen ones */}</div>
       <div className="space-y-5">
         {filteredSearchValue.map(
           ({ verify, image, email, isSelected, title, id }) => (
-            <div className="gap-5 flex items-center max-sm:shrink-0" onClick={()=>eachSelect({ id, verify, image, email, isSelected, title })}>
+            <div
+              className="gap-5 flex items-center max-sm:shrink-0"
+              onClick={() =>
+                eachSelect({ id, verify, image, email, isSelected, title })
+              }
+            >
               <div className="pl- max-sm:pl-0 rounded-full overflow-hidden max-sm:shrink-0">
                 <img src={image} alt="" className="w max-sm:w-12 w-16" />
               </div>
