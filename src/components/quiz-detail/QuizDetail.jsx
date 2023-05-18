@@ -4,8 +4,9 @@ import Nav from "./Nav";
 import img1 from "../../images/sch-10.png";
 import UserBoard from "../UserBoard";
 import SearchPeople from "../home-screen/SearchPeople";
+import QuRCode from "./QuRCode";
 
-const QuizDetails = ({ description= true }) => {
+const QuizDetails = ({ description=false }) => {
   const details = [
     {
       Quizzo: "Questions",
@@ -54,7 +55,7 @@ const QuizDetails = ({ description= true }) => {
                 <p className="text-lg text-zinc-700 py-2 font-semibold">
                   Invite your friends to play quiz together
                 </p>
-                <div className="text-center py-5 bg-zinc-200 w-10/12 text-sm space-y-2 mx-auto max-md:w-11/12 rounded-xl">
+                <div className="flex items-center flex-col my-6 h-48 justify-center  py-5 bg-zinc-200 w-10/12 text-sm space-y-2 mx-auto max-md:w-11/12 rounded-xl">
                   <EyeSlash className="mx-auto text-2xl" />
                   Question content is hidden by the creator
                 </div>
@@ -72,7 +73,8 @@ const QuizDetails = ({ description= true }) => {
                 </div>
               </>
             )}
-            <div className="flex justify-center capitalize font-semibold gap-x-5 max-md:fixed bottom-0 w-ful right-0 left-0">
+            <QuRCode/>
+            <div className="flex justify-center capitalize font-semibold gap-x-5 max-md:fixed bottom-0 w-full right-0 left-0 z-30">
                 <span className="rounded-full text-center py-3 cursor-pointer w-2/6 bg-zinc-300 hover:bg-purple">play solo</span>
                 <span className="rounded-full text-center py-3 cursor-pointer w-2/6 bg-zinc-300 hover:bg-purple">play with friends</span>
             </div>
