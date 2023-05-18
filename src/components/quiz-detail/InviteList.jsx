@@ -11,9 +11,10 @@ const InviteList = () => {
     const debounceValue = useDebounce(searchValue);
     const itemKeyWord = ["email", "title", "contact", "id"];
     const filteredSearchValue = search(peopleYouMayKnow, itemKeyWord, debounceValue);
+
   return (
-    <div>
-        <div className="flex gap-10 items-center">
+    <div className="xl:w-1/2 mx-auto space-y-8 my-6">
+        <div className="flex gap-10 items-center bg-red-700">
             <div>
               <ArrowLeft size={cssValues.iconSize} className="cursor-pointer" />
             </div>
@@ -26,9 +27,9 @@ const InviteList = () => {
           <div>
             {/* choosen ones */}
           </div>
-          <div>
+          <div className="space-y-5"> 
           {
-            filteredSearchValue.map(({verify})=>(
+            filteredSearchValue.map(({verify, image, email, title})=>(
                 <div className="gap-5 flex items-center max-sm:shrink-0">
           <div className="pl- max-sm:pl-0 rounded-full overflow-hidden max-sm:shrink-0">
             <img src={image} alt="" className="w max-sm:w-12 w-16" />
