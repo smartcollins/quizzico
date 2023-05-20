@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ArrowLeft } from "phosphor-react";
+import { ArrowLeft, X } from "phosphor-react";
 import { cssValues } from "../../assets/staticValues";
 import SearchInput from "../home-screen/SearchInput";
 import useDebounce from "../../assets/useDebounce";
@@ -10,6 +10,8 @@ import badgeImg from "../../images/red-badge.png";
 const InviteList = () => {
   const [searchValue, setSearchValue] = useState("");
   const [selected, setSelected] = useState([]);
+  // const [selected, setSelected] = useState([]);
+
   const debounceValue = useDebounce(searchValue);
   const itemKeyWord = ["email", "title", "contact", "id"];
 
@@ -25,24 +27,22 @@ const InviteList = () => {
       isSelected: true,
     };
 
-    if (selected.findIndex((item) => item.id === newItem.id) === -1) {
-      setSelected([...selected, newItem]);
-    } else {
-      setSelected((oldState) => {
-        return oldState.map((items) => {
-          return items.id === newItem.id ? { ...items } : { ...items };
-        });
-      });
-    }
-    console.log(selected);
+    selected.findIndex((item) => item.id === newItem.id) === -1
+      ? setSelected([...selected, newItem])
+      : setSelected((oldState) => oldState);
   };
+  const removeSelected = (id) => {
+    const filteredItem = selected.filter((item) => item.id !== id);
+    setSelected(filteredItem);
+  };
+
   return (
     <div className="xl:w-1/2 mx-auto space-y-8 my-6">
       <div className="flex gap-10 items-center">
         <div>
           <ArrowLeft size={cssValues.iconSize} className="cursor-pointer" />
         </div>
-        <div className="text-2xl capitalize font-[600]">
+        <div className="text-2xl capitalize font-semibold">
           Invite friends to play
         </div>
       </div>
@@ -52,9 +52,20 @@ const InviteList = () => {
           <span>Friends selected ({selected.length})</span>
         )}
         <div className="flex gap-3">
-          {selected.map(({ image }) => (
-            <div className="pl- max-sm:pl-0 rounded-full overflow-hidden max-sm:shrink-0 relative">
-              <img src={image} alt="" className="w max-sm:w-10 w-12" />
+          {selected.map(({ image, id }) => (
+            <div className="p-1 max-sm:pl-0 rounded-full bg-zinc-300 group max-sm:shrink-0 relative">
+              <span
+                onClick={() => removeSelected(id)}
+                className="bg-zinc-100 hidden group-hover:block cursor-pointer rounded-full absolute z-20 top-0 right-0 "
+              >
+                {" "}
+                <X className="text-sm" />
+              </span>
+              <img
+                src={image}
+                alt=""
+                className="h-12 max-sm:h-10 max-sm:w-10 w-12 rounded-full"
+              />
               <img
                 src={badgeImg}
                 className="absolute z-20 right-0  bottom-1"
