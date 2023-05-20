@@ -163,8 +163,8 @@ function App() {
     },
     {
       path: ROUTE_PATHS.QURCODE,
-      // element: <QuRCode/>
-      element: <InviteList/>
+      element: <QuRCode/>
+      // element: <InviteList/>
     },
   ]);
 
