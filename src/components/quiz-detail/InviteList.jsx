@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ArrowLeft, X } from "phosphor-react";
+import { ArrowBendRightUp, ArrowElbowRightUp, ArrowFatLineUp, ArrowLeft, ArrowsVertical, CheckCircle, X } from "phosphor-react";
 import { cssValues } from "../../assets/staticValues";
 import SearchInput from "../home-screen/SearchInput";
 import useDebounce from "../../assets/useDebounce";
@@ -31,6 +31,7 @@ const InviteList = () => {
       ? setSelected([...selected, newItem])
       : setSelected((oldState) => oldState);
   };
+
   const removeSelected = (id) => {
     const filteredItem = selected.filter((item) => item.id !== id);
     setSelected(filteredItem);
@@ -102,15 +103,17 @@ const InviteList = () => {
                 <p className="text-gray-400">{email}</p>
               </div>
               {isSelected && (
-                <img
-                  src="https://img.icons8.com/fluency/48/null/verified-badge.png"
-                  className="w-5 h-5"
-                  alt=""
-                />
+                <CheckCircle className="text-2xl text-zinc-400 flex justify-end"/>
               )}
             </div>
           )
         )}
+        <div className="flex justify-center py-5">
+          <button className="capitalize bg-purple w-1/2 text-zinc-100 font-semibold rounded-full max-sm:w-10/12 py-2">
+            send invite and play now
+        
+          </button>
+        </div>
       </div>
     </div>
   );
