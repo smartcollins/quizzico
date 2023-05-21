@@ -27,6 +27,9 @@ import Collection from "./components/library/Collection";
 import NewCollection from "./pages/NewCollection";
 import CollectionInfo from "./pages/CollectionInfo";
 import CreateQuiz from "./pages/CreateQuiz";
+import QuizDetails from "./components/quiz-detail/QuizDetail";
+import QuRCode from "./components/quiz-detail/QuRCode";
+import InviteList from "./components/quiz-detail/InviteList";
 
 const HomeScreen = lazy(() => import("./pages/HomeScreen"));
 const WorkPlace = lazy(() => import("./pages/WorkPlace"));
@@ -153,6 +156,15 @@ function App() {
     {
       path: ROUTE_PATHS.CREATEQUIZ,
       element: <CreateQuiz/>
+    },
+    {
+      path: ROUTE_PATHS.QUIZDETAILS,
+      element: <QuizDetails/>
+    },
+    {
+      path: ROUTE_PATHS.QURCODE,
+      element: <QuRCode/>
+      // element: <InviteList/>
     },
   ]);
 
