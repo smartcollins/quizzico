@@ -30,6 +30,7 @@ import CreateQuiz from "./pages/CreateQuiz";
 import QuizDetails from "./components/quiz-detail/QuizDetail";
 import QuRCode from "./components/quiz-detail/QuRCode";
 import InviteList from "./components/quiz-detail/InviteList";
+import Factor from "./components/005/Factor";
 
 const HomeScreen = lazy(() => import("./pages/HomeScreen"));
 const WorkPlace = lazy(() => import("./pages/WorkPlace"));
@@ -165,6 +166,10 @@ function App() {
       path: ROUTE_PATHS.QURCODE,
       element: <QuRCode/>
       // element: <InviteList/>
+    },
+    {
+      path: ROUTE_PATHS.QUESTIONS,
+      element: <Factor/>
     },
   ]);
 

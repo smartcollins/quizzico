@@ -25,6 +25,7 @@ export const ROUTE_PATHS = {
   CREATEQUIZ: "/createQuiz",
   QUIZDETAILS: "/quiz-details",
   QURCODE: "/quiz-details/QRCode",
+  QUESTIONS: "/questions"
 };
 
 // root path = topAuthor/:title/userCollection
