@@ -2,8 +2,14 @@ import React from 'react';
 import values from '../../assets/values';
 
 const Factor = ({bad})=>{
+    // Deep Destructuring without dot notation
+    // const {sect_5:{height}} = values
+    // const {sect_5:{color:{right,wrong}}} = values
+
+    // Accessing values content with dot notation
     const height = values.sect_5.height
     const {right,wrong} = values.sect_5.color
+
     console.log(height)
     // const me = 'h-[70vh]'
     // const m = '[50vh]'
