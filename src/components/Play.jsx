@@ -13,8 +13,8 @@ import frd8 from "../images/frd8.jpg";
 const Play = () => {
   return (
     // <div className="relative bg-[#785bff] h-[30vh]  rounded-xl px-2 mx-2 md:h-[15vh]">
-    <div className="relative bg-[#785bff] h-[30vh]  rounded-xl px-2 mx-2 md:h-[40vh] lg:h-[45vh]">
-      <div className="py-2 w-2/3 h-full">
+    <div className="relative bg-[#785bff] h-[30vh]  rounded-xl px-2 mx-2 md:h-[30vh] lg:h-[45vh]">
+      <div className="py-2 w-2/3 h-full flex flex-col justify-between bg-red-500">
         {/* <p className="text-white font-semibold text-xl w-full md:text-2xl"> */}
         <p className="text-white font-semibold text-xl w-full md:text-3xl md:w-[55%] lg:text-4xl bg-red-400">
           Play quiz together with your friends now!
