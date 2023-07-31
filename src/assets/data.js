@@ -395,42 +395,52 @@ export const category = [{
 
 export const question = [
   {
-    type: "quiz",
+    idx: 1,
+    type: "Quiz",
     img: img1,
     quiz: ".... do you get to school? By bus?"
   },{
-    type: "bool",
+    idx: 2,
+    type: "True or False",
     img: img2,
     quiz: "This is a book? True or False?"
   },{
-    type: "puzzle",
+    idx: 3,
+    type: "Puzzle",
     img: img3,
     quiz: "Order the following simple words!"
   },{
-    type: "type",
+    idx: 4,
+    type: "Type Answer",
     img: img4,
     quiz: "What does the illustration above describe?"
   },{
-    type: "audio",
+    idx: 5,
+    type: "Quiz + Audio",
     img: img5,
     quiz: "What does the audio say?"
   },{
-    type: "slider",
+    idx: 6,
+    type: "Slider",
     img: img6,
     quiz: "What is the price of the pen above? (Price in USD)"
   },{
-    type: "checkbox",
+    idx: 7,
+    type: "Checkbox",
     img: img7,
     quiz: "What are the objects in the picture above?"
   },{
-    type: "Say the word",
+    idx: 8,
+    type: "Say the Word",
     img: img8,
     quiz: "A for Apple, B for Ball, C for Cat."
   },{
-    type: "poll",
+    idx: 9,
+    type: "Poll",
     img: img9,
     quiz: "What are your hobbies"
   },{
+    idx: 10,
     type: "Drop pin",
     img: img10,
     quiz: "Which of the objects in the picture above do you like?"
