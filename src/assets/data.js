@@ -60,6 +60,7 @@ import img6 from '../images/q-6.jpg'
 import img7 from '../images/q-7.jpg'
 import img8 from '../images/q-8.jpg'
 import img9 from '../images/q-9.jpg'
+import img10 from '../images/q-10.jpg'
 
 import {
   User,
@@ -392,6 +393,46 @@ export const category = [{
   txt: "productivity quiz"
 }]
 
-export const Question = [
-  {}
+export const question = [
+  {
+    type: "quiz",
+    img: img1,
+    quiz: ".... do you get to school? By bus?"
+  },{
+    type: "bool",
+    img: img2,
+    quiz: "This is a book? True or False?"
+  },{
+    type: "puzzle",
+    img: img3,
+    quiz: "Order the following simple words!"
+  },{
+    type: "type",
+    img: img4,
+    quiz: "What does the illustration above describe?"
+  },{
+    type: "audio",
+    img: img5,
+    quiz: "What does the audio say?"
+  },{
+    type: "slider",
+    img: img6,
+    quiz: "What is the price of the pen above? (Price in USD)"
+  },{
+    type: "checkbox",
+    img: img7,
+    quiz: "What are the objects in the picture above?"
+  },{
+    type: "Say the word",
+    img: img8,
+    quiz: "A for Apple, B for Ball, C for Cat."
+  },{
+    type: "poll",
+    img: img9,
+    quiz: "What are your hobbies"
+  },{
+    type: "Drop pin",
+    img: img10,
+    quiz: "Which of the objects in the picture above do you like?"
+  }
 ]
