@@ -428,12 +428,14 @@ export const question = [
     idx: 6,
     type: "Slider",
     img: img6,
-    quiz: "What is the price of the pen above? (Price in USD)"
+    quiz: "What is the price of the pen above? (Price in USD)",
+    ans:['book','ruler','laptop','scissors']
   },{
     idx: 7,
     type: "Checkbox",
     img: img7,
-    quiz: "What are the objects in the picture above?"
+    quiz: "What are the objects in the picture above?",
+    ans:[]
   },{
     idx: 8,
     type: "Say the Word",
@@ -443,7 +445,8 @@ export const question = [
     idx: 9,
     type: "Poll",
     img: img9,
-    quiz: "What are your hobbies"
+    quiz: "What are your hobbies",
+    ans:['reading','painting','dancing','singing','writing','others']
   },{
     idx: 10,
     type: "Drop pin",
