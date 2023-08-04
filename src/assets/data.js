@@ -417,7 +417,7 @@ export const question = [
     type: "Type Answer",
     img: img4,
     quiz: "What does the illustration above describe?",
-    ans: 'Tap to write answer'
+    ans: ['Tap to write answer']
   },{
     idx: 5,
     type: "Quiz + Audio",
@@ -435,12 +435,13 @@ export const question = [
     type: "Checkbox",
     img: img7,
     quiz: "What are the objects in the picture above?",
-    ans:[]
+    ans:[null]
   },{
     idx: 8,
     type: "Say the Word",
     img: img8,
-    quiz: "A for Apple, B for Ball, C for Cat."
+    quiz: "A for Apple, B for Ball, C for Cat.",
+    ans:[null]
   },{
     idx: 9,
     type: "Poll",
@@ -451,6 +452,7 @@ export const question = [
     idx: 10,
     type: "Drop pin",
     img: img10,
-    quiz: "Which of the objects in the picture above do you like?"
+    quiz: "Which of the objects in the picture above do you like?",
+    ans:[null]
   }
 ]
