@@ -1,9 +1,11 @@
 import React from 'react';
 
 
-const Answer = ()=>{
+const Answer = ({ans})=>{
     return(
-        <div></div>
+        <div>
+            {ans.map((item,idx)=><p key={idx}>{item}</p>)}
+        </div>
     )
 }
 
