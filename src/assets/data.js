@@ -398,27 +398,32 @@ export const question = [
     idx: 1,
     type: "Quiz",
     img: img1,
-    quiz: ".... do you get to school? By bus?"
+    quiz: ".... do you get to school? By bus?",
+    ans:['how','what','which','where']
   },{
     idx: 2,
     type: "True or False",
     img: img2,
-    quiz: "This is a book? True or False?"
+    quiz: "This is a book? True or False?",
+    ans:['true','false']
   },{
     idx: 3,
     type: "Puzzle",
     img: img3,
-    quiz: "Order the following simple words!"
+    quiz: "Order the following simple words!",
+    ans:['this','calender','a','is']
   },{
     idx: 4,
     type: "Type Answer",
     img: img4,
-    quiz: "What does the illustration above describe?"
+    quiz: "What does the illustration above describe?",
+    ans: 'Tap to write answer'
   },{
     idx: 5,
     type: "Quiz + Audio",
     img: img5,
-    quiz: "What does the audio say?"
+    quiz: "What does the audio say?",
+    ans:['books are the window of the house','books are windows of knowledge','book is a window to the world','books are windows of information']
   },{
     idx: 6,
     type: "Slider",
