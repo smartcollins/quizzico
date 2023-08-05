@@ -429,13 +429,13 @@ export const question = [
     type: "Slider",
     img: img6,
     quiz: "What is the price of the pen above? (Price in USD)",
-    ans:['book','ruler','laptop','scissors']
+    ans:[null]
   },{
     idx: 7,
     type: "Checkbox",
     img: img7,
     quiz: "What are the objects in the picture above?",
-    ans:[null]
+    ans:['book','ruler','laptop','scissors']
   },{
     idx: 8,
     type: "Say the Word",
