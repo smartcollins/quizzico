@@ -429,7 +429,8 @@ export const question = [
     type: "Slider",
     img: img6,
     quiz: "What is the price of the pen above? (Price in USD)",
-    ans:[null]
+    // ans:[null]
+    ans:[]
   },{
     idx: 7,
     type: "Checkbox",
@@ -441,7 +442,8 @@ export const question = [
     type: "Say the Word",
     img: img8,
     quiz: "A for Apple, B for Ball, C for Cat.",
-    ans:[null]
+    // ans:[null]
+    ans:[]
   },{
     idx: 9,
     type: "Poll",
@@ -453,6 +455,7 @@ export const question = [
     type: "Drop pin",
     img: img10,
     quiz: "Which of the objects in the picture above do you like?",
-    ans:[null]
+    // ans:[null]
+    ans:[]
   }
 ]
