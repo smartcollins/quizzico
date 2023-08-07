@@ -51,6 +51,16 @@ import infoimg2 from "../images/info2.jpg"
 import infoimg3 from "../images/info3.jpg"
 
 
+import img1 from '../images/q-1.jpg'
+import img2 from '../images/q-2.jpg'
+import img3 from '../images/q-3.jpg'
+import img4 from '../images/q-4.jpg'
+import img5 from '../images/q-5.jpg'
+import img6 from '../images/q-6.jpg'
+import img7 from '../images/q-7.jpg'
+import img8 from '../images/q-8.jpg'
+import img9 from '../images/q-9.jpg'
+import img10 from '../images/q-10.jpg'
 
 import {
   User,
@@ -59,7 +69,7 @@ import {
   Briefcase,
   Student,
   GraduationCap,
-  ChartBar, ChatText, CheckSquare, ClipboardText, Gear,House,Newspaper,Tray
+  ChartBar, ChatText, CheckSquare, ClipboardText, Gear,House,Newspaper,Tray, Question
 } from "phosphor-react";
 
 
@@ -382,3 +392,57 @@ export const category = [{
 }, {
   txt: "productivity quiz"
 }]
+
+export const question = [
+  {
+    idx: 1,
+    type: "Quiz",
+    img: img1,
+    quiz: ".... do you get to school? By bus?"
+  },{
+    idx: 2,
+    type: "True or False",
+    img: img2,
+    quiz: "This is a book? True or False?"
+  },{
+    idx: 3,
+    type: "Puzzle",
+    img: img3,
+    quiz: "Order the following simple words!"
+  },{
+    idx: 4,
+    type: "Type Answer",
+    img: img4,
+    quiz: "What does the illustration above describe?"
+  },{
+    idx: 5,
+    type: "Quiz + Audio",
+    img: img5,
+    quiz: "What does the audio say?"
+  },{
+    idx: 6,
+    type: "Slider",
+    img: img6,
+    quiz: "What is the price of the pen above? (Price in USD)"
+  },{
+    idx: 7,
+    type: "Checkbox",
+    img: img7,
+    quiz: "What are the objects in the picture above?"
+  },{
+    idx: 8,
+    type: "Say the Word",
+    img: img8,
+    quiz: "A for Apple, B for Ball, C for Cat."
+  },{
+    idx: 9,
+    type: "Poll",
+    img: img9,
+    quiz: "What are your hobbies"
+  },{
+    idx: 10,
+    type: "Drop pin",
+    img: img10,
+    quiz: "Which of the objects in the picture above do you like?"
+  }
+]
