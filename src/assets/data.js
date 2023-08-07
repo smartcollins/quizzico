@@ -398,51 +398,64 @@ export const question = [
     idx: 1,
     type: "Quiz",
     img: img1,
-    quiz: ".... do you get to school? By bus?"
+    quiz: ".... do you get to school? By bus?",
+    ans:['how','what','which','where']
   },{
     idx: 2,
     type: "True or False",
     img: img2,
-    quiz: "This is a book? True or False?"
+    quiz: "This is a book? True or False?",
+    ans:['true','false']
   },{
     idx: 3,
     type: "Puzzle",
     img: img3,
-    quiz: "Order the following simple words!"
+    quiz: "Order the following simple words!",
+    ans:['this','calender','a','is']
   },{
     idx: 4,
     type: "Type Answer",
     img: img4,
-    quiz: "What does the illustration above describe?"
+    quiz: "What does the illustration above describe?",
+    ans: ['Tap to write answer']
   },{
     idx: 5,
     type: "Quiz + Audio",
     img: img5,
-    quiz: "What does the audio say?"
+    quiz: "What does the audio say?",
+    ans:['books are the window of the house','books are windows of knowledge','book is a window to the world','books are windows of information']
   },{
     idx: 6,
     type: "Slider",
     img: img6,
-    quiz: "What is the price of the pen above? (Price in USD)"
+    quiz: "What is the price of the pen above? (Price in USD)",
+    // ans:[null]
+    ans:[]
   },{
     idx: 7,
     type: "Checkbox",
     img: img7,
-    quiz: "What are the objects in the picture above?"
+    quiz: "What are the objects in the picture above?",
+    ans:['book','ruler','laptop','scissors']
   },{
     idx: 8,
     type: "Say the Word",
     img: img8,
-    quiz: "A for Apple, B for Ball, C for Cat."
+    quiz: "A for Apple, B for Ball, C for Cat.",
+    // ans:[null]
+    ans:[]
   },{
     idx: 9,
     type: "Poll",
     img: img9,
-    quiz: "What are your hobbies"
+    quiz: "What are your hobbies",
+    ans:['reading','painting','dancing','singing','writing','others']
   },{
     idx: 10,
     type: "Drop pin",
     img: img10,
-    quiz: "Which of the objects in the picture above do you like?"
+    quiz: "Which of the objects in the picture above do you like?",
+    // ans:[null]
+    ans:[]
   }
 ]
